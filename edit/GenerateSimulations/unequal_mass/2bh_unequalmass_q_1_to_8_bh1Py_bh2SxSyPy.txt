@@ -1,0 +1,14 @@
+name=2bh_unequalmass_q_1_to_8_bh1Py_bh2SxSyPy
+exename=manybhexe
+nzpt=12x13x17,16x17x25,24x25x33,32x33x41
+nz=10
+nbh=2
+mbh=0.10174,0.55179
+sbh=0.0x0.0x0.0,0.31957x-0.55351x0.0
+pbh=0.0x0.054063x0.0,0.0x-0.054063x0.0
+xbh=5.70322x0.05x0.06,-0.69841x0.05x0.06
+rsurf=0.25
+precis=1.0e-9
+twopunch_res=20,30,40
+
+

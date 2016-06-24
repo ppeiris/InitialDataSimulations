@@ -1,0 +1,40 @@
+--------------------------------------------------------------------------------
+
+       10                                  
+  1   0101       ************************  
+  01  1010 10      The Cactus Code V4.3.0    
+ 1010 1101 011      www.cactuscode.org     
+  1001 100101    ************************  
+    00010101                               
+     100011     (c) Copyright The Authors  
+      0100      GNU Licensed. No Warranty  
+      0101                                 
+--------------------------------------------------------------------------------
+
+Cactus version:    4.3.0
+Compile date:      Jun 21 2016 (05:40:04)
+Run date:          Jun 22 2016 (00:36:23+0000)
+Run host:          127.0.0.1ip-172-30-0-219 (pid=10069)
+Working directory: /home/admin/simulations/2bh_diffm_WithSpin_WithMomentum
+Executable:        ./cactus_manybhexe
+Parameter file:    manybhnear_2bh_unequalmass_q_1_to_8_bh1_Py0.054063_S0_m0.10174_bh2_Py-0.054063_Sx0.31957_Sy-0.55351_m0.55179_away0.5_40x41x49.par
+--------------------------------------------------------------------------------
+
+Activating thorn Cactus...Success -> active implementation Cactus
+Activation requested for 
+--->Time MoL cartgrid3d IOUtil Carpet CarpetLib CarpetInterp CarpetReduce CarpetSlab ADMBase ADMCoupling ADMMacros CoordBase CoordGauge SpaceMask StaticConformal TmunuBase LoopControl Boundary SymBase InitBase Slab LocalInterp GenericFD AEILocalInterp ML_BSSN ML_BSSN_Helper ADMConstraints Fortran GSL ManyBH NaNChecker CarpetIOBasic CarpetIOScalar CarpetIOASCII TimerReport <---
+Thorn Carpet requests automatic activation of MPI
+Thorn Carpet requests automatic activation of Timers
+Thorn CarpetLib requests automatic activation of Vectors
+Thorn CarpetLib requests automatic activation of CycleClock
+Thorn LoopControl requests automatic activation of hwloc
+Thorn ManyBH requests automatic activation of LORENE
+Thorn hwloc requests automatic activation of zlib
+Thorn LORENE requests automatic activation of BLAS
+Thorn LORENE requests automatic activation of LAPACK
+Error: Thorn ADMConstraints not found
+Activation failed - 1 errors in activation sequence
+WARNING level 0 from host 127.0.0.1ip-172-30-0-219 process 0
+  while executing schedule bin (none), routine (no thorn)::(no routine)
+  in thorn Cactus, file /home/admin/Cactus/configs/manybhexe/build/Cactus/main/SetParams.c:93:
+  -> CCTKi_SetParameter: Error at line 18 in parameter file manybhnear_2bh_unequalmass_q_1_to_8_bh1_Py0.054063_S0_m0.10174_bh2_Py-0.054063_Sx0.31957_Sy-0.55351_m0.55179_away0.5_40x41x49.par while activating thorns

@@ -1,0 +1,18 @@
+Build ID: build-bbhcode-127.0.0.1ip-172-30-0-219-admin-2016.06.22-17.14.48-20724
+Simulation ID: run-test2bh-127.0.0.1ip-172-30-0-219-admin-2016.06.24-05.19.01-1507
+Running with 1 processes and 1 threads
+********************************************************************************
+CarpetLib timing information at iteration 0 time 0:
+CarpetLib::dh::regrid: cnt: 117   time: sum: 0.005478 avg: 4.68205e-05 stddev: 6.4524e-05 min: 0 max: 0.000486034   bytes: sum: 0 avg: 0 stddev: 0 min: 0 max: 0
+commstate::create: cnt: 7   time: sum: 2.6662e-06 avg: 3.80886e-07 stddev: 7.46129e-07 min: 0 max: 2.20121e-06   bytes: sum: 0 avg: 0 stddev: 0 min: 0 max: 0
+sync_all: cnt: 220   time: sum: 3.09395e-05 avg: 1.40634e-07 stddev: 1.6243e-07 min: 0 max: 1.73247e-06   bytes: sum: 0 avg: 0 stddev: 0 min: 0 max: 0
+commstate::step: cnt: 28   time: sum: 6.57989e-06 avg: 2.34996e-07 stddev: 2.50077e-07 min: 0 max: 1.28623e-06   bytes: sum: 0 avg: 0 stddev: 0 min: 0 max: 0
+commstate::do_some_work::waitall: cnt: 7   time: sum: 1.67247e-06 avg: 2.38924e-07 stddev: 2.23019e-07 min: 0 max: 7.14988e-07   bytes: sum: 0 avg: 0 stddev: 0 min: 0 max: 0
+commstate::empty_recv_buffers::waitall: cnt: 7   time: sum: 2.83745e-07 avg: 4.0535e-08 stddev: 1.66347e-08 min: 0 max: 6.24989e-08   bytes: sum: 0 avg: 0 stddev: 0 min: 0 max: 0
+CarpetInterp::Carpet_DriverInterpolate: cnt: 58   time: sum: 2.46529 avg: 0.042505 stddev: 0.000144545 min: 0 max: 0.0433261   bytes: sum: 0 avg: 0 stddev: 0 min: 0 max: 0
+CarpetInterp::map_points: cnt: 116   time: sum: 0.0224509 avg: 0.000193542 stddev: 7.10611e-06 min: 0 max: 0.00020781   bytes: sum: 251256 avg: 2166 stddev: 0 min: 0 max: 2166
+CarpetInterp::send_npoints: cnt: 58   time: sum: 0.00012387 avg: 2.1357e-06 stddev: 6.32197e-07 min: 0 max: 3.30494e-06   bytes: sum: 232 avg: 4 stddev: 0 min: 0 max: 4
+CarpetInterp::send_coordinates: cnt: 58   time: sum: 0.000180597 avg: 3.11374e-06 stddev: 1.78376e-07 min: 0 max: 4.27368e-06   bytes: sum: 3.01507e+06 avg: 51984 stddev: 0 min: 0 max: 51984
+CarpetInterp::interpolate_components: cnt: 58   time: sum: 2.38068 avg: 0.0410462 stddev: 0.000117489 min: 0 max: 0.0415349   bytes: sum: 0 avg: 0 stddev: 0 min: 0 max: 0
+CarpetInterp::interpolate_single_component: cnt: 58   time: sum: 2.38038 avg: 0.0410411 stddev: 0.000117413 min: 0 max: 0.0415301   bytes: sum: 0 avg: 0 stddev: 0 min: 0 max: 0
+CarpetInterp::recv_points: cnt: 58   time: sum: 0.00406769 avg: 7.01327e-05 stddev: 2.21782e-06 min: 0 max: 8.16248e-05   bytes: sum: 3.41708e+07 avg: 589152 stddev: 0 min: 0 max: 589152

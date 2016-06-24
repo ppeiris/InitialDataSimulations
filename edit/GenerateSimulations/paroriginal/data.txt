@@ -1,0 +1,12 @@
+name=sim_name   
+exename=name_of_the_exe
+nzpt=10x12x13,12x14x45,46x78x46
+nbh=2
+mbh=0.234,0.1234
+sbh=0x4x0,0x3x0
+pbh=0x0x2,0x0x1
+xbh=0.0x-3.0x0.0,0.0x3.0x0.0
+rsurf=0.1
+twopunch_res=20,30,40
+
+
