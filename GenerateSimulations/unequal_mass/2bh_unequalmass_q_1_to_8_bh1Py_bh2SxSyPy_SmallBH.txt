@@ -1,0 +1,42 @@
+name=2bh_unequalmass_q_1_to_8_bh1Py_bh2SxSyPy_SmallBH
+exename=manybhexe_puncpow
+cases=near,mid,far
+nzpt=12x13x17,16x17x25,24x25x33,32x33x41,40x41x49
+nz=12
+nbh=2
+mbh=0.10174,0.55179
+sbh=0.0x0.0x0.0,0.31957x-0.55351x0.0
+pbh=0.0x0.054063x0.0,0.0x-0.054063x0.0
+xbh=5.70322x0.05x0.06,-0.69841x0.05x0.06
+rsurf=0.25
+precis=1.0e-9
+twopunch_res=20,30,40
+
+#near case
+
+dxyz_near=0.003125
+xmax_near=5.76572
+xmin_near=5.64072
+ymax_near=0.6125
+ymin_near=0.4875
+zmax_near=0.6225
+zmin_near=0.4975
+
+#mid case
+dxyz_mid=0.003125 
+xmax_mid=5.502405
+xmin_mid=-0.497595
+ymax_mid=0.0625
+ymin_mid=0.0375
+zmax_mid=0.0725
+zmin_mid=0.0475
+
+#far case
+dxyz_far=0.003125
+xmax_far=7.76572
+xmin_far=7.64072
+ymax_far=5.1125
+ymin_far=4.9875
+zmax_far=5.1225
+zmin_far=4.9975
+
