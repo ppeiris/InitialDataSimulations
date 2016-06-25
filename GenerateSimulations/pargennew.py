@@ -30,6 +30,10 @@ if (options.file is None) or (not os.path.exists(options.file)):
 
 datafile = os.path.join(os.getcwd(), options.file)
 
+inidf = pd.DataFrame()
+
+
+
 # Near Region Parameters
 xmin_near_shift = 0.0625
 xmax_near_shift = 0.0625

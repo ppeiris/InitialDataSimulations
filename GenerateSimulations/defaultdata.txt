@@ -1,49 +1,7 @@
-id
-
-xmin_shift = 0.0625
-xmax_shift = 0.0625
-ymin_shift = 0.4375
-ymax_shift = 0.5625
-zmin_shift = 0.4375
-zmax_shift = 0.5625
-
-
-
-
-
-# Heading
-var=val
-# global values
-name=2bh_noS_PinY_TEST
-exename=manybhexe_puncpow
-nzpt=12x13x17,16x17x25,24x25x33,32x33x41
-nbh=2
-mbh=0.47656,0.47656
-sbh=0.0x0.0x0.0,0.0x0.0x0.0
-pbh=0.0x0.13808x0.0,0.0x-0.13808x0.0
-xbh=3.0x0.0x0.0,-3.0x0.0x0.0
-rsurf=0.1
-twopunch_res=50
-
-# near case
-dxyz_near=0.003125
-xmin_near=2.9375
-xmax_near=3.0625
-ymin_near=-0.0078125
-ymax_near=0.0078125
-zmin_near=-0.0078125
-zmax_near=0.0078125
-
-global_nx_near=41
-global_ny_near=5
-global_nz_near=5
-
-# mid case
-dxyz_mid=0.00078125
-xmax_mid=0.5
-xmin_mid=-0.5
-
-# far case
-dxyz_far=0.00078125
-xmax_far=1.265625
-xmin_far=1.234375
+id	first	near11	mid11	far11
+xmin_shift		0.0625	1.0	1.9375
+xmax_shift		0.0625	1.0	2.0625
+ymin_shift		0.4375	0.0125	4.9375
+ymax_shift		0.5625	0.0125	5.0625
+zmin_shift		0.4375	0.0125	4.9375
+zmax_shift		0.5625	0.0125	5.0625

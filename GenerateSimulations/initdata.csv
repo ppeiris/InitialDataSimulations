@@ -1,0 +1,9 @@
+variables	global	near	mid	far
+xmin_shift		0.0625	1.0000	1.9375
+xmax_shift		0.0625	1.0000	2.0625
+ymin_shift		0.4375	0.0125	4.9375
+ymax_shift		0.5625	0.0125	5.0625
+zmin_shift		0.4375	0.0125	4.9375
+zmax_shift		0.5625	0.0125	5.0625
+domain		full	full	full
+exename	manybhexe_puncpow			
