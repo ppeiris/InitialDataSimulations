@@ -1,6 +1,20 @@
-var    val
-name        2bh_noS_PinY_TEST
+id
 
+xmin_shift = 0.0625
+xmax_shift = 0.0625
+ymin_shift = 0.4375
+ymax_shift = 0.5625
+zmin_shift = 0.4375
+zmax_shift = 0.5625
+
+
+
+
+
+# Heading
+var=val
+# global values
+name=2bh_noS_PinY_TEST
 exename=manybhexe_puncpow
 nzpt=12x13x17,16x17x25,24x25x33,32x33x41
 nbh=2
@@ -11,7 +25,7 @@ xbh=3.0x0.0x0.0,-3.0x0.0x0.0
 rsurf=0.1
 twopunch_res=50
 
-#near case
+# near case
 dxyz_near=0.003125
 xmin_near=2.9375
 xmax_near=3.0625
@@ -24,17 +38,12 @@ global_nx_near=41
 global_ny_near=5
 global_nz_near=5
 
-
-
-
-#mid case
+# mid case
 dxyz_mid=0.00078125
 xmax_mid=0.5
 xmin_mid=-0.5
 
-#far case
+# far case
 dxyz_far=0.00078125
 xmax_far=1.265625
 xmin_far=1.234375
-
-
