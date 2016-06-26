@@ -2,7 +2,7 @@ variables	global	near	mid	far
 exename	manybhexe_puncpow			
 domain		full	full	full
 type		Byrange	Byrange	Byrange
-cases	near	mid	far	
+cases	near,mid,far			
 xmin_shift		0.0625	1	1.9375
 xmax_shift		0.0625	1	2.0625
 ymin_shift		0.4375	0.0125	4.9375

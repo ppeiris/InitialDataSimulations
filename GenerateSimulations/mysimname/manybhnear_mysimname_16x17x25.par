@@ -182,58 +182,68 @@ CarpetIOHDF5::out_vars      = "
 #--------------------------------------------------------------------------------------- 
 
 grid::type = "Byrange"
-grid::domain ="full"
-grid::dxyz =0.003125
-grid::xmin =2.9375
-grid::ymin =-0.0078125
-grid::zmin =-0.0078125
-grid::xmax =3.0625
-grid::ymax =0.0078125
-grid::zmax =0.0078125
-driver::global_nx   =41
-driver::global_ny   =5
-driver::global_nz   =5
+grid::domain = "full"
+grid::dxyz = 0.003125
+grid::xmin = 2.9375
+grid::ymin = -0.0078125
+grid::zmin = -0.0078125
+grid::xmax = 3.0625
+grid::ymax = 0.0078125
+grid::zmax = 0.0078125
 
-IOASCII::out1D_xline_y = 0.50
-IOASCII::out1D_xline_z = 0.50
+driver::global_nx = 41
+driver::global_ny = 5
+driver::global_nz = 5
+driver::ghost_size = 3
 
-IOASCII::out1D_yline_x = 3.00
-IOASCII::out1D_yline_z = 0.50
+CoordBase::boundary_size_x_lower = 3
+CoordBase::boundary_size_x_upper = 3
+CoordBase::boundary_size_y_lower = 3
+CoordBase::boundary_size_y_upper = 3
+CoordBase::boundary_size_z_lower = 3
+CoordBase::boundary_size_z_upper = 3
 
-IOASCII::out1D_zline_x = 3.00
-IOASCII::out1D_zline_y = 0.50
+IOASCII::out1D_xline_y = 0.5
+IOASCII::out1D_xline_z = 0.5
+
+IOASCII::out1D_yline_x = 3
+IOASCII::out1D_yline_z = 0.5
+
+IOASCII::out1D_zline_x = 3
+IOASCII::out1D_zline_y = 0.5
 
 #--------------------------------------------------------------------------------------- 
 # ManyBH Parameters:
 #--------------------------------------------------------------------------------------- 
 ManyBH :: rsurf=0.1
-ManyBH :: nz=10
-ManyBH :: np=16
-ManyBH :: nt=17
-ManyBH :: nr=25
-ManyBH :: precis=1.0e-9
-ManyBH :: ite_max = 500
-ManyBH :: relax = 0.5
+ManyBH :: nz        = 10
+ManyBH :: np        = 16
+ManyBH :: nt        = 17
+ManyBH :: nr        = 25
+ManyBH :: precis    = 1.0e-9
+ManyBH :: ite_max   = 500
+ManyBH :: relax     = 0.5
 
-ManyBH :: nbh=2
-ManyBH :: mbh[0]=0.47656
-ManyBH :: sbh[0]=0.0
-ManyBH :: sbh[1]=0.0
-ManyBH :: sbh[2]=0.0
-ManyBH :: pbh[0]=0.0
-ManyBH :: pbh[1]=0.13808
-ManyBH :: pbh[2]=0.0
-ManyBH :: xbh[0]=3.0
-ManyBH :: xbh[1]=0.0
-ManyBH :: xbh[2]=0.0
+ManyBH :: nbh = 2
 
-ManyBH :: mbh[1]=0.47656
-ManyBH :: sbh[3]=0.0
-ManyBH :: sbh[4]=0.0
-ManyBH :: sbh[5]=0.0
-ManyBH :: pbh[3]=0.0
-ManyBH :: pbh[4]=-0.13808
-ManyBH :: pbh[5]=0.0
-ManyBH :: xbh[3]=-3.0
-ManyBH :: xbh[4]=0.0
-ManyBH :: xbh[5]=0.0
+ManyBH :: mbh[0] = 0.47656
+ManyBH :: sbh[0] = 0.0
+ManyBH :: sbh[1] = 0.0
+ManyBH :: sbh[2] = 0.0
+ManyBH :: pbh[0] = 0.0
+ManyBH :: pbh[1] = 0.13808
+ManyBH :: pbh[2] = 0.0
+ManyBH :: xbh[0] = 3.0
+ManyBH :: xbh[1] = 0.0
+ManyBH :: xbh[2] = 0.0
+
+ManyBH :: mbh[1] = 0.47656
+ManyBH :: sbh[3] = 0.0
+ManyBH :: sbh[4] = 0.0
+ManyBH :: sbh[5] = 0.0
+ManyBH :: pbh[3] = 0.0
+ManyBH :: pbh[4] = -0.13808
+ManyBH :: pbh[5] = 0.0
+ManyBH :: xbh[3] = -3.0
+ManyBH :: xbh[4] = 0.0
+ManyBH :: xbh[5] = 0.0

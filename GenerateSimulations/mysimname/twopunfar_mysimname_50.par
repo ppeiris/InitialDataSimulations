@@ -133,27 +133,28 @@ TimerReport::n_top_timers               = 20
 # Grid Parameters:
 #--------------------------------------------------------------------------------------- 
 
-grid::type = "Byrange"
-grid::domain ="full"
-grid::dxyz =0.00078125
-grid::xmin =1.234375
-grid::ymin =4.9375000
-grid::zmin =4.9375000
-grid::xmax =1.265625
-grid::ymax =5.0625000
-grid::zmax =5.0625000
-driver::global_nx   =41.0000000
-driver::global_ny   =41.0000000
-driver::global_nz   =41.0000000
+grid::type       = "Byrange"
+grid::domain     = "full"
+grid::dxyz       = 0.00078125
+grid::xmin       = 1.234375
+grid::ymin       = 4.9375
+grid::zmin       = 4.9375
+grid::xmax       = 1.265625
+grid::ymax       = 5.0625
+grid::zmax       = 5.0625
 
-IOASCII::out1D_xline_y = 5.0
-IOASCII::out1D_xline_z = 5.0
+driver::global_nx    = 41
+driver::global_ny    = 41
+driver::global_nz    = 41
 
-IOASCII::out1D_yline_x = 5.0
-IOASCII::out1D_yline_z = 5.0
+IOASCII::out1D_xline_y = 5
+IOASCII::out1D_xline_z = 5
 
-IOASCII::out1D_zline_x = 5.0
-IOASCII::out1D_zline_y = 5.0
+IOASCII::out1D_yline_x = 5
+IOASCII::out1D_yline_z = 5
+
+IOASCII::out1D_zline_x = 5
+IOASCII::out1D_zline_y = 5
 
 #--------------------------------------------------------------------------------------- 
 # ManyBH Parameters:
