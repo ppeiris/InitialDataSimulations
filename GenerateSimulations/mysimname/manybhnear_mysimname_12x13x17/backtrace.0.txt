@@ -1,0 +1,20 @@
+Backtrace from rank 0 pid 7118:
+1. ./manybhexe_puncpow() [0x22624ba]
+2. /lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7f6485b9a0e0]
+3. /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x37) [0x7f6485b9a067]
+4. /lib/x86_64-linux-gnu/libc.so.6(abort+0x148) [0x7f6485b9b448]
+5. /lib/x86_64-linux-gnu/libc.so.6(+0x2e266) [0x7f6485b93266]
+6. /lib/x86_64-linux-gnu/libc.so.6(+0x2e312) [0x7f6485b93312]
+7. ./manybhexe_puncpow() [0x22bc9b0]
+8. ./manybhexe_puncpow() [0x221310d]
+9. ./manybhexe_puncpow() [0x22173c6]
+a. ./manybhexe_puncpow() [0x4513c3]
+b. ./manybhexe_puncpow() [0x465c5b]
+c. ./manybhexe_puncpow() [0x21ee6b2]
+d. ./manybhexe_puncpow() [0x41ba33]
+e. /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7f6485b86b45]
+f. ./manybhexe_puncpow() [0x42588f]
+
+The hexadecimal addresses in this backtrace can also be interpreted
+with a debugger (e.g. gdb), or with the 'addr2line' (or 'gaddr2line')
+command line tool: 'addr2line -e cactus_sim <address>'.

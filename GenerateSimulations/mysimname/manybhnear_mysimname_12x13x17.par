@@ -194,7 +194,8 @@ grid::zmax = 0.0078125
 driver::global_nx = 41
 driver::global_ny = 5
 driver::global_nz = 5
-driver::ghost_size = 3
+
+driver::ghost_size = 5
 
 CoordBase::boundary_size_x_lower = 3
 CoordBase::boundary_size_x_upper = 3
