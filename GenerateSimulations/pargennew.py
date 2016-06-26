@@ -155,7 +155,7 @@ for case in cases:
         runScript.write("nohup ./"+exename+" $SIM_PATH"+inputFileName+" > $SIM_PATH"+outputFileName+"\n")
         runScript.write("END=$(date +%s)\n")
         runScript.write("echo \"Simulation twopun"+case+"_"+simname+"_"+tres+" end at \"`date -u` >> SimulationStatus.out\n")
-        runScript.write("echo \"Simulation took\" $(($END-$START)) \"seconds\" >> SimulationStatus.out\n")
+        #runScript.write("echo \"Simulation took\" $(($END-$START)) \"seconds\" >> SimulationStatus.out\n")
         runScript.write("\n")
 
         # fill the grid info
@@ -270,7 +270,7 @@ for case in cases:
         runScript.write("nohup ./"+exename+" $SIM_PATH"+inputFileName+" > $SIM_PATH"+outputFileName+"\n")
         runScript.write("END=$(date +%s)\n")
         runScript.write("echo \"Simulation ManyBH"+case+"_"+simname+"_"+res+" end at \"`date -u` >> SimulationStatus.out\n")
-        runScript.write("echo \"Simulation took\" $($END-$START) \"seconds\" >> SimulationStatus.out\n")
+        # runScript.write("echo \"Simulation took\" $($END-$START) \"seconds\" >> SimulationStatus.out\n")
         runScript.write("\n")
 
 
