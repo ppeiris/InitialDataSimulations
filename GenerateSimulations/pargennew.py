@@ -12,6 +12,25 @@ import sys
 import optparse
 import pandas as pd
 
+# update new values in in the default value set
+def updatedf(data, key, col, val):
+
+    if key in list(data.variables):
+        print("Updating key %s" %(key))
+
+        index = data[data.variables == key].index[0]
+
+        data.set_value(index, col, val)
+        data.set_value(index, 'update', 'updated')
+
+    else:
+        # print("Key is not in the list. Adding the key (%s) to the data " %(key))
+        newrow = {'variables':np.NaN, 'global':np.NaN, 'near':np.NaN, 'mid':np.NaN, 'far':np.NaN, 'update':'new'}
+        newrow['variables'] = key
+        newrow[col] = val
+        data = data.append(newrow, ignore_index=True)
+    return data
+
 VERSION = '1.0'
 USAGE = '%prog [-h | --help] [--version][-f | --file]'
 parser = optparse.OptionParser(usage=USAGE, version=VERSION)
@@ -32,12 +51,19 @@ datafile = os.path.join(os.getcwd(), options.file)
 
 # Load the default values
 data = pd.read_csv('initdata.csv', sep='\t', dtype=object)
-
 # Load the data file in to dataframe
 udata = pd.read_table(datafile, sep='\=', engine='python', comment='#', index_col='var')
 udata = udata.transpose()
 
-print(data)
+data['update'] = 'initial'
+for key in list(udata.columns):
+    col = key.split('_')[-1]
+    if col in ['near', 'mid', 'far']:
+        nkey = "_".join(key.split('_')[:-1])
+    else:
+        nkey = key
+        col = 'global'
 
-# print(udata)
-# print(udata['xmax_mid']['val'])
+    data = updatedf(data, nkey, col, udata[key]['val'])
+
+print(data)
