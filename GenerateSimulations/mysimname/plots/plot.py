@@ -2,10 +2,12 @@
 
 import numpy as np
 import scipy as sp
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 axisArr=['d','x','y','z']
-caseArr=['near','mid','far']
+caseArr=['mid','far']
 index=0
 #========================================================================================================================================
 #Following 3 lines will be replaced by another python script according to the simulation parameters, Please do not change them manually
