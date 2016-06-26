@@ -249,5 +249,26 @@ for case in cases:
             twoeditFile.write("twopunctures :: par_S_minus[1] = %s\n" % sbhval[1])
             twoeditFile.write("twopunctures :: par_S_minus[2] = %s\n" % sbhval[2])
 
+    # ManyBH Simulation par files
+
+
+    runScript.write("# ManyBH " + case + " simulation\n")
+    runScript.write("# ==================================\n")
+    for res in resArray:
+        newParFileName=pathcwd+'/'+simname+'/manybh'+case+'_'+simname+'_'+res+'.par'
+        simulationDir='manybh'+case+'_'+simname+'_'+res
+        inputFileName='/manybh'+case+'_'+simname+'_'+res+'.par'
+        outputFileName='/manybh'+case+'_'+simname+'_'+res+'.out'
+    #copy file with the new name
+    sh.copy(ParFileName,newParFileName)
+        #open the new file
+    editFile=open(newParFileName,'a+')
+
+        #Plot Script==============
+        #plotScriptName
+    if(manybhDirlist):
+        manybhDirlist+=',\''+simulationDir+'\''
+    else:
+        manybhDirlist+='\''+simulationDir+'\''
 
 print('Done.')
