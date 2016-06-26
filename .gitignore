@@ -1,4 +1,5 @@
 *
+!.git*
 !/**
 !*.sh
 !*.py
@@ -9,3 +10,4 @@
 !*.par
 !*.out
 *exe
+manybhexe_puncpow
