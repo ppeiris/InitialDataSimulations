@@ -254,8 +254,9 @@ for case in cases:
 
     runScript.write("# ManyBH " + case + " simulation\n")
     runScript.write("# ==================================\n")
+    resArray = getVal(data, 'nzpt')
     for res in resArray:
-        newParFileName=pathcwd+'/'+simname+'/manybh'+case+'_'+simname+'_'+res+'.par'
+        newParFileName = os.path.join(os.getcwd(), simname +'/manybh' + case + '_' + simname + '_' + res + '.par')
         simulationDir='manybh'+case+'_'+simname+'_'+res
         inputFileName='/manybh'+case+'_'+simname+'_'+res+'.par'
         outputFileName='/manybh'+case+'_'+simname+'_'+res+'.out'
