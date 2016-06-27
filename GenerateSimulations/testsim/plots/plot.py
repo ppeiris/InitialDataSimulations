@@ -9,9 +9,15 @@ caseArr=['near','mid','far']
 index=0
 #========================================================================================================================================
 #Following 3 lines will be replaced by another python script according to the simulation parameters, Please do not change them manually
-[==manybhDirArr==]
-[==twopunDirArr==]
-[==simname==]
+manybhDirArr=['manybhnear_testsim_12x13x17','manybhnear_testsim_16x17x25','manybhnear_testsim_24x25x33','manybhnear_testsim_32x33x41','manybhmid_testsim_12x13x17','manybhmid_testsim_16x17x25','manybhmid_testsim_24x25x33','manybhmid_testsim_32x33x41','manybhfar_testsim_12x13x17','manybhfar_testsim_16x17x25','manybhfar_testsim_24x25x33','manybhfar_testsim_32x33x41']
+
+
+twopunDirArr=['twopunnear_testsim_50','twopunmid_testsim_50','twopunfar_testsim_50']
+
+
+simname='testsim'
+
+
 
 # Legend locations
 legend_ncol=3

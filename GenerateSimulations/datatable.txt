@@ -2,7 +2,7 @@
 # do not delete this line
 var=val
 # Simulation Name
-simname=mysimname
+simname=testsim
 # global values
 name=2bh_noS_PinY_TEST
 exename=manybhexe_puncpow
