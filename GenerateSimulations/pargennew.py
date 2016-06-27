@@ -138,7 +138,7 @@ for case in cases:
     for tres in twopunch_resArr:
         newtwoParFileName = os.path.join(os.getcwd(), simname, 'twopun' + case + '_' + simname + '_' + tres + '.par')
         inputFileName = '/twopun' + case + '_' + simname + '_' + tres + '.par'
-        simulationDir = '/twopun' + case + '_' + simname + '_' + tres
+        simulationDir = 'twopun' + case + '_' + simname + '_' + tres
         outputFileName = '/twopun' + case + '_' + simname + '_' + tres + '.out'
         sh.copy(twopParFileName, newtwoParFileName)
         twoeditFile = open(newtwoParFileName, 'a+')
@@ -181,6 +181,16 @@ for case in cases:
         twoeditFile.write('driver::global_nx    = %s\n' % getVal(data, 'global_nx', case))
         twoeditFile.write('driver::global_ny    = %s\n' % getVal(data, 'global_ny', case))
         twoeditFile.write('driver::global_nz    = %s\n' % getVal(data, 'global_nz', case))
+        twoeditFile.write('driver::ghost_size   = %s\n' % getVal(data, 'ghost_size', case))
+
+        twoeditFile.write('\n')
+
+        twoeditFile.write('CoordBase::boundary_size_x_lower = %s\n' % getVal(data, 'boundary_size_x_lower', case))
+        twoeditFile.write('CoordBase::boundary_size_x_upper = %s\n' % getVal(data, 'boundary_size_x_upper', case))
+        twoeditFile.write('CoordBase::boundary_size_y_lower = %s\n' % getVal(data, 'boundary_size_y_lower', case))
+        twoeditFile.write('CoordBase::boundary_size_y_upper = %s\n' % getVal(data, 'boundary_size_y_upper', case))
+        twoeditFile.write('CoordBase::boundary_size_z_lower = %s\n' % getVal(data, 'boundary_size_z_lower', case))
+        twoeditFile.write('CoordBase::boundary_size_z_upper = %s\n' % getVal(data, 'boundary_size_z_upper', case))
 
         twoeditFile.write('\n')
 
@@ -248,7 +258,7 @@ for case in cases:
     resArray = getVal(data, 'nzpt')
     for res in resArray:
         newParFileName = os.path.join(os.getcwd(), simname +'/manybh' + case + '_' + simname + '_' + res + '.par')
-        simulationDir='/manybh'+case+'_'+simname+'_'+res
+        simulationDir='manybh'+case+'_'+simname+'_'+res
         inputFileName='/manybh'+case+'_'+simname+'_'+res+'.par'
         outputFileName='/manybh'+case+'_'+simname+'_'+res+'.out'
         # copy file with the new name
