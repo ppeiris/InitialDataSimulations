@@ -131,8 +131,7 @@ for case in cases:
     runScript.write("# Twopunch " + case + " simulations\n")
     runScript.write("# =====================================\n")
     twopunch_resArr = getVal(data, 'twopunch_res')
-
-    if not type(twopunch_resArr) is 'list':
+    if not type(twopunch_resArr) is list:
         twopunch_resArr = [twopunch_resArr]
     exename = getVal(data, 'exename')
     for tres in twopunch_resArr:
