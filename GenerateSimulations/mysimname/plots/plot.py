@@ -92,10 +92,12 @@ for case in caseArr:
     az = figz.add_subplot(111)
     az.grid(True)   
 
+
     for manybhDir in manybhDirArr:
 	#Create all the file Names 
-	if(manybhDir[6:manybhDir.find('_')]==case):
 
+        print(manybhDir[6:manybhDir.find('_')])
+	if(manybhDir[6:manybhDir.find('_')]==case):
             if(case=='near'):
                 d_label_loc=near_d_label_loc_manybh
                 x_label_loc=near_x_label_loc_manybh
@@ -112,10 +114,16 @@ for case in caseArr:
                 y_label_loc=far_y_label_loc_manybh
                 z_label_loc=far_z_label_loc_manybh
                 
+            print('I am here')
+            exit()
 	    dataFiled='../'+manybhDir+'/admconstraints::hamiltonian.d.asc'
 	    dataFilex='../'+manybhDir+'/admconstraints::hamiltonian.x.asc'
 	    dataFiley='../'+manybhDir+'/admconstraints::hamiltonian.y.asc'
 	    dataFilez='../'+manybhDir+'/admconstraints::hamiltonian.z.asc'
+            
+            print('I am in  here ') 
+            print(dataFiled)
+            exit()
 
 	    datad=np.loadtxt(dataFiled)
 	    datax=np.loadtxt(dataFilex)
