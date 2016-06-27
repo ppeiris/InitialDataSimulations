@@ -1,3 +1,6 @@
+# Sim Name 
+simname=2bh_test
+# Blobal Vars
 name=2bh_noS_PinY_DifRes
 exename=manybhexe
 nzpt=12x13x17,16x17x25,24x25x33,32x33x41

@@ -13,8 +13,8 @@
 
 Cactus version:    4.3.0
 Compile date:      Jun 22 2016 (17:16:26)
-Run date:          Jun 26 2016 (19:25:57+0000)
-Run host:          127.0.0.1ip-172-30-0-219 (pid=6852)
+Run date:          Jun 27 2016 (00:59:30+0000)
+Run host:          127.0.0.1ip-172-30-0-219 (pid=8128)
 Working directory: /home/admin/simulations/GenerateSimulations/mysimname
 Executable:        ./manybhexe_puncpow
 Parameter file:    /home/admin/simulations/GenerateSimulations/mysimname/manybhnear_mysimname_12x13x17.par
@@ -728,8 +728,9 @@ INFO (Carpet): Multi-Model process distribution:
 INFO (Carpet): Multi-Model: This is process 0, model 0 "world"
 Current core file size limit: hard=[unlimited], soft=0 MB
 Current memory size limit: hard=[unlimited], soft=[unlimited]
+manybhexe_puncpow: /home/admin/Cactus/configs/bbhcode/build/CarpetLib/gh.cc:69: gh::gh(const std::vector<vect<int, 3> >&, centering, int, centering, const std::vector<std::vector<bbox<int, 3> > >&, const i2vect&): Assertion `all (box.shape() / box.stride() >= boundary_width[0] + boundary_width[1])' failed.
 INFO (CycleClock): Measuring CycleClock tick via gettimeofday...
-INFO (CycleClock): Calibrated CycleClock: 0.416741 ns per clock tick (2.39957 GHz)
+INFO (CycleClock): Calibrated CycleClock: 0.416661 ns per clock tick (2.40003 GHz)
 INFO (Vectors): Using vector size 1 for architecture scalar (no vectorisation, 64-bit precision)
 --------------------------------------------------------------------------------
 AMR driver provided by Carpet
@@ -765,7 +766,7 @@ INFO (Carpet): MPI is enabled
 INFO (Carpet): Carpet is running on 1 processes
 INFO (Carpet): This is process 0
 INFO (Carpet): OpenMP is disabled
-INFO (Carpet): This process runs on host 127.0.0.1ip-172-30-0-219, pid=6852
+INFO (Carpet): This process runs on host 127.0.0.1ip-172-30-0-219, pid=8128
 INFO (Carpet): This process runs on 4 cores: 0-3
 INFO (Carpet): Thread 0 runs on 4 cores: 0-3
 INFO (Carpet): This simulation is running in 3 dimensions
@@ -791,3 +792,5 @@ INFO (Carpet): Adapted domain specification for map 0:
 INFO (Carpet): Base grid specification for map 0:
    number of grid points             : [41,5,5]
    number of coarse grid ghost points: [[3,3,3],[3,3,3]]
+Rank 0 with PID 8128 received signal 6
+Writing backtrace to manybhnear_mysimname_12x13x17/backtrace.0.txt

@@ -33,4 +33,3 @@ nohup ./manybhexe_puncpow $SIM_PATH/manybhfar_mysimname_12x13x17.par > $SIM_PATH
 END=$(date +%s)
 echo "Simulation ManyBHfar_mysimname_12x13x17 end at "`date -u` >> SimulationStatus.out
 
-echo "Done!" >> SimulationStatus.out
