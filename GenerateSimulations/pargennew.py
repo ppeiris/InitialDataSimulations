@@ -37,12 +37,17 @@ def updatedf(data, key, col, val):
 
 # get cell value from the df
 def getVal(df, key, col='global'):
-    val = df[df.variables == key][col].values[0]
-    val = val.split(',')
-    if len(val) == 1:
-        return val[0]
-    return val
-
+    try:
+        val = df[df.variables == key][col].values[0]
+        val = val.split(',')
+        if len(val) == 1:
+            return val[0]
+        return val
+    except IndexError:
+        return False
+    except Exception, e:
+        print(str(e))
+        sys.exit()
 
 VERSION = '1.0'
 USAGE = '%prog [-h | --help] [--version][-f | --file]'
@@ -131,130 +136,149 @@ for case in cases:
     runScript.write("# Twopunch " + case + " simulations\n")
     runScript.write("# =====================================\n")
     twopunch_resArr = getVal(data, 'twopunch_res')
-    if not type(twopunch_resArr) is list:
-        twopunch_resArr = [twopunch_resArr]
     exename = getVal(data, 'exename')
-    for tres in twopunch_resArr:
-        newtwoParFileName = os.path.join(os.getcwd(), simname, 'twopun' + case + '_' + simname + '_' + tres + '.par')
-        inputFileName = '/twopun' + case + '_' + simname + '_' + tres + '.par'
-        simulationDir = 'twopun' + case + '_' + simname + '_' + tres
-        outputFileName = '/twopun' + case + '_' + simname + '_' + tres + '.out'
-        sh.copy(twopParFileName, newtwoParFileName)
-        twoeditFile = open(newtwoParFileName, 'a+')
+    nbh = getVal(data, 'nbh')
+    xbh = getVal(data, 'xbh')
+    if not type(xbh) is list:
+        xbh = [xbh]
 
-        if (twopunDirlist):
-            twopunDirlist+=',\''+simulationDir+'\''
-        else:
-            twopunDirlist+='\''+simulationDir+'\''
+    pbh = getVal(data, 'pbh')
+    if not type(pbh) is list:
+        pbh = [pbh]
 
-        # print inputFileName
-        runScript.write("START=$(date +%s)\n")
-        runScript.write("echo \"Simulation twopun"+case+"_"+simname+"_"+tres+" start at \"`date -u` >> SimulationStatus.out\n")
-        runScript.write("echo \"Still working on ...\" >> SimulationStatus.out\n")
-        runScript.write("nohup ./"+exename+" $SIM_PATH"+inputFileName+" > $SIM_PATH"+outputFileName+"\n")
-        runScript.write("END=$(date +%s)\n")
-        runScript.write("echo \"Simulation twopun"+case+"_"+simname+"_"+tres+" end at \"`date -u` >> SimulationStatus.out\n")
-        #runScript.write("echo \"Simulation took\" $(($END-$START)) \"seconds\" >> SimulationStatus.out\n")
-        runScript.write("\n")
+    sbh = getVal(data, 'sbh')
+    if not type(sbh) is list:
+        sbh = [sbh]
 
-        # fill the grid info
-        twoeditFile.write('\n')
-        twoeditFile.write("#--------------------------------------------------------------------------------------- \n")
-        twoeditFile.write("# Grid Parameters:\n")
-        twoeditFile.write("#--------------------------------------------------------------------------------------- \n")
+    resArray = getVal(data, 'nzpt')
 
-        twoeditFile.write('\n')
+    if twopunch_resArr:
+        print(twopunch_resArr)
+        if not type(twopunch_resArr) is list:
+            twopunch_resArr = [twopunch_resArr]
 
-        twoeditFile.write('grid::type       = \"%s\"\n' % getVal(data, 'type', case))
-        twoeditFile.write('grid::domain     = \"%s\"\n' % getVal(data, 'domain', case))
-        twoeditFile.write('grid::dxyz       = %s\n' % getVal(data, 'dxyz', case))
-        twoeditFile.write('grid::xmin       = %s\n' % getVal(data, 'xmin', case))
-        twoeditFile.write('grid::ymin       = %s\n' % getVal(data, 'ymin', case))
-        twoeditFile.write('grid::zmin       = %s\n' % getVal(data, 'zmin', case))
-        twoeditFile.write('grid::xmax       = %s\n' % getVal(data, 'xmax', case))
-        twoeditFile.write('grid::ymax       = %s\n' % getVal(data, 'ymax', case))
-        twoeditFile.write('grid::zmax       = %s\n' % getVal(data, 'zmax', case))
+        for tres in twopunch_resArr:
+            newtwoParFileName = os.path.join(os.getcwd(), simname, 'twopun' + case + '_' + simname + '_' + tres + '.par')
+            inputFileName = '/twopun' + case + '_' + simname + '_' + tres + '.par'
+            simulationDir = 'twopun' + case + '_' + simname + '_' + tres
+            outputFileName = '/twopun' + case + '_' + simname + '_' + tres + '.out'
+            sh.copy(twopParFileName, newtwoParFileName)
+            twoeditFile = open(newtwoParFileName, 'a+')
 
-        twoeditFile.write('\n')
+            if (twopunDirlist):
+                twopunDirlist+=',\''+simulationDir+'\''
+            else:
+                twopunDirlist+='\''+simulationDir+'\''
 
-        twoeditFile.write('driver::global_nx    = %s\n' % getVal(data, 'global_nx', case))
-        twoeditFile.write('driver::global_ny    = %s\n' % getVal(data, 'global_ny', case))
-        twoeditFile.write('driver::global_nz    = %s\n' % getVal(data, 'global_nz', case))
-        twoeditFile.write('driver::ghost_size   = %s\n' % getVal(data, 'ghost_size', case))
+            # print inputFileName
+            runScript.write("START=$(date +%s)\n")
+            runScript.write("echo \"Simulation twopun"+case+"_"+simname+"_"+tres+" start at \"`date -u` >> SimulationStatus.out\n")
+            runScript.write("echo \"Still working on ...\" >> SimulationStatus.out\n")
+            runScript.write("nohup ./"+exename+" $SIM_PATH"+inputFileName+" > $SIM_PATH"+outputFileName+"\n")
+            runScript.write("END=$(date +%s)\n")
+            runScript.write("echo \"Simulation twopun"+case+"_"+simname+"_"+tres+" end at \"`date -u` >> SimulationStatus.out\n")
+            #runScript.write("echo \"Simulation took\" $(($END-$START)) \"seconds\" >> SimulationStatus.out\n")
+            runScript.write("\n")
 
-        twoeditFile.write('\n')
+            # fill the grid info
+            twoeditFile.write('\n')
+            twoeditFile.write("#--------------------------------------------------------------------------------------- \n")
+            twoeditFile.write("# Grid Parameters:\n")
+            twoeditFile.write("#--------------------------------------------------------------------------------------- \n")
 
-        twoeditFile.write('CoordBase::boundary_size_x_lower = %s\n' % getVal(data, 'boundary_size_x_lower', case))
-        twoeditFile.write('CoordBase::boundary_size_x_upper = %s\n' % getVal(data, 'boundary_size_x_upper', case))
-        twoeditFile.write('CoordBase::boundary_size_y_lower = %s\n' % getVal(data, 'boundary_size_y_lower', case))
-        twoeditFile.write('CoordBase::boundary_size_y_upper = %s\n' % getVal(data, 'boundary_size_y_upper', case))
-        twoeditFile.write('CoordBase::boundary_size_z_lower = %s\n' % getVal(data, 'boundary_size_z_lower', case))
-        twoeditFile.write('CoordBase::boundary_size_z_upper = %s\n' % getVal(data, 'boundary_size_z_upper', case))
+            twoeditFile.write('\n')
 
-        twoeditFile.write('\n')
+            twoeditFile.write('grid::type       = \"%s\"\n' % getVal(data, 'type', case))
+            twoeditFile.write('grid::domain     = \"%s\"\n' % getVal(data, 'domain', case))
+            twoeditFile.write('grid::dxyz       = %s\n' % getVal(data, 'dxyz', case))
+            twoeditFile.write('grid::xmin       = %s\n' % getVal(data, 'xmin', case))
+            twoeditFile.write('grid::ymin       = %s\n' % getVal(data, 'ymin', case))
+            twoeditFile.write('grid::zmin       = %s\n' % getVal(data, 'zmin', case))
+            twoeditFile.write('grid::xmax       = %s\n' % getVal(data, 'xmax', case))
+            twoeditFile.write('grid::ymax       = %s\n' % getVal(data, 'ymax', case))
+            twoeditFile.write('grid::zmax       = %s\n' % getVal(data, 'zmax', case))
 
-        twoeditFile.write('IOASCII::out1D_xline_y = %s\n' % getVal(data, 'out1D_xline_y', case))
-        twoeditFile.write('IOASCII::out1D_xline_z = %s\n' % getVal(data, 'out1D_xline_z', case))
-        twoeditFile.write('\n')
-        twoeditFile.write('IOASCII::out1D_yline_x = %s\n' % getVal(data, 'out1D_yline_x', case))
-        twoeditFile.write('IOASCII::out1D_yline_z = %s\n' % getVal(data, 'out1D_yline_z', case))
-        twoeditFile.write('\n')
-        twoeditFile.write('IOASCII::out1D_zline_x = %s\n' % getVal(data, 'out1D_zline_x', case))
-        twoeditFile.write('IOASCII::out1D_zline_y = %s\n' % getVal(data, 'out1D_zline_y', case))
+            twoeditFile.write('\n')
 
-        twoeditFile.write('\n')
+            twoeditFile.write('driver::global_nx    = %s\n' % getVal(data, 'global_nx', case))
+            twoeditFile.write('driver::global_ny    = %s\n' % getVal(data, 'global_ny', case))
+            twoeditFile.write('driver::global_nz    = %s\n' % getVal(data, 'global_nz', case))
+            twoeditFile.write('driver::ghost_size   = %s\n' % getVal(data, 'ghost_size', case))
 
-        twoeditFile.write("#--------------------------------------------------------------------------------------- \n")
-        twoeditFile.write("# ManyBH Parameters:\n")
-        twoeditFile.write("#--------------------------------------------------------------------------------------- \n")
+            twoeditFile.write('\n')
 
-        twoeditFile.write("twopunctures :: verbose=\"yes\"\n")
-        twoeditFile.write("twopunctures :: grid_setup_method = \"evaluation\"\n")
-        twoeditFile.write("twopunctures :: npoints_A = %s\n" % tres)
-        twoeditFile.write("twopunctures :: npoints_B = %s\n" % tres)
-        twoeditFile.write("twopunctures :: npoints_phi = %s\n" % tres)
+            twoeditFile.write('CoordBase::boundary_size_x_lower = %s\n' % getVal(data, 'boundary_size_x_lower', case))
+            twoeditFile.write('CoordBase::boundary_size_x_upper = %s\n' % getVal(data, 'boundary_size_x_upper', case))
+            twoeditFile.write('CoordBase::boundary_size_y_lower = %s\n' % getVal(data, 'boundary_size_y_lower', case))
+            twoeditFile.write('CoordBase::boundary_size_y_upper = %s\n' % getVal(data, 'boundary_size_y_upper', case))
+            twoeditFile.write('CoordBase::boundary_size_z_lower = %s\n' % getVal(data, 'boundary_size_z_lower', case))
+            twoeditFile.write('CoordBase::boundary_size_z_upper = %s\n' % getVal(data, 'boundary_size_z_upper', case))
 
-        nbh = getVal(data, 'nbh')
-        if (int(nbh) == 2):
-            twoeditFile.write("twopunctures :: par_m_plus = %s\n" % mbh[0])
-            twoeditFile.write("twopunctures :: par_m_minus = %s\n" % mbh[1])
-        elif(int(nbh) == 1):
-            twoeditFile.write("twopunctures :: par_m_plus = %s\n" % mbh[0])
+            twoeditFile.write('\n')
 
-        xbh = getVal(data, 'xbh')
-        pbh = getVal(data, 'pbh')
-        sbh = getVal(data, 'sbh')
-        xbhval = xbh[0].split('x')
-        twoeditFile.write("twopunctures :: par_b = %s\n"% xbhval[0])
+            twoeditFile.write('IOASCII::out1D_xline_y = %s\n' % getVal(data, 'out1D_xline_y', case))
+            twoeditFile.write('IOASCII::out1D_xline_z = %s\n' % getVal(data, 'out1D_xline_z', case))
+            twoeditFile.write('\n')
+            twoeditFile.write('IOASCII::out1D_yline_x = %s\n' % getVal(data, 'out1D_yline_x', case))
+            twoeditFile.write('IOASCII::out1D_yline_z = %s\n' % getVal(data, 'out1D_yline_z', case))
+            twoeditFile.write('\n')
+            twoeditFile.write('IOASCII::out1D_zline_x = %s\n' % getVal(data, 'out1D_zline_x', case))
+            twoeditFile.write('IOASCII::out1D_zline_y = %s\n' % getVal(data, 'out1D_zline_y', case))
 
-        for i in range(0, int(nbh)):
-            pbhval = pbh[i].split('x')
-            sbhval = sbh[i].split('x')
-            if(i == 0):
-                twoeditFile.write('\n')
-                twoeditFile.write("twopunctures :: par_P_plus[0] = %s\n" % pbhval[0])
-                twoeditFile.write("twopunctures :: par_P_plus[1] = %s\n" % pbhval[1])
-                twoeditFile.write("twopunctures :: par_P_plus[2] = %s\n" % pbhval[2])
-            elif(i == 1):
-                twoeditFile.write('\n')
-                twoeditFile.write("twopunctures :: par_P_minus[0] = %s\n" % pbhval[0])
-                twoeditFile.write("twopunctures :: par_P_minus[1] = %s\n" % pbhval[1])
-                twoeditFile.write("twopunctures :: par_P_minus[2] = %s\n" % pbhval[2])
-            if(i == 0):
-                twoeditFile.write('\n')
-                twoeditFile.write("twopunctures :: par_S_plus[0] = %s\n" % sbhval[0])
-                twoeditFile.write("twopunctures :: par_S_plus[1] = %s\n" % sbhval[1])
-                twoeditFile.write("twopunctures :: par_S_plus[2] = %s\n" % sbhval[2])
-            elif(i == 1):
-                twoeditFile.write('\n')
-                twoeditFile.write("twopunctures :: par_S_minus[0] = %s\n" % sbhval[0])
-                twoeditFile.write("twopunctures :: par_S_minus[1] = %s\n" % sbhval[1])
-                twoeditFile.write("twopunctures :: par_S_minus[2] = %s\n" % sbhval[2])
+            twoeditFile.write('\n')
+
+            twoeditFile.write("#--------------------------------------------------------------------------------------- \n")
+            twoeditFile.write("# ManyBH Parameters:\n")
+            twoeditFile.write("#--------------------------------------------------------------------------------------- \n")
+
+            twoeditFile.write("twopunctures :: verbose=\"yes\"\n")
+            twoeditFile.write("twopunctures :: grid_setup_method = \"evaluation\"\n")
+            twoeditFile.write("twopunctures :: npoints_A = %s\n" % tres)
+            twoeditFile.write("twopunctures :: npoints_B = %s\n" % tres)
+            twoeditFile.write("twopunctures :: npoints_phi = %s\n" % tres)
+
+
+            if (int(nbh) == 2):
+                twoeditFile.write("twopunctures :: par_m_plus = %s\n" % mbh[0])
+                twoeditFile.write("twopunctures :: par_m_minus = %s\n" % mbh[1])
+            elif(int(nbh) == 1):
+                twoeditFile.write("twopunctures :: par_m_plus = %s\n" % mbh[0])
+
+
+            xbhval = xbh[0].split('x')
+            twoeditFile.write("twopunctures :: par_b = %s\n"% xbhval[0])
+
+            for i in range(0, int(nbh)):
+                pbhval = pbh[i].split('x')
+                sbhval = sbh[i].split('x')
+                if(i == 0):
+                    twoeditFile.write('\n')
+                    twoeditFile.write("twopunctures :: par_P_plus[0] = %s\n" % pbhval[0])
+                    twoeditFile.write("twopunctures :: par_P_plus[1] = %s\n" % pbhval[1])
+                    twoeditFile.write("twopunctures :: par_P_plus[2] = %s\n" % pbhval[2])
+                elif(i == 1):
+                    twoeditFile.write('\n')
+                    twoeditFile.write("twopunctures :: par_P_minus[0] = %s\n" % pbhval[0])
+                    twoeditFile.write("twopunctures :: par_P_minus[1] = %s\n" % pbhval[1])
+                    twoeditFile.write("twopunctures :: par_P_minus[2] = %s\n" % pbhval[2])
+                if(i == 0):
+                    twoeditFile.write('\n')
+                    twoeditFile.write("twopunctures :: par_S_plus[0] = %s\n" % sbhval[0])
+                    twoeditFile.write("twopunctures :: par_S_plus[1] = %s\n" % sbhval[1])
+                    twoeditFile.write("twopunctures :: par_S_plus[2] = %s\n" % sbhval[2])
+                elif(i == 1):
+                    twoeditFile.write('\n')
+                    twoeditFile.write("twopunctures :: par_S_minus[0] = %s\n" % sbhval[0])
+                    twoeditFile.write("twopunctures :: par_S_minus[1] = %s\n" % sbhval[1])
+                    twoeditFile.write("twopunctures :: par_S_minus[2] = %s\n" % sbhval[2])
+    else:
+        print("Skipping Twopunch...")
+
 
     # ManyBH Simulation par files
     runScript.write("# ManyBH " + case + " simulation\n")
     runScript.write("# ==================================\n")
-    resArray = getVal(data, 'nzpt')
+
     for res in resArray:
         newParFileName = os.path.join(os.getcwd(), simname +'/manybh' + case + '_' + simname + '_' + res + '.par')
         simulationDir='manybh'+case+'_'+simname+'_'+res
@@ -355,6 +379,7 @@ for case in cases:
         editFile.write("\n")
 
         for i in range(0,int(nbh)):
+
             editFile.write("\n")
             editFile.write("ManyBH :: mbh[%s] = %s\n" % (i, mbh[i]))
 
@@ -375,7 +400,8 @@ for case in cases:
 
 runScript.write("echo \"Done!\" >> SimulationStatus.out")
 editFile.close()
-twoeditFile.close()
+if 'twoeditFile' in globals():
+    twoeditFile.close()
 runScript.close()
 
 twopunDirlist='twopunDirArr=['+twopunDirlist+']'
