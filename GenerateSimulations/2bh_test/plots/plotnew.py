@@ -1,5 +1,7 @@
 import numpy as np
 import scipy as sp
+import matplotlib
+matplotlib.use('agg')
 import matplotlib.pyplot as plt
 import pandas as pd
 pd.set_option('display.precision', 30)
