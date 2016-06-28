@@ -12,6 +12,11 @@ import sys
 import optparse
 import pandas as pd
 
+pd.set_option('display.height', 1000)
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.width', 1000)
+
 # update new values in in the default value set
 def updatedf(data, key, col, val):
 
@@ -84,9 +89,17 @@ for key in list(udata.columns):
 
     data = updatedf(data, nkey, col, udata[key]['val'])
 
+print("Simulation Parameters")
+print('--------------------------------------------------------------------------------------------------------')
+print(data.sort(columns=['global']))
+print('--------------------------------------------------------------------------------------------------------')
+
+con = str(raw_input('These are the parameters for this simulation, Continue ? [y/n]')).lower().strip()
+if con != 'y':
+    print('Abort.')
+    sys.exit()
 
 # Build the dir for the par file
-
 if data[data.variables == 'simname'].empty:
     print("Please define a simname varibale in your data file with the simulation name")
     sys.exit()
@@ -153,7 +166,6 @@ for case in cases:
     resArray = getVal(data, 'nzpt')
 
     if twopunch_resArr:
-        print(twopunch_resArr)
         if not type(twopunch_resArr) is list:
             twopunch_resArr = [twopunch_resArr]
 
