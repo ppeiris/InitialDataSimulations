@@ -7,11 +7,22 @@ axisArr=['d','x','y','z']
 caseArr=['near','mid','far']
 hamiltonian_colnames = ['it','tl','rl','c','ml','ix','iy','iz','time','x','y','z','data']
 
-# Following 3 lines will be replaced by another python script according to the simulation parameters, Please do not change them manually
+#========================================================================================================================================
+#Following 3 lines will be replaced by another python script according to the simulation parameters, Please do not change them manually
 
-[==manybhDirArr==]
-[==twopunDirArr==]
-[==simname==]
+# [==manybhDirArr==]
+# [==twopunDirArr==]
+# [==simname==]
+
+manybhDirArr=['manybhnear_2bh_test_12x13x17','manybhnear_2bh_test_16x17x25','manybhnear_2bh_test_24x25x33','manybhnear_2bh_test_32x33x41','manybhmid_2bh_test_12x13x17','manybhmid_2bh_test_16x17x25','manybhmid_2bh_test_24x25x33','manybhmid_2bh_test_32x33x41','manybhfar_2bh_test_12x13x17','manybhfar_2bh_test_16x17x25','manybhfar_2bh_test_24x25x33','manybhfar_2bh_test_32x33x41']
+
+
+twopunDirArr=['twopunnear_2bh_test_20','twopunnear_2bh_test_30','twopunnear_2bh_test_40','twopunmid_2bh_test_20','twopunmid_2bh_test_30','twopunmid_2bh_test_40','twopunfar_2bh_test_20','twopunfar_2bh_test_30','twopunfar_2bh_test_40']
+
+
+simname='2bh_test'
+
+
 
 # Legend locations
 legend_ncol = 3
@@ -165,21 +176,21 @@ for case in caseArr:
     #Loop through twopun simulation files
     for twopunDir in twopunDirArr:
         if(twopunDir[6:twopunDir.find('_')]==case):
-            if(case == 'near'):
-                d_label_loc = near_d_label_loc_twopun
-                x_label_loc = near_x_label_loc_twopun
-                y_label_loc = near_y_label_loc_twopun
-                z_label_loc = near_z_label_loc_twopun
-            elif(case == 'mid'):
-                d_label_loc = mid_d_label_loc_twopun
-                x_label_loc = mid_x_label_loc_twopun
-                y_label_loc = mid_y_label_loc_twopun
-                z_label_loc = mid_z_label_loc_twopun
-            elif(case == 'far'):
-                d_label_loc = far_d_label_loc_twopun
-                x_label_loc = far_x_label_loc_twopun
-                y_label_loc = far_y_label_loc_twopun
-                z_label_loc = far_z_label_loc_twopun
+            if(case=='near'):
+                d_label_loc=near_d_label_loc_twopun
+                x_label_loc=near_x_label_loc_twopun
+                y_label_loc=near_y_label_loc_twopun
+                z_label_loc=near_z_label_loc_twopun
+            elif(case=='mid'):
+                d_label_loc=mid_d_label_loc_twopun
+                x_label_loc=mid_x_label_loc_twopun
+                y_label_loc=mid_y_label_loc_twopun
+                z_label_loc=mid_z_label_loc_twopun
+            elif(case=='far'):
+                d_label_loc=far_d_label_loc_twopun
+                x_label_loc=far_x_label_loc_twopun
+                y_label_loc=far_y_label_loc_twopun
+                z_label_loc=far_z_label_loc_twopun
 
 
         tdataFiled='../'+twopunDir+'/admconstraints-hamiltonian.d.asc'
@@ -250,6 +261,8 @@ for case in caseArr:
     ax.set_ylim(ymin,ymax)
     tax.set_ylim(ymin,ymax)
 
+
+
     #Fix the ylimits for y-plots
     ylimarray_m=ay.get_ylim()
     ylimarray_t=tay.get_ylim()
@@ -263,6 +276,7 @@ for case in caseArr:
 
     ay.set_ylim(ymin,ymax)
     tay.set_ylim(ymin,ymax)
+
 
     #Fix the ylimits for z-plots
     ylimarray_m=az.get_ylim()
