@@ -9,15 +9,20 @@ axisArr=['d','x','y','z']
 caseArr=['near','mid','far']
 hamiltonian_colnames = ['it','tl','rl','c','ml','ix','iy','iz','time','x','y','z','data']
 
-# Following 3 lines will be replaced by another python script according to the simulation parameters, Please do not change them manually
-
-[==manybhDirArr==]
-[==twopunDirArr==]
-[==simname==]
-
-
 plotFormat = '.png'
 # plotFormat = '.eps'
+
+
+# Following 3 lines will be replaced by another python script according to the simulation parameters, Please do not change them manually
+
+manybhDirArr=['manybhnear_One_BH_12x13x17','manybhnear_One_BH_16x17x25','manybhnear_One_BH_24x25x33','manybhnear_One_BH_32x33x41','manybhmid_One_BH_12x13x17','manybhmid_One_BH_16x17x25','manybhmid_One_BH_24x25x33','manybhmid_One_BH_32x33x41','manybhfar_One_BH_12x13x17','manybhfar_One_BH_16x17x25','manybhfar_One_BH_24x25x33','manybhfar_One_BH_32x33x41']
+
+
+twopunDirArr=['twopunnear_One_BH_20','twopunnear_One_BH_30','twopunnear_One_BH_40','twopunmid_One_BH_20','twopunmid_One_BH_30','twopunmid_One_BH_40','twopunfar_One_BH_20','twopunfar_One_BH_30','twopunfar_One_BH_40']
+
+
+simname='One_BH'
+
 
 
 # Legend locations
@@ -309,14 +314,13 @@ for case in caseArr:
     taz.set_xlabel('z')
     taz.set_ylabel('log(H)')
 
-    figd.savefig((case + '_d_manybh_' + simname + plotFormat), bbox_inches= 'tight')
-    figx.savefig((case + '_x_manybh_' + simname + plotFormat), bbox_inches= 'tight')
-    figy.savefig((case + '_y_manybh_' + simname + plotFormat), bbox_inches= 'tight')
-    figz.savefig((case + '_z_manybh_' + simname + plotFormat), bbox_inches= 'tight')
+    figd.savefig((case + '_d_manybh_' + simname + plotFormat),bbox_inches='tight')
+    figx.savefig((case + '_x_manybh_' + simname + plotFormat),bbox_inches='tight')
+    figy.savefig((case + '_y_manybh_' + simname + plotFormat),bbox_inches='tight')
+    figz.savefig((case + '_z_manybh_' + simname + plotFormat),bbox_inches='tight')
 
-    tfigd.savefig((case + '_d_twopun_' + simname + plotFormat), bbox_inches= 'tight')
-    tfigx.savefig((case + '_x_twopun_' + simname + plotFormat), bbox_inches= 'tight')
-    tfigy.savefig((case + '_y_twopun_' + simname + plotFormat), bbox_inches= 'tight')
-    tfigz.savefig((case + '_z_twopun_' + simname + plotFormat), bbox_inches= 'tight')
-
+    tfigd.savefig((case + '_d_twopun_' + simname + plotFormat),bbox_inches='tight')
+    tfigx.savefig((case + '_x_twopun_' + simname + plotFormat),bbox_inches='tight')
+    tfigy.savefig((case + '_y_twopun_' + simname + plotFormat),bbox_inches='tight')
+    tfigz.savefig((case + '_z_twopun_' + simname + plotFormat),bbox_inches='tight')
     plt.close('all')

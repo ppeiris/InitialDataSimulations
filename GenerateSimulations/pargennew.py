@@ -17,6 +17,9 @@ pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 
+BASEPATH = os.path.dirname(os.path.realpath(__file__))
+defaultData = os.path.join(BASEPATH, 'paroriginal/initdata.csv')
+
 # update new values in in the default value set
 def updatedf(data, key, col, val):
 
@@ -72,7 +75,7 @@ if (options.file is None) or (not os.path.exists(options.file)):
 datafile = os.path.join(os.getcwd(), options.file)
 
 # Load the default values
-data = pd.read_csv('initdata.csv', sep='\t', dtype=object)
+data = pd.read_csv(defaultData, sep='\t', dtype=object)
 # Load the data file in to dataframe
 udata = pd.read_table(datafile, sep='\=', engine='python', comment='#', index_col='var')
 tudata = udata
@@ -91,7 +94,7 @@ for key in list(udata.columns):
 
 print("Simulation Parameters")
 print('--------------------------------------------------------------------------------------------------------')
-print(data.sort(columns=['global']))
+print(data.sort_values(by=['global']))
 print('--------------------------------------------------------------------------------------------------------')
 
 con = str(raw_input('These are the parameters for this simulation, Continue ? [y/n]')).lower().strip()
@@ -128,7 +131,7 @@ runScript.write("echo \"Simulation start at \" `date -u` >> SimulationStatus.out
 runScript.write("\n\n")
 runScript.write("echo \"Simulations start\"\n")
 # Plotting Script
-plotScriptName = os.path.join(os.getcwd(), 'paroriginal/plot.py')
+plotScriptName = os.path.join(BASEPATH, 'paroriginal/plot.py')
 sh.copy(plotScriptName, simname + '/plots/')
 newPlotScriptName = os.path.join(os.getcwd(), simname + '/plots/plot.py')
 PlotScript=open(newPlotScriptName,'a+')
@@ -140,8 +143,8 @@ manybhDirlist = ''
 mbh = getVal(data, 'mbh')
 for case in cases:
     #Read the par file
-    ParFileName = os.path.join(os.getcwd(), 'paroriginal/manybh' + case + '.par')
-    twopParFileName = os.path.join(os.getcwd(), 'paroriginal/twopunc' + case + '.par')
+    ParFileName = os.path.join(BASEPATH, 'paroriginal/manybh' + case + '.par')
+    twopParFileName = os.path.join(BASEPATH, 'paroriginal/twopunc' + case + '.par')
     oParfile = open(ParFileName,'r')
     otwopParfile = open(twopParFileName,'r')
 

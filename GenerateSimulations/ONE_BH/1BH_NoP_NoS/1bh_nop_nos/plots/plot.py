@@ -11,9 +11,15 @@ hamiltonian_colnames = ['it','tl','rl','c','ml','ix','iy','iz','time','x','y','z
 
 # Following 3 lines will be replaced by another python script according to the simulation parameters, Please do not change them manually
 
-[==manybhDirArr==]
-[==twopunDirArr==]
-[==simname==]
+manybhDirArr=['manybhnear_1bh_nop_nos_12x13x17','manybhnear_1bh_nop_nos_16x17x25','manybhnear_1bh_nop_nos_24x25x33','manybhnear_1bh_nop_nos_32x33x41','manybhnear_1bh_nop_nos_40x41x49','manybhmid_1bh_nop_nos_12x13x17','manybhmid_1bh_nop_nos_16x17x25','manybhmid_1bh_nop_nos_24x25x33','manybhmid_1bh_nop_nos_32x33x41','manybhmid_1bh_nop_nos_40x41x49','manybhfar_1bh_nop_nos_12x13x17','manybhfar_1bh_nop_nos_16x17x25','manybhfar_1bh_nop_nos_24x25x33','manybhfar_1bh_nop_nos_32x33x41','manybhfar_1bh_nop_nos_40x41x49']
+
+
+twopunDirArr=['twopunnear_1bh_nop_nos_20','twopunnear_1bh_nop_nos_30','twopunnear_1bh_nop_nos_40','twopunmid_1bh_nop_nos_20','twopunmid_1bh_nop_nos_30','twopunmid_1bh_nop_nos_40','twopunfar_1bh_nop_nos_20','twopunfar_1bh_nop_nos_30','twopunfar_1bh_nop_nos_40']
+
+
+simname='1bh_nop_nos'
+
+
 
 
 plotFormat = '.png'
