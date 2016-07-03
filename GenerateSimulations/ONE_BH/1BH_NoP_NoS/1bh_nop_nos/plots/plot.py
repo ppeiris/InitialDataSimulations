@@ -4,11 +4,13 @@ import matplotlib
 matplotlib.use('agg')
 import matplotlib.pyplot as plt
 import pandas as pd
+import os, sys
 pd.set_option('display.precision', 30)
 axisArr=['d','x','y','z']
 caseArr=['near','mid','far']
 hamiltonian_colnames = ['it','tl','rl','c','ml','ix','iy','iz','time','x','y','z','data']
-
+axislist = ['d', 'x', 'y', 'z']
+BASEPATH = os.path.dirname(os.path.realpath(__file__))
 # Following 3 lines will be replaced by another python script according to the simulation parameters, Please do not change them manually
 
 manybhDirArr=['manybhnear_1bh_nop_nos_12x13x17','manybhnear_1bh_nop_nos_16x17x25','manybhnear_1bh_nop_nos_24x25x33','manybhnear_1bh_nop_nos_32x33x41','manybhnear_1bh_nop_nos_40x41x49','manybhmid_1bh_nop_nos_12x13x17','manybhmid_1bh_nop_nos_16x17x25','manybhmid_1bh_nop_nos_24x25x33','manybhmid_1bh_nop_nos_32x33x41','manybhmid_1bh_nop_nos_40x41x49','manybhfar_1bh_nop_nos_12x13x17','manybhfar_1bh_nop_nos_16x17x25','manybhfar_1bh_nop_nos_24x25x33','manybhfar_1bh_nop_nos_32x33x41','manybhfar_1bh_nop_nos_40x41x49']
@@ -19,8 +21,7 @@ twopunDirArr=['twopunnear_1bh_nop_nos_20','twopunnear_1bh_nop_nos_30','twopunnea
 
 simname='1bh_nop_nos'
 
-
-
+simdir = {'manybh': manybhDirArr, 'twopun': twopunDirArr}
 
 plotFormat = '.png'
 # plotFormat = '.eps'
@@ -73,7 +74,103 @@ near_x_label_loc_twopun = loc['best']
 near_y_label_loc_twopun = loc['best']
 near_z_label_loc_twopun = loc['best']
 
+
+def buildGroupPlots(datadf, method):
+    print('Building Group Plots ...')
+    ai = {'x': 0, 'y': 1, 'z': 2}
+    for gname, gdata in datadf.groupby('zone'):
+        for axis in axislist:
+            fig = plt.figure()
+            ad = fig.add_subplot(111)
+            ad.grid(True)
+            for irow in gdata.index:
+                if axis in ['d']:
+                    axisVal = datadf.loc[irow][axis]['ml'].str.split(' ').apply(lambda x: x[0])
+                    dataVal = np.log10(np.abs(datadf.loc[irow][axis]['ix']))
+                else:
+                    axisVal = datadf.loc[irow][axis]['ix'].str.split(' ').apply(lambda x: x[ai[axis]])
+                    dataVal = np.log10(np.abs(datadf.loc[irow][axis]['iy']))
+                ad.plot(axisVal, dataVal, label=datadf.loc[irow]['res'])
+            ad.legend(loc=loc['best'], ncol=legend_ncol, prop={'size': legend_fontsize})
+            ad.set_xlabel(axis)
+            ad.set_ylabel('log(H)')
+            fig.savefig((gname + '/' + method + '_' + gname + '_' + axis + plotFormat), bbox_inches= 'tight')
+            plt.close('all')
+            # print('Plot %s' % (gname + '_' + axis + '.png'))
+        # print(gdata)
+
+def buildSinglePlosts(datadf):
+    # build individual plots
+    print('Building Individual Plots...')
+    ai = {'x': 0, 'y': 1, 'z': 2}
+    for irow in datadf.index:
+        for axis in axislist:
+            if not datadf.loc[irow][axis].empty:
+                fig = plt.figure()
+                ad = fig.add_subplot(111)
+                ad.grid(True)
+
+                if axis in ['d']:
+                    axisVal = datadf.loc[irow][axis]['ml'].str.split(' ').apply(lambda x: x[0])
+                    dataVal = np.log10(np.abs(datadf.loc[irow][axis]['ix']))
+                else:
+                    axisVal = datadf.loc[irow][axis]['ix'].str.split(' ').apply(lambda x: x[ai[axis]])
+                    dataVal = np.log10(np.abs(datadf.loc[irow][axis]['iy']))
+
+                ad.plot(axisVal, dataVal, label=datadf.loc[irow]['res'])
+                ad.legend(loc=loc['best'], ncol=legend_ncol, prop={'size': legend_fontsize})
+                ad.set_xlabel(axis)
+                ad.set_ylabel('log(H)')
+                fig.savefig((datadf.loc[irow]['zone'] + '/' + datadf.loc[irow]['dir'] + '_' + axis + plotFormat), bbox_inches= 'tight')
+                plt.close('all')
+                print('Plot %s' % (datadf.loc[irow]['dir'] + '_' + axis + plotFormat))
+            else:
+                print("Data set %s is empty" %(dataFiled))
+
+
+def buildPlots(method):
+    if not method in ['manybh', 'twopun']:
+        print('Error...')
+        return False
+
+    simdatadf = pd.DataFrame(simdir[method], columns=['dir'])
+    simdatadf['zone'] = simdatadf.dir.str.split('_').apply(lambda x: x[0][6:len(x[0])])
+    simdatadf['res'] = simdatadf.dir.str.split('_').apply(lambda x: x[-1])
+    simdatadf['d'] = None
+    simdatadf['x'] = None
+    simdatadf['y'] = None
+    simdatadf['z'] = None
+    print('Loading data for %s ...' % (method))
+    # Read all the data and store in simdatadf datat frame
+    for irow in simdatadf.index:
+        for axis in axislist:
+            datapath = '../' + simdatadf.loc[irow]['dir'] + '/admconstraints-hamiltonian.' + axis + '.asc'
+            df = pd.read_table(datapath, sep='\t', comment='#', names=hamiltonian_colnames)
+            # print('Data loaded for %s %s: %s ' % (simdatadf.loc[irow]['dir'], axis, datapath))
+            simdatadf.loc[irow][axis] = df[df.it == 0]
+
+    for zone in caseArr:
+        if not os.path.isdir(os.path.join(BASEPATH, zone)):
+            os.makedirs(os.path.join(BASEPATH, zone))
+
+    buildSinglePlosts(simdatadf)
+    buildGroupPlots(simdatadf, method)
+    # build individual plots
+    del simdatadf
+
+
+
+
+buildPlots('manybh')
+buildPlots('twopun')
+
+
+exit()
+
+
+
 for case in caseArr:
+    print('Start building plots for %s zone ' % (case))
     # ManyBH plots ==================================================================================
     figd=plt.figure()
     ad = figd.add_subplot(111)
@@ -91,10 +188,12 @@ for case in caseArr:
     az = figz.add_subplot(111)
     az.grid(True)
 
+    print('ManyBH:')
     for manybhDir in manybhDirArr:
+        print('resolution: %s' % (manybhDir))
        #Create all the file Names
        # print(manybhDir[6:manybhDir.find('_')])
-       if(manybhDir[6:manybhDir.find('_')]==case):
+        if(manybhDir[6:manybhDir.find('_')]==case):
 
             if(case == 'near'):
                 d_label_loc = near_d_label_loc_manybh
@@ -121,6 +220,11 @@ for case in caseArr:
             datax = pd.read_table(dataFilex, sep='\t', comment='#', names=hamiltonian_colnames)
             datay = pd.read_table(dataFiley, sep='\t', comment='#', names=hamiltonian_colnames)
             dataz = pd.read_table(dataFilez, sep='\t', comment='#', names=hamiltonian_colnames)
+
+            datad = datad[datad.it == 0]
+            datax = datax[datax.it == 0]
+            datay = datay[datay.it == 0]
+            dataz = dataz[dataz.it == 0]
 
             # make the legends ( labels ) : Lorene resolutions
             plot_label=manybhDir[manybhDir.rfind('_')+1:len(manybhDir)]
@@ -205,6 +309,11 @@ for case in caseArr:
         tdatay = pd.read_table(tdataFiley, sep='\t', comment='#', names=hamiltonian_colnames)
         tdataz = pd.read_table(tdataFilez, sep='\t', comment='#', names=hamiltonian_colnames)
 
+        tdatad = tdatad[tdatad.it == 0]
+        tdatax = tdatax[tdatax.it == 0]
+        tdatay = tdatay[tdatay.it == 0]
+        tdataz = tdataz[tdataz.it == 0]
+
         # make the legends ( labels ) : Lorene resolutions
         plot_label=twopunDir[twopunDir.rfind('_')+1:len(twopunDir)]
         #Plot the axis d
@@ -230,8 +339,6 @@ for case in caseArr:
             tdataz['axis'] = tdataz['ix'].str.split(' ').apply(lambda x: x[2])
             tay.plot(tdataz['axis'],np.log10(np.abs(tdataz['iy'])),label=plot_label)
             tay.legend(loc=d_label_loc,ncol=legend_ncol, prop={'size':legend_fontsize})
-
-
 
     #Fix the ylimits for d-plots
 
