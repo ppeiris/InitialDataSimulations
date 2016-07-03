@@ -1,5 +1,7 @@
 variables	global	near	mid	far
 exename	manybhexe_puncpow			
+nz	14			
+puncpow	0.25			
 domain		full	full	full
 type		Byrange	Byrange	Byrange
 cases	near,mid,far			
