@@ -16,7 +16,7 @@ BASEPATH = os.path.dirname(os.path.realpath(__file__))
 manybhDirArr=['manybhnear_1bh_p0.3_nos_12x13x17','manybhnear_1bh_p0.3_nos_16x17x25','manybhnear_1bh_p0.3_nos_24x25x33','manybhnear_1bh_p0.3_nos_32x33x41','manybhnear_1bh_p0.3_nos_40x41x49','manybhmid_1bh_p0.3_nos_12x13x17','manybhmid_1bh_p0.3_nos_16x17x25','manybhmid_1bh_p0.3_nos_24x25x33','manybhmid_1bh_p0.3_nos_32x33x41','manybhmid_1bh_p0.3_nos_40x41x49','manybhfar_1bh_p0.3_nos_12x13x17','manybhfar_1bh_p0.3_nos_16x17x25','manybhfar_1bh_p0.3_nos_24x25x33','manybhfar_1bh_p0.3_nos_32x33x41','manybhfar_1bh_p0.3_nos_40x41x49']
 
 
-twopunDirArr=['twopunnear_1bh_p0.3_nos_20','twopunnear_1bh_p0.3_nos_30','twopunnear_1bh_p0.3_nos_40','twopunmid_1bh_p0.3_nos_20','twopunmid_1bh_p0.3_nos_30','twopunmid_1bh_p0.3_nos_40','twopunfar_1bh_p0.3_nos_20','twopunfar_1bh_p0.3_nos_30','twopunfar_1bh_p0.3_nos_40']
+twopunDirArr=[]
 
 
 simname='1bh_p0.3_nos'

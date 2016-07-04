@@ -4,6 +4,7 @@ var=val
 
 # Simulation Name
 simname=1bh_p0.5_nos
+simmethods=manybh
 
 # global values
 name=1bh_p0.5_nos

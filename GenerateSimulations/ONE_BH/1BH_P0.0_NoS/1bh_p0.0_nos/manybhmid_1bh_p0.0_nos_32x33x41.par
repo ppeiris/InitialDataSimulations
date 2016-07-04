@@ -214,15 +214,18 @@ IOASCII::out1D_zline_y = 0
 #--------------------------------------------------------------------------------------- 
 # ManyBH Parameters:
 #--------------------------------------------------------------------------------------- 
-ManyBH :: rsurf=0.1
-ManyBH :: nz        = 10
+
+ManyBH :: nz        = 14
 ManyBH :: np        = 32
 ManyBH :: nt        = 33
 ManyBH :: nr        = 41
+
 ManyBH :: precis    = 1.0e-9
 ManyBH :: ite_max   = 500
 ManyBH :: relax     = 0.5
 
+ManyBH :: puncpow   = 0.25
+ManyBH :: rsurf     = 0.1
 ManyBH :: nbh = 1
 
 ManyBH :: mbh[0] = 1
