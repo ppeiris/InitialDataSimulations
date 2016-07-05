@@ -1,75 +1,48 @@
 Simulation 1bh_p0.5_nos
-Simulation start at  Sun Jul 3 05:47:06 UTC 2016
-Simulation twopunnear_1bh_p0.5_nos_20 start at Sun Jul 3 05:47:06 UTC 2016
+Simulation start at  Mon Jul 4 20:56:45 UTC 2016
+Simulation ManyBHnear_1bh_p0.5_nos_12x13x17 start at Mon Jul 4 20:56:45 UTC 2016
 Still working on ...
-Simulation twopunnear_1bh_p0.5_nos_20 end at Sun Jul 3 05:48:00 UTC 2016
-Simulation twopunnear_1bh_p0.5_nos_30 start at Sun Jul 3 05:48:00 UTC 2016
+Simulation ManyBHnear_1bh_p0.5_nos_12x13x17 end at Mon Jul 4 21:00:44 UTC 2016
+Simulation ManyBHnear_1bh_p0.5_nos_16x17x25 start at Mon Jul 4 21:00:44 UTC 2016
 Still working on ...
-Simulation twopunnear_1bh_p0.5_nos_30 end at Sun Jul 3 05:52:51 UTC 2016
-Simulation twopunnear_1bh_p0.5_nos_40 start at Sun Jul 3 05:52:51 UTC 2016
+Simulation ManyBHnear_1bh_p0.5_nos_16x17x25 end at Mon Jul 4 21:07:47 UTC 2016
+Simulation ManyBHnear_1bh_p0.5_nos_24x25x33 start at Mon Jul 4 21:07:47 UTC 2016
 Still working on ...
-Simulation twopunnear_1bh_p0.5_nos_40 end at Sun Jul 3 06:09:25 UTC 2016
-Simulation ManyBHnear_1bh_p0.5_nos_12x13x17 start at Sun Jul 3 06:09:25 UTC 2016
+Simulation ManyBHnear_1bh_p0.5_nos_24x25x33 end at Mon Jul 4 21:24:06 UTC 2016
+Simulation ManyBHnear_1bh_p0.5_nos_32x33x41 start at Mon Jul 4 21:24:06 UTC 2016
 Still working on ...
-Simulation ManyBHnear_1bh_p0.5_nos_12x13x17 end at Sun Jul 3 06:09:26 UTC 2016
-Simulation ManyBHnear_1bh_p0.5_nos_16x17x25 start at Sun Jul 3 06:09:26 UTC 2016
+Simulation ManyBHnear_1bh_p0.5_nos_32x33x41 end at Mon Jul 4 21:55:55 UTC 2016
+Simulation ManyBHnear_1bh_p0.5_nos_40x41x49 start at Mon Jul 4 21:55:55 UTC 2016
 Still working on ...
-Simulation ManyBHnear_1bh_p0.5_nos_16x17x25 end at Sun Jul 3 06:09:27 UTC 2016
-Simulation ManyBHnear_1bh_p0.5_nos_24x25x33 start at Sun Jul 3 06:09:27 UTC 2016
+Simulation ManyBHnear_1bh_p0.5_nos_40x41x49 end at Mon Jul 4 22:55:06 UTC 2016
+Simulation ManyBHmid_1bh_p0.5_nos_12x13x17 start at Mon Jul 4 22:55:06 UTC 2016
 Still working on ...
-Simulation ManyBHnear_1bh_p0.5_nos_24x25x33 end at Sun Jul 3 06:09:28 UTC 2016
-Simulation ManyBHnear_1bh_p0.5_nos_32x33x41 start at Sun Jul 3 06:09:28 UTC 2016
+Simulation ManyBHmid_1bh_p0.5_nos_12x13x17 end at Mon Jul 4 22:59:12 UTC 2016
+Simulation ManyBHmid_1bh_p0.5_nos_16x17x25 start at Mon Jul 4 22:59:12 UTC 2016
 Still working on ...
-Simulation ManyBHnear_1bh_p0.5_nos_32x33x41 end at Sun Jul 3 06:09:31 UTC 2016
-Simulation ManyBHnear_1bh_p0.5_nos_40x41x49 start at Sun Jul 3 06:09:31 UTC 2016
+Simulation ManyBHmid_1bh_p0.5_nos_16x17x25 end at Mon Jul 4 23:06:25 UTC 2016
+Simulation ManyBHmid_1bh_p0.5_nos_24x25x33 start at Mon Jul 4 23:06:25 UTC 2016
 Still working on ...
-Simulation ManyBHnear_1bh_p0.5_nos_40x41x49 end at Sun Jul 3 06:09:33 UTC 2016
-Simulation twopunmid_1bh_p0.5_nos_20 start at Sun Jul 3 06:09:33 UTC 2016
+Simulation ManyBHmid_1bh_p0.5_nos_24x25x33 end at Mon Jul 4 23:22:47 UTC 2016
+Simulation ManyBHmid_1bh_p0.5_nos_32x33x41 start at Mon Jul 4 23:22:47 UTC 2016
 Still working on ...
-Simulation twopunmid_1bh_p0.5_nos_20 end at Sun Jul 3 06:10:35 UTC 2016
-Simulation twopunmid_1bh_p0.5_nos_30 start at Sun Jul 3 06:10:35 UTC 2016
+Simulation ManyBHmid_1bh_p0.5_nos_32x33x41 end at Mon Jul 4 23:55:16 UTC 2016
+Simulation ManyBHmid_1bh_p0.5_nos_40x41x49 start at Mon Jul 4 23:55:16 UTC 2016
 Still working on ...
-Simulation twopunmid_1bh_p0.5_nos_30 end at Sun Jul 3 06:15:10 UTC 2016
-Simulation twopunmid_1bh_p0.5_nos_40 start at Sun Jul 3 06:15:10 UTC 2016
+Simulation ManyBHmid_1bh_p0.5_nos_40x41x49 end at Tue Jul 5 00:54:36 UTC 2016
+Simulation ManyBHfar_1bh_p0.5_nos_12x13x17 start at Tue Jul 5 00:54:36 UTC 2016
 Still working on ...
-Simulation twopunmid_1bh_p0.5_nos_40 end at Sun Jul 3 06:37:06 UTC 2016
-Simulation ManyBHmid_1bh_p0.5_nos_12x13x17 start at Sun Jul 3 06:37:06 UTC 2016
+Simulation ManyBHfar_1bh_p0.5_nos_12x13x17 end at Tue Jul 5 00:58:33 UTC 2016
+Simulation ManyBHfar_1bh_p0.5_nos_16x17x25 start at Tue Jul 5 00:58:33 UTC 2016
 Still working on ...
-Simulation ManyBHmid_1bh_p0.5_nos_12x13x17 end at Sun Jul 3 06:37:07 UTC 2016
-Simulation ManyBHmid_1bh_p0.5_nos_16x17x25 start at Sun Jul 3 06:37:07 UTC 2016
+Simulation ManyBHfar_1bh_p0.5_nos_16x17x25 end at Tue Jul 5 01:05:35 UTC 2016
+Simulation ManyBHfar_1bh_p0.5_nos_24x25x33 start at Tue Jul 5 01:05:35 UTC 2016
 Still working on ...
-Simulation ManyBHmid_1bh_p0.5_nos_16x17x25 end at Sun Jul 3 06:37:08 UTC 2016
-Simulation ManyBHmid_1bh_p0.5_nos_24x25x33 start at Sun Jul 3 06:37:08 UTC 2016
+Simulation ManyBHfar_1bh_p0.5_nos_24x25x33 end at Tue Jul 5 01:21:47 UTC 2016
+Simulation ManyBHfar_1bh_p0.5_nos_32x33x41 start at Tue Jul 5 01:21:47 UTC 2016
 Still working on ...
-Simulation ManyBHmid_1bh_p0.5_nos_24x25x33 end at Sun Jul 3 06:37:09 UTC 2016
-Simulation ManyBHmid_1bh_p0.5_nos_32x33x41 start at Sun Jul 3 06:37:09 UTC 2016
+Simulation ManyBHfar_1bh_p0.5_nos_32x33x41 end at Tue Jul 5 01:53:54 UTC 2016
+Simulation ManyBHfar_1bh_p0.5_nos_40x41x49 start at Tue Jul 5 01:53:54 UTC 2016
 Still working on ...
-Simulation ManyBHmid_1bh_p0.5_nos_32x33x41 end at Sun Jul 3 06:37:11 UTC 2016
-Simulation ManyBHmid_1bh_p0.5_nos_40x41x49 start at Sun Jul 3 06:37:11 UTC 2016
-Still working on ...
-Simulation ManyBHmid_1bh_p0.5_nos_40x41x49 end at Sun Jul 3 06:37:13 UTC 2016
-Simulation twopunfar_1bh_p0.5_nos_20 start at Sun Jul 3 06:37:13 UTC 2016
-Still working on ...
-Simulation twopunfar_1bh_p0.5_nos_20 end at Sun Jul 3 06:37:54 UTC 2016
-Simulation twopunfar_1bh_p0.5_nos_30 start at Sun Jul 3 06:37:54 UTC 2016
-Still working on ...
-Simulation twopunfar_1bh_p0.5_nos_30 end at Sun Jul 3 06:41:48 UTC 2016
-Simulation twopunfar_1bh_p0.5_nos_40 start at Sun Jul 3 06:41:48 UTC 2016
-Still working on ...
-Simulation twopunfar_1bh_p0.5_nos_40 end at Sun Jul 3 06:56:17 UTC 2016
-Simulation ManyBHfar_1bh_p0.5_nos_12x13x17 start at Sun Jul 3 06:56:17 UTC 2016
-Still working on ...
-Simulation ManyBHfar_1bh_p0.5_nos_12x13x17 end at Sun Jul 3 06:56:17 UTC 2016
-Simulation ManyBHfar_1bh_p0.5_nos_16x17x25 start at Sun Jul 3 06:56:17 UTC 2016
-Still working on ...
-Simulation ManyBHfar_1bh_p0.5_nos_16x17x25 end at Sun Jul 3 06:56:18 UTC 2016
-Simulation ManyBHfar_1bh_p0.5_nos_24x25x33 start at Sun Jul 3 06:56:18 UTC 2016
-Still working on ...
-Simulation ManyBHfar_1bh_p0.5_nos_24x25x33 end at Sun Jul 3 06:56:19 UTC 2016
-Simulation ManyBHfar_1bh_p0.5_nos_32x33x41 start at Sun Jul 3 06:56:19 UTC 2016
-Still working on ...
-Simulation ManyBHfar_1bh_p0.5_nos_32x33x41 end at Sun Jul 3 06:56:20 UTC 2016
-Simulation ManyBHfar_1bh_p0.5_nos_40x41x49 start at Sun Jul 3 06:56:20 UTC 2016
-Still working on ...
-Simulation ManyBHfar_1bh_p0.5_nos_40x41x49 end at Sun Jul 3 06:56:22 UTC 2016
+Simulation ManyBHfar_1bh_p0.5_nos_40x41x49 end at Tue Jul 5 02:51:03 UTC 2016
 Done!

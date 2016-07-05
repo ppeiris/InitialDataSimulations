@@ -1,0 +1,241 @@
+#=======================================================================================
+# ManyBH: near case 
+#=======================================================================================
+
+
+#---------------------------------------------------------------------------------------
+# Active Thorns:
+#--------------------------------------------------------------------------------------- 
+
+ActiveThorns = "Time MoL cartgrid3d IOUtil Carpet CarpetLib CarpetInterp CarpetIOHDF5 CarpetReduce CarpetSlab ADMBase ADMCoupling ADMMacros CoordBase CoordGauge SpaceMask StaticConformal TmunuBase LoopControl Boundary SymBase InitBase Slab LocalInterp GenericFD AEILocalInterp ML_BSSN ML_BSSN_Helper ADMConstraints "
+ActiveThorns = "Fortran"
+ActiveThorns = "GSL"
+ActiveThorns = "ManyBH"
+ActiveThorns = "NaNChecker"
+ActiveThorns = "CarpetIOBasic"
+ActiveThorns = "CarpetIOScalar"
+ActiveThorns = "CarpetIOASCII"
+ActiveThorns = "TimerReport"
+ 
+
+#---------------------------------------------------------------------------------------
+# Cactus parameters:
+#--------------------------------------------------------------------------------------- 
+Cactus::cctk_run_title = "Manybhnear"
+Cactus::cctk_full_warnings         = yes
+Cactus::highlight_warning_messages = no
+Cactus::terminate       = "iteration"
+Cactus::cctk_itlast = 0
+ 
+#---------------------------------------------------------------------------------------
+# Diagnostic Parameters:
+#--------------------------------------------------------------------------------------- 
+TimerReport::out_every                  = 1
+TimerReport::out_filename               = "TimerReport"
+TimerReport::output_all_timers_together = yes
+TimerReport::output_all_timers_readable = yes
+TimerReport::n_top_timers               = 20 
+
+
+#---------------------------------------------------------------------------------------
+# Utility Parameters:
+#--------------------------------------------------------------------------------------- 
+methodoflines::ODE_Method             = "RK2"
+methodoflines::MoL_Intermediate_Steps = 2
+
+TmunuBase::stress_energy_storage = "yes"
+TmunuBase::stress_energy_at_RHS = "yes"
+TmunuBase::timelevels = 2
+ 
+
+ADMMacros::spatial_order=4
+
+#---------------------------------------------------------------------------------------
+# Run Parameters:
+#--------------------------------------------------------------------------------------- 
+
+Time::dtfac = 0.25
+
+ADMBase::initial_data    = "ManyBH"
+ADMBase::initial_lapse   = "one"
+ADMBase::initial_shift   = "zero"
+ADMBase::initial_dtlapse = "zero"
+ADMBase::initial_dtshift = "zero"
+ADMBase::metric_type = "physical"
+ADMBase::evolution_method = "ML_BSSN"
+
+#---------------------------------------------------------------------------------------
+# Output:
+#--------------------------------------------------------------------------------------- 
+
+ADMConstraints::constraints_timelevels=2
+ADMConstraints::constraints_persist="yes"
+ 
+IO::out_dir = $parfile
+
+IOBasic::outInfo_every      = 1
+IOBasic::outInfo_reductions = "norm2"
+IOBasic::outInfo_vars       = "
+        Carpet::physical_time_per_hour
+	ADMBase::metric
+	ADMBase::curv
+	ADMBase::lapse
+	ADMBase::shift
+        ADMConstraints::hamiltonian
+        ADMConstraints::momentum
+"
+#        ML_ADMConstraints::ML_Ham
+#        ML_ADMConstraints::ML_mom
+
+
+IOScalar::one_file_per_group = yes
+IOScalar::outScalar_every = 1
+IOScalar::outScalar_vars  = "
+        CarpetReduce::weight
+        ADMBase::metric
+        ADMBase::curv
+        ADMBase::lapse
+        ADMBase::shift
+        ADMBase::dtlapse
+        ADMBase::dtshift
+        ADMConstraints::hamiltonian
+        ADMConstraints::momentum
+"
+#        SphericalSurface::sf_radius
+#        ML_ADMConstraints::ML_Ham
+#        ML_ADMConstraints::ML_mom
+
+
+
+IOASCII::one_file_per_group = yes
+
+IOASCII::output_symmetry_points = no
+IOASCII::out3D_ghosts           = no
+
+IOASCII::out0D_every = 1
+IOASCII::out0D_vars  = "
+        Carpet::timing
+        CarpetReduce::weight
+        ADMBase::metric
+        ADMBase::curv
+        ADMBase::lapse
+        ADMBase::shift
+        ADMBase::dtlapse
+        ADMBase::dtshift
+        ADMConstraints::hamiltonian
+        ADMConstraints::momentum
+"
+#        ML_ADMConstraints::ML_Ham
+#        ML_ADMConstraints::ML_mom
+
+IOASCII::out1D_every = 1
+IOASCII::out1D_vars  = "
+        CarpetReduce::weight
+	ADMBase::gxx
+        ADMBase::metric
+        ADMBase::curv
+        ADMBase::lapse
+        ADMBase::shift
+        ADMBase::dtlapse
+        ADMBase::dtshift
+        ADMConstraints::hamiltonian
+        ADMConstraints::momentum
+"
+ 
+CarpetIOHDF5::one_file_per_group             = "yes"
+CarpetIOHDF5::open_one_input_file_at_a_time  = "yes"
+
+#CarpetIOHDF5::output_symmetry_points         = "no"
+#CarpetIOHDF5::output_ghost_points            = "no"
+#CarpetIOHDF5::output_boundary_points         = "no"
+#CarpetIOHDF5::output_buffer_points           = "no"
+
+#CarpetIOHDF5::out2D_every                    = 256
+CarpetIOHDF5::out2D_every                    = 1
+CarpetIOHDF5::out2D_xy                       = "yes"
+CarpetIOHDF5::out2D_xz                       = "no"
+CarpetIOHDF5::out2D_yz                       = "no"
+CarpetIOHDF5::out2D_xyplane_z                = 0.0
+CarpetIOHDF5::out2D_vars      = "
+        ADMBase::curv
+        ADMBase::lapse
+        ADMBase::metric
+        ADMBase::shift
+        ADMConstraints::hamiltonian
+        ADMConstraints::momentum
+        Grid::coordinates
+"
+
+CarpetIOHDF5::out_every                    = 1
+CarpetIOHDF5::out_vars      = "
+        ADMBase::curv
+        ADMBase::lapse
+        ADMBase::metric
+        ADMBase::shift
+        ADMConstraints::hamiltonian
+        ADMConstraints::momentum
+        Grid::coordinates
+"
+ 
+#--------------------------------------------------------------------------------------- 
+# Grid Parameters:
+#--------------------------------------------------------------------------------------- 
+
+grid::type = "Byrange"
+grid::domain = "full"
+grid::dxyz = 0.003125
+grid::xmin = 2.9375
+grid::ymin = 0.4375
+grid::zmin = 0.4375
+grid::xmax = 3.0625
+grid::ymax = 0.5625
+grid::zmax = 0.5625
+
+driver::global_nx = 41
+driver::global_ny = 41
+driver::global_nz = 41
+driver::ghost_size = 3
+
+CoordBase::boundary_size_x_lower = 3
+CoordBase::boundary_size_x_upper = 3
+CoordBase::boundary_size_y_lower = 3
+CoordBase::boundary_size_y_upper = 3
+CoordBase::boundary_size_z_lower = 3
+CoordBase::boundary_size_z_upper = 3
+
+IOASCII::out1D_xline_y = 0.5
+IOASCII::out1D_xline_z = 0.5
+
+IOASCII::out1D_yline_x = 3
+IOASCII::out1D_yline_z = 0.5
+
+IOASCII::out1D_zline_x = 3
+IOASCII::out1D_zline_y = 0.5
+
+#--------------------------------------------------------------------------------------- 
+# ManyBH Parameters:
+#--------------------------------------------------------------------------------------- 
+
+ManyBH :: nz        = 14
+ManyBH :: np        = 16
+ManyBH :: nt        = 17
+ManyBH :: nr        = 25
+
+ManyBH :: precis    = 1.0e-9
+ManyBH :: ite_max   = 500
+ManyBH :: relax     = 0.5
+
+ManyBH :: puncpow   = 0.25
+ManyBH :: rsurf     = 0.1
+ManyBH :: nbh = 1
+
+ManyBH :: mbh[0] = 1
+ManyBH :: sbh[0] = 0.0
+ManyBH :: sbh[1] = 0.0
+ManyBH :: sbh[2] = 0.0
+ManyBH :: pbh[0] = 0.3
+ManyBH :: pbh[1] = 0.0
+ManyBH :: pbh[2] = 0.0
+ManyBH :: xbh[0] = 3.0
+ManyBH :: xbh[1] = 0.0
+ManyBH :: xbh[2] = 0.0
