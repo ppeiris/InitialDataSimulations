@@ -90,7 +90,7 @@ def buildGroupPlots(datadf, method):
             ad.legend(loc=loc['best'], ncol=legend_ncol, prop={'size': legend_fontsize})
             ad.set_xlabel(axis)
             ad.set_ylabel('log(H)')
-            fig.savefig((gname + '/' + method + '_' + gname + '_' + axis + plotFormat), bbox_inches= 'tight')
+            fig.savefig((gname + '/' + method + '_' + gname + '_' + axis + '_all_resolution' + plotFormat), bbox_inches= 'tight')
             plt.close('all')
             # print('Plot %s' % (gname + '_' + axis + '.png'))
         # print(gdata)
