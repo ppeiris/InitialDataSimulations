@@ -142,6 +142,8 @@ def buildPlots(method):
         for axis in axislist:
             datapath = '../' + simdatadf.loc[irow]['dir'] + '/admconstraints-hamiltonian.' + axis + '.asc'
             df = pd.read_table(datapath, sep='\t', comment='#', names=hamiltonian_colnames)
+            df = df[2:-2]
+            df = df.reset_index()
             # print('Data loaded for %s %s: %s ' % (simdatadf.loc[irow]['dir'], axis, datapath))
             simdatadf.loc[irow][axis] = df[df.it == 0]
 

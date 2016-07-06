@@ -223,6 +223,7 @@ ManyBH :: nr        = 33
 ManyBH :: precis    = 1.0e-9
 ManyBH :: ite_max   = 500
 ManyBH :: relax     = 0.5
+ManyBH :: puncpow	= 0.1
 
 ManyBH :: nbh = 2
 

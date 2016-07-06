@@ -2,7 +2,7 @@ variables	global	near	mid	far
 exename	manybhexe_puncpow			
 simmethods	manybh,twopunc			
 nz	14			
-puncpow	0.25			
+puncpower	0.25			
 domain		full	full	full
 type		Byrange	Byrange	Byrange
 cases	near,mid,far			

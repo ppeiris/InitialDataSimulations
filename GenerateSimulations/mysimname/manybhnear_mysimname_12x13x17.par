@@ -181,19 +181,20 @@ CarpetIOHDF5::out_vars      = "
 # Grid Parameters:
 #--------------------------------------------------------------------------------------- 
 
+
 grid::type = "Byrange"
 grid::domain = "full"
 grid::dxyz = 0.003125
-grid::xmin = 2.9375
-grid::ymin = -0.0078125
-grid::zmin = -0.0078125
-grid::xmax = 3.0625
-grid::ymax = 0.0078125
-grid::zmax = 0.0078125
+grid::xmin = 4.9375
+grid::ymin = 4.9375
+grid::zmin = 4.9375
+grid::xmax = 5.0625
+grid::ymax = 5.0625
+grid::zmax = 5.0625
 
 driver::global_nx = 41
-driver::global_ny = 5
-driver::global_nz = 5
+driver::global_ny = 41
+driver::global_nz = 41
 driver::ghost_size = 3
 
 CoordBase::boundary_size_x_lower = 3
@@ -203,18 +204,20 @@ CoordBase::boundary_size_y_upper = 3
 CoordBase::boundary_size_z_lower = 3
 CoordBase::boundary_size_z_upper = 3
 
-IOASCII::out1D_xline_y = 0.5
-IOASCII::out1D_xline_z = 0.5
+IOASCII::out1D_xline_y = 5
+IOASCII::out1D_xline_z = 5
 
-IOASCII::out1D_yline_x = 3
-IOASCII::out1D_yline_z = 0.5
+IOASCII::out1D_yline_x = 5
+IOASCII::out1D_yline_z = 5
 
-IOASCII::out1D_zline_x = 3
-IOASCII::out1D_zline_y = 0.5
+IOASCII::out1D_zline_x = 5
+IOASCII::out1D_zline_y = 5
+
 
 #--------------------------------------------------------------------------------------- 
 # ManyBH Parameters:
 #--------------------------------------------------------------------------------------- 
+
 ManyBH :: rsurf=0.1
 ManyBH :: nz        = 10
 ManyBH :: np        = 12
@@ -223,6 +226,7 @@ ManyBH :: nr        = 17
 ManyBH :: precis    = 1.0e-9
 ManyBH :: ite_max   = 500
 ManyBH :: relax     = 0.5
+ManyBH :: puncpow   = 0.1
 
 ManyBH :: nbh = 2
 
