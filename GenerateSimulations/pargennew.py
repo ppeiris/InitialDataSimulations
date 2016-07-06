@@ -17,7 +17,8 @@ pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 
-BASEPATH = os.path.dirname(os.path.realpath(__file__))
+# BASEPATH = os.path.dirname(os.path.realpath(__file__))
+BASEPATH = os.path.expanduser('~') + '/simulations/GenerateSimulations'
 defaultData = os.path.join(BASEPATH, 'paroriginal/initdata.csv')
 
 # update new values in in the default value set
@@ -379,7 +380,7 @@ for case in cases:
 
             rsurf = getVal(data, 'rsurf')
             nz = getVal(data, 'nz')
-            puncpow = getVal(data, 'puncpow')
+            puncpower = getVal(data, 'puncpower')
 
             editFile.write("\n")
 
@@ -397,7 +398,7 @@ for case in cases:
 
             editFile.write("\n")
 
-            editFile.write("ManyBH :: puncpow   = %s\n" % (puncpow))
+            editFile.write("ManyBH :: puncpower   = %s\n" % (puncpower))
             editFile.write("ManyBH :: rsurf     = %s" % (rsurf))
 
             editFile.write("\n")
