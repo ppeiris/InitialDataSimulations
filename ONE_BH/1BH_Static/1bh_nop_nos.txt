@@ -1,0 +1,25 @@
+# Heading
+# do not delete this line
+var=val
+
+# Simulation Name
+simname=1bh_nop_nos
+simmethods=manybh
+
+# global values
+name=1bh_nop_nos
+exename=bbhcode
+nbh=1
+mbh=1
+sbh=0.0x0.0x0.0
+pbh=0.0x0.0x0.0
+xbh=3.0x0.0x0.0
+
+# ManyBH Variables 
+
+nzpt=12x13x17,16x17x25,24x25x33,32x33x41,40x41x49
+rsurf=0.1
+puncpower=0.25
+
+# TwoPunc Variables
+twopunch_res=20,30,40
