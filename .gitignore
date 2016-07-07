@@ -7,7 +7,7 @@
 !.txt
 !*.par
 !*.out
-!/**/*.asc
+!/**
 !/**/admconstraints-hamiltonian*
 
 
