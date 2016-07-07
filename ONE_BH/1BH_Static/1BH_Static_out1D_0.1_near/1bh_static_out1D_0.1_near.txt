@@ -4,7 +4,7 @@ var=val
 
 # Simulation Name
 simname=1bh_static_out1D_0.1_near
-simmethods=manybh
+simmethods=manybh,twopunc
 
 # global values
 name=1bh_nop_nos

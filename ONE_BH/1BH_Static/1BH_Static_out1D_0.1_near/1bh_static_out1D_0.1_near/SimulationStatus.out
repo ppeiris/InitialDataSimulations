@@ -1,48 +1,75 @@
 Simulation 1bh_static_out1D_0.1_near
-Simulation start at  Thu Jul 7 19:32:11 UTC 2016
-Simulation ManyBHnear_1bh_static_out1D_0.1_near_12x13x17 start at Thu Jul 7 19:32:11 UTC 2016
+Simulation start at  Thu Jul 7 19:56:21 UTC 2016
+Simulation twopunnear_1bh_static_out1D_0.1_near_20 start at Thu Jul 7 19:56:21 UTC 2016
 Still working on ...
-Simulation ManyBHnear_1bh_static_out1D_0.1_near_12x13x17 end at Thu Jul 7 19:32:13 UTC 2016
-Simulation ManyBHnear_1bh_static_out1D_0.1_near_16x17x25 start at Thu Jul 7 19:32:13 UTC 2016
+Simulation twopunnear_1bh_static_out1D_0.1_near_20 end at Thu Jul 7 19:56:25 UTC 2016
+Simulation twopunnear_1bh_static_out1D_0.1_near_30 start at Thu Jul 7 19:56:25 UTC 2016
 Still working on ...
-Simulation ManyBHnear_1bh_static_out1D_0.1_near_16x17x25 end at Thu Jul 7 19:32:16 UTC 2016
-Simulation ManyBHnear_1bh_static_out1D_0.1_near_24x25x33 start at Thu Jul 7 19:32:16 UTC 2016
+Simulation twopunnear_1bh_static_out1D_0.1_near_30 end at Thu Jul 7 19:56:40 UTC 2016
+Simulation twopunnear_1bh_static_out1D_0.1_near_40 start at Thu Jul 7 19:56:40 UTC 2016
 Still working on ...
-Simulation ManyBHnear_1bh_static_out1D_0.1_near_24x25x33 end at Thu Jul 7 19:32:21 UTC 2016
-Simulation ManyBHnear_1bh_static_out1D_0.1_near_32x33x41 start at Thu Jul 7 19:32:21 UTC 2016
+Simulation twopunnear_1bh_static_out1D_0.1_near_40 end at Thu Jul 7 19:57:19 UTC 2016
+Simulation ManyBHnear_1bh_static_out1D_0.1_near_12x13x17 start at Thu Jul 7 19:57:19 UTC 2016
 Still working on ...
-Simulation ManyBHnear_1bh_static_out1D_0.1_near_32x33x41 end at Thu Jul 7 19:32:29 UTC 2016
-Simulation ManyBHnear_1bh_static_out1D_0.1_near_40x41x49 start at Thu Jul 7 19:32:29 UTC 2016
+Simulation ManyBHnear_1bh_static_out1D_0.1_near_12x13x17 end at Thu Jul 7 19:57:21 UTC 2016
+Simulation ManyBHnear_1bh_static_out1D_0.1_near_16x17x25 start at Thu Jul 7 19:57:21 UTC 2016
 Still working on ...
-Simulation ManyBHnear_1bh_static_out1D_0.1_near_40x41x49 end at Thu Jul 7 19:32:42 UTC 2016
-Simulation ManyBHmid_1bh_static_out1D_0.1_near_12x13x17 start at Thu Jul 7 19:32:42 UTC 2016
+Simulation ManyBHnear_1bh_static_out1D_0.1_near_16x17x25 end at Thu Jul 7 19:57:24 UTC 2016
+Simulation ManyBHnear_1bh_static_out1D_0.1_near_24x25x33 start at Thu Jul 7 19:57:24 UTC 2016
 Still working on ...
-Simulation ManyBHmid_1bh_static_out1D_0.1_near_12x13x17 end at Thu Jul 7 19:32:47 UTC 2016
-Simulation ManyBHmid_1bh_static_out1D_0.1_near_16x17x25 start at Thu Jul 7 19:32:47 UTC 2016
+Simulation ManyBHnear_1bh_static_out1D_0.1_near_24x25x33 end at Thu Jul 7 19:57:29 UTC 2016
+Simulation ManyBHnear_1bh_static_out1D_0.1_near_32x33x41 start at Thu Jul 7 19:57:29 UTC 2016
 Still working on ...
-Simulation ManyBHmid_1bh_static_out1D_0.1_near_16x17x25 end at Thu Jul 7 19:32:52 UTC 2016
-Simulation ManyBHmid_1bh_static_out1D_0.1_near_24x25x33 start at Thu Jul 7 19:32:52 UTC 2016
+Simulation ManyBHnear_1bh_static_out1D_0.1_near_32x33x41 end at Thu Jul 7 19:57:37 UTC 2016
+Simulation ManyBHnear_1bh_static_out1D_0.1_near_40x41x49 start at Thu Jul 7 19:57:37 UTC 2016
 Still working on ...
-Simulation ManyBHmid_1bh_static_out1D_0.1_near_24x25x33 end at Thu Jul 7 19:33:00 UTC 2016
-Simulation ManyBHmid_1bh_static_out1D_0.1_near_32x33x41 start at Thu Jul 7 19:33:00 UTC 2016
+Simulation ManyBHnear_1bh_static_out1D_0.1_near_40x41x49 end at Thu Jul 7 19:57:50 UTC 2016
+Simulation twopunmid_1bh_static_out1D_0.1_near_20 start at Thu Jul 7 19:57:50 UTC 2016
 Still working on ...
-Simulation ManyBHmid_1bh_static_out1D_0.1_near_32x33x41 end at Thu Jul 7 19:33:12 UTC 2016
-Simulation ManyBHmid_1bh_static_out1D_0.1_near_40x41x49 start at Thu Jul 7 19:33:12 UTC 2016
+Simulation twopunmid_1bh_static_out1D_0.1_near_20 end at Thu Jul 7 19:57:56 UTC 2016
+Simulation twopunmid_1bh_static_out1D_0.1_near_30 start at Thu Jul 7 19:57:56 UTC 2016
 Still working on ...
-Simulation ManyBHmid_1bh_static_out1D_0.1_near_40x41x49 end at Thu Jul 7 19:33:31 UTC 2016
-Simulation ManyBHfar_1bh_static_out1D_0.1_near_12x13x17 start at Thu Jul 7 19:33:31 UTC 2016
+Simulation twopunmid_1bh_static_out1D_0.1_near_30 end at Thu Jul 7 19:58:15 UTC 2016
+Simulation twopunmid_1bh_static_out1D_0.1_near_40 start at Thu Jul 7 19:58:15 UTC 2016
 Still working on ...
-Simulation ManyBHfar_1bh_static_out1D_0.1_near_12x13x17 end at Thu Jul 7 19:33:33 UTC 2016
-Simulation ManyBHfar_1bh_static_out1D_0.1_near_16x17x25 start at Thu Jul 7 19:33:33 UTC 2016
+Simulation twopunmid_1bh_static_out1D_0.1_near_40 end at Thu Jul 7 19:59:06 UTC 2016
+Simulation ManyBHmid_1bh_static_out1D_0.1_near_12x13x17 start at Thu Jul 7 19:59:06 UTC 2016
 Still working on ...
-Simulation ManyBHfar_1bh_static_out1D_0.1_near_16x17x25 end at Thu Jul 7 19:33:36 UTC 2016
-Simulation ManyBHfar_1bh_static_out1D_0.1_near_24x25x33 start at Thu Jul 7 19:33:36 UTC 2016
+Simulation ManyBHmid_1bh_static_out1D_0.1_near_12x13x17 end at Thu Jul 7 19:59:10 UTC 2016
+Simulation ManyBHmid_1bh_static_out1D_0.1_near_16x17x25 start at Thu Jul 7 19:59:10 UTC 2016
 Still working on ...
-Simulation ManyBHfar_1bh_static_out1D_0.1_near_24x25x33 end at Thu Jul 7 19:33:41 UTC 2016
-Simulation ManyBHfar_1bh_static_out1D_0.1_near_32x33x41 start at Thu Jul 7 19:33:41 UTC 2016
+Simulation ManyBHmid_1bh_static_out1D_0.1_near_16x17x25 end at Thu Jul 7 19:59:16 UTC 2016
+Simulation ManyBHmid_1bh_static_out1D_0.1_near_24x25x33 start at Thu Jul 7 19:59:16 UTC 2016
 Still working on ...
-Simulation ManyBHfar_1bh_static_out1D_0.1_near_32x33x41 end at Thu Jul 7 19:33:49 UTC 2016
-Simulation ManyBHfar_1bh_static_out1D_0.1_near_40x41x49 start at Thu Jul 7 19:33:49 UTC 2016
+Simulation ManyBHmid_1bh_static_out1D_0.1_near_24x25x33 end at Thu Jul 7 19:59:24 UTC 2016
+Simulation ManyBHmid_1bh_static_out1D_0.1_near_32x33x41 start at Thu Jul 7 19:59:24 UTC 2016
 Still working on ...
-Simulation ManyBHfar_1bh_static_out1D_0.1_near_40x41x49 end at Thu Jul 7 19:34:02 UTC 2016
+Simulation ManyBHmid_1bh_static_out1D_0.1_near_32x33x41 end at Thu Jul 7 19:59:35 UTC 2016
+Simulation ManyBHmid_1bh_static_out1D_0.1_near_40x41x49 start at Thu Jul 7 19:59:35 UTC 2016
+Still working on ...
+Simulation ManyBHmid_1bh_static_out1D_0.1_near_40x41x49 end at Thu Jul 7 19:59:54 UTC 2016
+Simulation twopunfar_1bh_static_out1D_0.1_near_20 start at Thu Jul 7 19:59:54 UTC 2016
+Still working on ...
+Simulation twopunfar_1bh_static_out1D_0.1_near_20 end at Thu Jul 7 19:59:58 UTC 2016
+Simulation twopunfar_1bh_static_out1D_0.1_near_30 start at Thu Jul 7 19:59:58 UTC 2016
+Still working on ...
+Simulation twopunfar_1bh_static_out1D_0.1_near_30 end at Thu Jul 7 20:00:13 UTC 2016
+Simulation twopunfar_1bh_static_out1D_0.1_near_40 start at Thu Jul 7 20:00:13 UTC 2016
+Still working on ...
+Simulation twopunfar_1bh_static_out1D_0.1_near_40 end at Thu Jul 7 20:00:52 UTC 2016
+Simulation ManyBHfar_1bh_static_out1D_0.1_near_12x13x17 start at Thu Jul 7 20:00:52 UTC 2016
+Still working on ...
+Simulation ManyBHfar_1bh_static_out1D_0.1_near_12x13x17 end at Thu Jul 7 20:00:54 UTC 2016
+Simulation ManyBHfar_1bh_static_out1D_0.1_near_16x17x25 start at Thu Jul 7 20:00:54 UTC 2016
+Still working on ...
+Simulation ManyBHfar_1bh_static_out1D_0.1_near_16x17x25 end at Thu Jul 7 20:00:57 UTC 2016
+Simulation ManyBHfar_1bh_static_out1D_0.1_near_24x25x33 start at Thu Jul 7 20:00:57 UTC 2016
+Still working on ...
+Simulation ManyBHfar_1bh_static_out1D_0.1_near_24x25x33 end at Thu Jul 7 20:01:02 UTC 2016
+Simulation ManyBHfar_1bh_static_out1D_0.1_near_32x33x41 start at Thu Jul 7 20:01:02 UTC 2016
+Still working on ...
+Simulation ManyBHfar_1bh_static_out1D_0.1_near_32x33x41 end at Thu Jul 7 20:01:10 UTC 2016
+Simulation ManyBHfar_1bh_static_out1D_0.1_near_40x41x49 start at Thu Jul 7 20:01:10 UTC 2016
+Still working on ...
+Simulation ManyBHfar_1bh_static_out1D_0.1_near_40x41x49 end at Thu Jul 7 20:01:23 UTC 2016
 Done!

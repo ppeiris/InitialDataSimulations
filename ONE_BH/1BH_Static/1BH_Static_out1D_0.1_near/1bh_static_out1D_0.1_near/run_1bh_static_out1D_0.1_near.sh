@@ -6,6 +6,29 @@ echo "Simulation start at " `date -u` >> SimulationStatus.out
 
 
 echo "Simulations start"
+# Twopunch near simulations
+# =====================================
+START=$(date +%s)
+echo "Simulation twopunnear_1bh_static_out1D_0.1_near_20 start at "`date -u` >> SimulationStatus.out
+echo "Still working on ..." >> SimulationStatus.out
+nohup ./bbhcode $SIM_PATH/twopunnear_1bh_static_out1D_0.1_near_20.par > $SIM_PATH/twopunnear_1bh_static_out1D_0.1_near_20.out
+END=$(date +%s)
+echo "Simulation twopunnear_1bh_static_out1D_0.1_near_20 end at "`date -u` >> SimulationStatus.out
+
+START=$(date +%s)
+echo "Simulation twopunnear_1bh_static_out1D_0.1_near_30 start at "`date -u` >> SimulationStatus.out
+echo "Still working on ..." >> SimulationStatus.out
+nohup ./bbhcode $SIM_PATH/twopunnear_1bh_static_out1D_0.1_near_30.par > $SIM_PATH/twopunnear_1bh_static_out1D_0.1_near_30.out
+END=$(date +%s)
+echo "Simulation twopunnear_1bh_static_out1D_0.1_near_30 end at "`date -u` >> SimulationStatus.out
+
+START=$(date +%s)
+echo "Simulation twopunnear_1bh_static_out1D_0.1_near_40 start at "`date -u` >> SimulationStatus.out
+echo "Still working on ..." >> SimulationStatus.out
+nohup ./bbhcode $SIM_PATH/twopunnear_1bh_static_out1D_0.1_near_40.par > $SIM_PATH/twopunnear_1bh_static_out1D_0.1_near_40.out
+END=$(date +%s)
+echo "Simulation twopunnear_1bh_static_out1D_0.1_near_40 end at "`date -u` >> SimulationStatus.out
+
 # ManyBH near simulation
 # ==================================
 START=$(date +%s)
@@ -43,6 +66,29 @@ nohup ./bbhcode $SIM_PATH/manybhnear_1bh_static_out1D_0.1_near_40x41x49.par > $S
 END=$(date +%s)
 echo "Simulation ManyBHnear_1bh_static_out1D_0.1_near_40x41x49 end at "`date -u` >> SimulationStatus.out
 
+# Twopunch mid simulations
+# =====================================
+START=$(date +%s)
+echo "Simulation twopunmid_1bh_static_out1D_0.1_near_20 start at "`date -u` >> SimulationStatus.out
+echo "Still working on ..." >> SimulationStatus.out
+nohup ./bbhcode $SIM_PATH/twopunmid_1bh_static_out1D_0.1_near_20.par > $SIM_PATH/twopunmid_1bh_static_out1D_0.1_near_20.out
+END=$(date +%s)
+echo "Simulation twopunmid_1bh_static_out1D_0.1_near_20 end at "`date -u` >> SimulationStatus.out
+
+START=$(date +%s)
+echo "Simulation twopunmid_1bh_static_out1D_0.1_near_30 start at "`date -u` >> SimulationStatus.out
+echo "Still working on ..." >> SimulationStatus.out
+nohup ./bbhcode $SIM_PATH/twopunmid_1bh_static_out1D_0.1_near_30.par > $SIM_PATH/twopunmid_1bh_static_out1D_0.1_near_30.out
+END=$(date +%s)
+echo "Simulation twopunmid_1bh_static_out1D_0.1_near_30 end at "`date -u` >> SimulationStatus.out
+
+START=$(date +%s)
+echo "Simulation twopunmid_1bh_static_out1D_0.1_near_40 start at "`date -u` >> SimulationStatus.out
+echo "Still working on ..." >> SimulationStatus.out
+nohup ./bbhcode $SIM_PATH/twopunmid_1bh_static_out1D_0.1_near_40.par > $SIM_PATH/twopunmid_1bh_static_out1D_0.1_near_40.out
+END=$(date +%s)
+echo "Simulation twopunmid_1bh_static_out1D_0.1_near_40 end at "`date -u` >> SimulationStatus.out
+
 # ManyBH mid simulation
 # ==================================
 START=$(date +%s)
@@ -79,6 +125,29 @@ echo "Still working on ..." >> SimulationStatus.out
 nohup ./bbhcode $SIM_PATH/manybhmid_1bh_static_out1D_0.1_near_40x41x49.par > $SIM_PATH/manybhmid_1bh_static_out1D_0.1_near_40x41x49.out
 END=$(date +%s)
 echo "Simulation ManyBHmid_1bh_static_out1D_0.1_near_40x41x49 end at "`date -u` >> SimulationStatus.out
+
+# Twopunch far simulations
+# =====================================
+START=$(date +%s)
+echo "Simulation twopunfar_1bh_static_out1D_0.1_near_20 start at "`date -u` >> SimulationStatus.out
+echo "Still working on ..." >> SimulationStatus.out
+nohup ./bbhcode $SIM_PATH/twopunfar_1bh_static_out1D_0.1_near_20.par > $SIM_PATH/twopunfar_1bh_static_out1D_0.1_near_20.out
+END=$(date +%s)
+echo "Simulation twopunfar_1bh_static_out1D_0.1_near_20 end at "`date -u` >> SimulationStatus.out
+
+START=$(date +%s)
+echo "Simulation twopunfar_1bh_static_out1D_0.1_near_30 start at "`date -u` >> SimulationStatus.out
+echo "Still working on ..." >> SimulationStatus.out
+nohup ./bbhcode $SIM_PATH/twopunfar_1bh_static_out1D_0.1_near_30.par > $SIM_PATH/twopunfar_1bh_static_out1D_0.1_near_30.out
+END=$(date +%s)
+echo "Simulation twopunfar_1bh_static_out1D_0.1_near_30 end at "`date -u` >> SimulationStatus.out
+
+START=$(date +%s)
+echo "Simulation twopunfar_1bh_static_out1D_0.1_near_40 start at "`date -u` >> SimulationStatus.out
+echo "Still working on ..." >> SimulationStatus.out
+nohup ./bbhcode $SIM_PATH/twopunfar_1bh_static_out1D_0.1_near_40.par > $SIM_PATH/twopunfar_1bh_static_out1D_0.1_near_40.out
+END=$(date +%s)
+echo "Simulation twopunfar_1bh_static_out1D_0.1_near_40 end at "`date -u` >> SimulationStatus.out
 
 # ManyBH far simulation
 # ==================================
