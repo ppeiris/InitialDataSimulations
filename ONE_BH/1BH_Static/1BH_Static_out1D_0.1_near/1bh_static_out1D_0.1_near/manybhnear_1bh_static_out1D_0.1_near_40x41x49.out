@@ -13,11 +13,11 @@
 
 Cactus version:    4.3.0
 Compile date:      Jul 06 2016 (04:25:41)
-Run date:          Jul 07 2016 (06:34:32+0000)
-Run host:          127.0.0.1ip-172-30-0-219 (pid=2265)
-Working directory: /home/admin/simulations/ONE_BH/1BH_Static_out1D_0.1_near/1bh_static_out1D_0.1_near
+Run date:          Jul 07 2016 (19:32:29+0000)
+Run host:          127.0.0.1ip-172-30-0-219 (pid=647)
+Working directory: /home/admin/simulations/ONE_BH/1BH_Static/1BH_Static_out1D_0.1_near/1bh_static_out1D_0.1_near
 Executable:        ./bbhcode
-Parameter file:    /home/admin/simulations/ONE_BH/1BH_Static_out1D_0.1_near/1bh_static_out1D_0.1_near/manybhnear_1bh_static_out1D_0.1_near_40x41x49.par
+Parameter file:    /home/admin/simulations/ONE_BH/1BH_Static/1BH_Static_out1D_0.1_near/1bh_static_out1D_0.1_near/manybhnear_1bh_static_out1D_0.1_near_40x41x49.par
 --------------------------------------------------------------------------------
 
 Activating thorn Cactus...Success -> active implementation Cactus
@@ -729,7 +729,7 @@ INFO (Carpet): Multi-Model: This is process 0, model 0 "world"
 Current core file size limit: hard=[unlimited], soft=0 MB
 Current memory size limit: hard=[unlimited], soft=[unlimited]
 INFO (CycleClock): Measuring CycleClock tick via gettimeofday...
-INFO (CycleClock): Calibrated CycleClock: 0.416655 ns per clock tick (2.40007 GHz)
+INFO (CycleClock): Calibrated CycleClock: 0.416658 ns per clock tick (2.40005 GHz)
 INFO (Vectors): Using vector size 1 for architecture scalar (no vectorisation, 64-bit precision)
 --------------------------------------------------------------------------------
 AMR driver provided by Carpet
@@ -765,7 +765,7 @@ INFO (Carpet): MPI is enabled
 INFO (Carpet): Carpet is running on 1 processes
 INFO (Carpet): This is process 0
 INFO (Carpet): OpenMP is disabled
-INFO (Carpet): This process runs on host 127.0.0.1ip-172-30-0-219, pid=2265
+INFO (Carpet): This process runs on host 127.0.0.1ip-172-30-0-219, pid=647
 INFO (Carpet): This process runs on 4 cores: 0-3
 INFO (Carpet): Thread 0 runs on 4 cores: 0-3
 INFO (Carpet): This simulation is running in 3 dimensions
@@ -963,11 +963,11 @@ INFO (CarpetIOScalar): Periodic scalar output requested for:
    ADMBASE::dtbetax
    ADMBASE::dtbetay
    ADMBASE::dtbetaz
-   ADMCONSTWARNING level 1 from host 127.0.0.1ip-172-30-0-219 process 0
+   ADMCONSTRWARNING level 1 from host 127.0.0.1ip-172-30-0-219 process 0
   while executing schedule bin CCTK_WRAGH, routine ML_BSSN_Helper::ML_BSSN_ParamCompat
   in thorn ML_BSSN_Helper, file /home/admin/Cactus/configs/bbhcode/build/ML_BSSN_Helper/Parameters.c:98:
   -> Forcing ML_BSSN::evolveB=0 because ML_BSSN::shiftGammaCoeff=0.0
-RAINTS::ham
+AINTS::ham
    ADMCONSTRAINTS::momx
    ADMCONSTRAINTS::momy
    ADMCONSTRAINTS::momz
@@ -982,7 +982,7 @@ Map_et::poisson : relat. diff. u^J <-> u^{J-1} :
   step 1 :  0.000000000000000  0.000000000000000  0.000000000000000  0.000000000000000  0.000000000000000  0.000000000000000  0.000000000000000  0.000000000000000  0.000000000000000  0.000000000000000  0.000000000000000  0.000000000000000  0.000000000000000  0.000000000000000  
 STEP 0 ; DIFF : 0.000000000012500
 Manybh: exist? 0x7e51c60 0x7e51c68
-BH :0 0x13682580 0x13682560
+BH :0 0x12f03570 0x12f03550
 manybh: Leaving spectralinit!
 INFO (MoL): Using Runge-Kutta 2 as the time integrator.
 INFO (MoL): The maximum number of evolved variables is 255. 25 are registered.
@@ -69941,26 +69941,26 @@ INFO (TimerReport): Top timers at iteration 0 time 0
 ======================================================================
     %    Time/s   Min/s   Max/s   Timer (gettimeofday)
 ======================================================================
-100.0   11.9875 11.9875 11.9875   CCTK total time
-100.0   11.9839 11.9839 11.9839   meta mode/meta mode/global mode
- 57.0    6.8343  6.8343  6.8343   main/Initialise/CallInitial
- 57.0    6.8341  6.8341  6.8341   meta mode/meta mode/global mode/level(0)
- 55.7    6.6780  6.6780  6.6780   main/Initialise/CallInitial/CCTK_INITIAL
- 55.7    6.6779  6.6779  6.6779   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction
- 55.7    6.6773  6.6773  6.6773   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns
- 55.4    6.6356  6.6356  6.6356   [0068] ManyBH: ManyBH_initialdata in CCTK_INITIAL
- 55.4    6.6354  6.6354  6.6354   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ManyBH_initialdata
- 43.0    5.1506  5.1506  5.1506   main/Initialise/CallSetup
- 43.0    5.1499  5.1499  5.1499   main/Initialise/CallSetup/CCTK_WRAGH
- 43.0    5.1498  5.1498  5.1498   main/Initialise/CallSetup/CCTK_WRAGH/CallFunction
- 43.0    5.1496  5.1496  5.1496   main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns
- 42.9    5.1484  5.1484  5.1484   [0030] ManyBH: ManyBH_spectralinit in CCTK_WRAGH
- 42.9    5.1484  5.1484  5.1484   main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/ManyBH_spectralinit
-  0.9    0.1058  0.1058  0.1058   main/Initialise/CallInitial/CCTK_POSTINITIAL
-  0.9    0.1056  0.1056  0.1056   main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction
-  0.9    0.1048  0.1048  0.1048   main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns
+100.0   11.9320 11.9320 11.9320   CCTK total time
+100.0   11.9284 11.9284 11.9284   meta mode/meta mode/global mode
+ 57.3    6.8316  6.8316  6.8316   main/Initialise/CallInitial
+ 57.3    6.8314  6.8314  6.8314   meta mode/meta mode/global mode/level(0)
+ 56.0    6.6761  6.6761  6.6761   main/Initialise/CallInitial/CCTK_INITIAL
+ 56.0    6.6759  6.6759  6.6759   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction
+ 55.9    6.6754  6.6754  6.6754   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns
+ 55.6    6.6353  6.6353  6.6353   [0068] ManyBH: ManyBH_initialdata in CCTK_INITIAL
+ 55.6    6.6351  6.6351  6.6351   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ManyBH_initialdata
+ 42.7    5.0979  5.0979  5.0979   main/Initialise/CallSetup
+ 42.7    5.0972  5.0972  5.0972   main/Initialise/CallSetup/CCTK_WRAGH
+ 42.7    5.0970  5.0970  5.0970   main/Initialise/CallSetup/CCTK_WRAGH/CallFunction
+ 42.7    5.0968  5.0968  5.0968   main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns
+ 42.7    5.0958  5.0958  5.0958   [0030] ManyBH: ManyBH_spectralinit in CCTK_WRAGH
+ 42.7    5.0957  5.0957  5.0957   main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/ManyBH_spectralinit
+  0.9    0.1053  0.1053  0.1053   main/Initialise/CallInitial/CCTK_POSTINITIAL
+  0.9    0.1051  0.1051  0.1051   main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction
+  0.9    0.1042  0.1042  0.1042   main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns
   0.8    0.1000  0.1000  0.1000   [0001] CycleClock: CycleClock_Setup in CCTK_STARTUP
-  0.4    0.0462  0.0462  0.0462   main/Initialise/CallInitial/Poison
+  0.4    0.0460  0.0460  0.0460   main/Initialise/CallInitial/Poison
 ======================================================================
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Iteration      Time | ADMBASE::gxx | ADMBASE::gxy | ADMBASE::gxz | ADMBASE::gyy | ADMBASE::gyz | ADMBASE::gzz | ADMBASE::kxx | ADMBASE::kxy | ADMBASE::kxz | ADMBASE::kyy | ADMBASE::kyz | ADMBASE::kzz | ADMBASE::alp | *BASE::betax | *BASE::betay | *BASE::betaz | *RAINTS::ham | *AINTS::momx | *AINTS::momy | *AINTS::momz | *me_per_hour
@@ -69972,26 +69972,26 @@ INFO (TimerReport): Top timers at iteration 0 time 0
 ======================================================================
     %    Time/s   Min/s   Max/s   Timer (gettimeofday)
 ======================================================================
-100.0   12.6350 12.6350 12.6350   CCTK total time
-100.0   12.6340 12.6340 12.6340   main/Initialise
-100.0   12.6312 12.6312 12.6312   meta mode/meta mode/global mode
- 59.1    7.4688  7.4688  7.4688   meta mode/meta mode/global mode/level(0)
- 54.1    6.8343  6.8343  6.8343   main/Initialise/CallInitial
- 52.9    6.6780  6.6780  6.6780   main/Initialise/CallInitial/CCTK_INITIAL
- 52.9    6.6779  6.6779  6.6779   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction
- 52.8    6.6773  6.6773  6.6773   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns
- 52.5    6.6356  6.6356  6.6356   [0068] ManyBH: ManyBH_initialdata in CCTK_INITIAL
- 52.5    6.6354  6.6354  6.6354   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ManyBH_initialdata
- 40.8    5.1506  5.1506  5.1506   main/Initialise/CallSetup
- 40.8    5.1499  5.1499  5.1499   main/Initialise/CallSetup/CCTK_WRAGH
- 40.8    5.1498  5.1498  5.1498   main/Initialise/CallSetup/CCTK_WRAGH/CallFunction
- 40.8    5.1496  5.1496  5.1496   main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns
- 40.7    5.1484  5.1484  5.1484   [0030] ManyBH: ManyBH_spectralinit in CCTK_WRAGH
- 40.7    5.1484  5.1484  5.1484   main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/ManyBH_spectralinit
-  5.1    0.6474  0.6474  0.6474   main/Initialise/CallAnalysis
-  5.1    0.6419  0.6419  0.6419   main/Initialise/CallAnalysis/OutputGH
-  5.1    0.6419  0.6419  0.6419   main/Initialise/CallAnalysis/OutputGH/OutputGH
-  2.3    0.2847  0.2847  0.2847   main/Initialise/CallAnalysis/OutputGH/OutputGH/IOHDF5::IOHDF5 [10]
+100.0   12.5578 12.5578 12.5578   CCTK total time
+100.0   12.5569 12.5569 12.5569   main/Initialise
+100.0   12.5541 12.5541 12.5541   meta mode/meta mode/global mode
+ 59.3    7.4444  7.4444  7.4444   meta mode/meta mode/global mode/level(0)
+ 54.4    6.8316  6.8316  6.8316   main/Initialise/CallInitial
+ 53.2    6.6761  6.6761  6.6761   main/Initialise/CallInitial/CCTK_INITIAL
+ 53.2    6.6759  6.6759  6.6759   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction
+ 53.2    6.6754  6.6754  6.6754   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns
+ 52.8    6.6353  6.6353  6.6353   [0068] ManyBH: ManyBH_initialdata in CCTK_INITIAL
+ 52.8    6.6351  6.6351  6.6351   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ManyBH_initialdata
+ 40.6    5.0979  5.0979  5.0979   main/Initialise/CallSetup
+ 40.6    5.0972  5.0972  5.0972   main/Initialise/CallSetup/CCTK_WRAGH
+ 40.6    5.0970  5.0970  5.0970   main/Initialise/CallSetup/CCTK_WRAGH/CallFunction
+ 40.6    5.0968  5.0968  5.0968   main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns
+ 40.6    5.0958  5.0958  5.0958   [0030] ManyBH: ManyBH_spectralinit in CCTK_WRAGH
+ 40.6    5.0957  5.0957  5.0957   main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/ManyBH_spectralinit
+  5.0    0.6258  0.6258  0.6258   main/Initialise/CallAnalysis
+  4.9    0.6203  0.6203  0.6203   main/Initialise/CallAnalysis/OutputGH
+  4.9    0.6203  0.6203  0.6203   main/Initialise/CallAnalysis/OutputGH/OutputGH
+  2.2    0.2700  0.2700  0.2700   main/Initialise/CallAnalysis/OutputGH/OutputGH/IOHDF5::IOHDF5 [10]
 ======================================================================
 --------------------------------------------------------------------------------
 Done.
