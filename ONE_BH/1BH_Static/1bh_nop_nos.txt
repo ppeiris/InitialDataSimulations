@@ -14,6 +14,17 @@ mbh=1
 sbh=0.0x0.0x0.0
 pbh=0.0x0.0x0.0
 xbh=3.0x0.0x0.0
+out1D_xline_y_near=0.1
+
+out1D_xline_y_near=0.1
+out1D_xline_z_near=0.1
+out1D_yline_x_near=0.1
+out1D_yline_z_near=0.1
+out1D_zline_x_near=0.1
+out1D_zline_y_near=0.1
+
+
+
 
 
 out1D_xline_y_near=0.1
