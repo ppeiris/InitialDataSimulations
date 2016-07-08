@@ -1,0 +1,717 @@
+# Clock gettimeofday
+# Unit seconds
+# Column 1 iteration
+# Column 2 simulation time
+# Column 3 timer number
+# Column 4,5,6 average, minimum, maximum over all processors
+# Column 7+ timer name
+0 0	0	3.50074 3.50074 3.50074	CCTK total time
+0 0	1	0 0 0	IO method CarpetIOBasic
+0 0	2	0 0 0	IO method CarpetIOScalar
+0 0	3	0 0 0	IO method IOASCII_0D
+0 0	4	0 0 0	IO method IOASCII_1D
+0 0	5	0 0 0	IO method IOASCII_2D
+0 0	6	0 0 0	IO method IOASCII_3D
+0 0	7	0 0 0	IO method IOHDF5
+0 0	8	0 0 0	IO method IOHDF5_0D
+0 0	9	0 0 0	IO method IOHDF5_1D
+0 0	10	0 0 0	IO method IOHDF5_2D
+0 0	11	0 0 0	IO method IOHDF5_3D
+0 0	12	0 0 0	Slab/apply
+0 0	13	0 0 0	Slab/copy_back
+0 0	14	0 0 0	Slab/copy_back_flipgeneral
+0 0	15	0 0 0	Slab/copy_back_flipx
+0 0	16	0 0 0	Slab/copy_back_flipxy
+0 0	17	0 0 0	Slab/copy_back_flipy
+0 0	18	0 0 0	Slab/copy_back_general
+0 0	19	0 0 0	Slab/copy_back_noflip
+0 0	20	0 0 0	Slab/copy_in
+0 0	21	0 0 0	Slab/copy_in_general
+0 0	22	0 0 0	Slab/copy_in_noxpose
+0 0	23	0 0 0	Slab/copy_in_xposegeneral
+0 0	24	0 0 0	Slab/copy_in_xposexy
+0 0	25	0 0 0	Slab/init
+0 0	26	0 0 0	Slab/xfer
+0 0	27	0.000136 0.000136 0.000136	[0000] Carpet: MultiModel_Startup in CCTK_STARTUP
+0 0	28	0.100024 0.100024 0.100024	[0001] CycleClock: CycleClock_Setup in CCTK_STARTUP
+0 0	29	2e-06 2e-06 2e-06	[0002] LoopControl: lc_setup in CCTK_STARTUP
+0 0	30	3.3e-05 3.3e-05 3.3e-05	[0003] ML_BSSN_Helper: ML_BSSN_SetGroupTags in CCTK_STARTUP
+0 0	31	1.2e-05 1.2e-05 1.2e-05	[0004] Timers: Timer_Startup in CCTK_STARTUP
+0 0	32	3e-06 3e-06 3e-06	[0005] Carpet: Driver_Startup in CCTK_STARTUP
+0 0	33	2e-06 2e-06 2e-06	[0006] IOUtil: IOUtil_Startup in CCTK_STARTUP
+0 0	34	4e-06 4e-06 4e-06	[0007] CarpetInterp: CarpetInterpStartup in CCTK_STARTUP
+0 0	35	2.8e-05 2.8e-05 2.8e-05	[0008] CarpetReduce: CarpetReduceStartup in CCTK_STARTUP
+0 0	36	1e-06 1e-06 1e-06	[0009] CartGrid3D: SymmetryStartup in CCTK_STARTUP
+0 0	37	1e-06 1e-06 1e-06	[0010] CoordBase: CoordBase_Startup in CCTK_STARTUP
+0 0	38	4e-06 4e-06 4e-06	[0011] AEILocalInterp: AEILocalInterp_U_Startup in CCTK_STARTUP
+0 0	39	3.3e-05 3.3e-05 3.3e-05	[0012] CarpetIOASCII: CarpetIOASCIIStartup in CCTK_STARTUP
+0 0	40	2e-06 2e-06 2e-06	[0013] LocalInterp: LocalInterp_Startup in CCTK_STARTUP
+0 0	41	3e-06 3e-06 3e-06	[0014] CarpetIOBasic: CarpetIOBasicStartup in CCTK_STARTUP
+0 0	42	1e-06 1e-06 1e-06	[0015] ML_BSSN: ML_BSSN_Startup in CCTK_STARTUP
+0 0	43	2e-06 2e-06 2e-06	[0016] ML_BSSN_Helper: ML_BSSN_RegisterSlicing in CCTK_STARTUP
+0 0	44	3.1e-05 3.1e-05 3.1e-05	[0017] CarpetIOHDF5: CarpetIOHDF5_Startup in CCTK_STARTUP
+0 0	45	4e-06 4e-06 4e-06	[0018] MoL: MoL_Startup in CCTK_STARTUP
+0 0	46	8e-06 8e-06 8e-06	[0019] Slab: Slab_InitMPIDatatypes in CCTK_STARTUP
+0 0	47	2e-06 2e-06 2e-06	[0020] SymBase: SymBase_Startup in CCTK_STARTUP
+0 0	48	4e-06 4e-06 4e-06	[0021] CarpetIOScalar: CarpetIOScalarStartup in CCTK_STARTUP
+0 0	49	2e-06 2e-06 2e-06	[0022] Vectors: Vectors_Startup in CCTK_STARTUP
+0 0	50	5.5e-05 5.5e-05 5.5e-05	[0023] ADMBase: Einstein_InitSymBound in CCTK_WRAGH
+0 0	51	9.9e-05 9.9e-05 9.9e-05	[0024] ADMConstraints: ADMConstraint_InitSymBound in CCTK_WRAGH
+0 0	52	1.6e-05 1.6e-05 1.6e-05	[0025] Boundary: Boundary_RegisterBCs in CCTK_WRAGH
+0 0	53	5.5e-05 5.5e-05 5.5e-05	[0026] CartGrid3D: RegisterCartGrid3DCoords in CCTK_WRAGH
+0 0	54	1.1e-05 1.1e-05 1.1e-05	[0027] CoordGauge: Einstein_ActivateSlicing in CCTK_WRAGH
+0 0	55	9e-06 9e-06 9e-06	[0028] CoordGauge: Einstein_SetNextSlicing in CCTK_WRAGH
+0 0	56	0.000262 0.000262 0.000262	[0029] ML_BSSN_Helper: ML_BSSN_ParamCompat in CCTK_WRAGH
+0 0	57	1.356371 1.356371 1.356371	[0030] ManyBH: ManyBH_spectralinit in CCTK_WRAGH
+0 0	58	7.1e-05 7.1e-05 7.1e-05	[0031] MoL: MoL_SetupIndexArrays in CCTK_WRAGH
+0 0	59	3.4e-05 3.4e-05 3.4e-05	[0032] MoL: MoL_SetScheduleStatus in CCTK_WRAGH
+0 0	60	9.4e-05 9.4e-05 9.4e-05	[0033] TmunuBase: TmunuBase_SetStressEnergyState in CCTK_WRAGH
+0 0	61	0.000226 0.000226 0.000226	[0034] ML_BSSN: ML_BSSN_RegisterVars in CCTK_WRAGH
+0 0	62	0.000132 0.000132 0.000132	[0035] ML_BSSN_Helper: ML_BSSN_RegisterConstrained in CCTK_WRAGH
+0 0	63	3.2e-05 3.2e-05 3.2e-05	[0036] Slab: Slab_InitTimers in CCTK_WRAGH
+0 0	64	3.9e-05 3.9e-05 3.9e-05	[0037] CartGrid3D: RegisterSymmetryBoundaries in CCTK_WRAGH
+0 0	65	0.000157 0.000157 0.000157	[0038] ML_BSSN: ML_BSSN_RegisterSymmetries in CCTK_WRAGH
+0 0	66	1.1e-05 1.1e-05 1.1e-05	[0039] SymBase: SymBase_Statistics in CCTK_WRAGH
+0 0	67	5.7e-05 5.7e-05 5.7e-05	[0040] MoL: MoL_ReportNumberVariables in CCTK_WRAGH
+0 0	68	3.7e-05 3.7e-05 3.7e-05	[0041] ADMBase: ADMBase_ParamCheck in CCTK_PARAMCHECK
+0 0	69	7.6e-05 7.6e-05 7.6e-05	[0042] ADMConstraints: ADMConstraints_ParamCheck in CCTK_PARAMCHECK
+0 0	70	9e-06 9e-06 9e-06	[0043] Boundary: Boundary_Check in CCTK_PARAMCHECK
+0 0	71	5.2e-05 5.2e-05 5.2e-05	[0044] Carpet: CarpetParamCheck in CCTK_PARAMCHECK
+0 0	72	1.8e-05 1.8e-05 1.8e-05	[0045] CarpetLib: CarpetLib_test_prolongate_3d_rf2 in CCTK_PARAMCHECK
+0 0	73	1.6e-05 1.6e-05 1.6e-05	[0046] CartGrid3D: ParamCheck_CartGrid3D in CCTK_PARAMCHECK
+0 0	74	9e-06 9e-06 9e-06	[0047] Fortran: CheckFortranParameters in CCTK_PARAMCHECK
+0 0	75	0.00013 0.00013 0.00013	[0048] ML_BSSN_Helper: ML_BSSN_ParamCheck in CCTK_PARAMCHECK
+0 0	76	3.2e-05 3.2e-05 3.2e-05	[0049] MoL: MoL_ParamCheck in CCTK_PARAMCHECK
+0 0	77	3.5e-05 3.5e-05 3.5e-05	[0050] Vectors: Vectors_Test in CCTK_PARAMCHECK
+0 0	78	7.3e-05 7.3e-05 7.3e-05	[0051] ADMBase: ADMBase_SetShiftStateOn in CCTK_BASEGRID
+0 0	79	4.6e-05 4.6e-05 4.6e-05	[0052] ADMBase: ADMBase_SetDtLapseStateOn in CCTK_BASEGRID
+0 0	80	4.7e-05 4.7e-05 4.7e-05	[0053] ADMBase: ADMBase_SetDtShiftStateOn in CCTK_BASEGRID
+0 0	81	3.8e-05 3.8e-05 3.8e-05	[0054] ADMMacros: ADMMacros_SetLocalSpatialOrder in CCTK_BASEGRID
+0 0	82	7.6e-05 7.6e-05 7.6e-05	[0055] CartGrid3D: SpatialSpacings in CCTK_BASEGRID
+0 0	83	0.001652 0.001652 0.001652	[0056] CartGrid3D: SpatialCoordinates in CCTK_BASEGRID
+0 0	84	2.8e-05 2.8e-05 2.8e-05	[0057] CarpetReduce: MaskBase_AllocateMask in CCTK_BASEGRID
+0 0	85	0.000358 0.000358 0.000358	[0058] CarpetReduce: MaskBase_InitMask in CCTK_BASEGRID
+0 0	86	0.000229 0.000229 0.000229	[0059] CarpetReduce: CoordBase_SetupMask in CCTK_BASEGRID
+0 0	87	5.6e-05 5.6e-05 5.6e-05	[0060] CarpetReduce: CarpetMaskSetup in CCTK_BASEGRID
+0 0	88	0.000784 0.000784 0.000784	[0061] CarpetReduce: MaskBase_SetMask in CCTK_BASEGRID
+0 0	89	0.000355 0.000355 0.000355	[0062] CarpetReduce: MaskBase_TestMask in CCTK_BASEGRID
+0 0	90	0.000162 0.000162 0.000162	[0063] ML_BSSN: ML_BSSN_CheckBoundaries in CCTK_BASEGRID
+0 0	91	4.6e-05 4.6e-05 4.6e-05	[0064] SymBase: SymBase_Check in CCTK_BASEGRID
+0 0	92	2.9e-05 2.9e-05 2.9e-05	[0065] Time: Time_Initialise in CCTK_BASEGRID
+0 0	93	2.2e-05 2.2e-05 2.2e-05	[0066] Time: TemporalSpacings in CCTK_BASEGRID
+0 0	94	6.1e-05 6.1e-05 6.1e-05	[0067] StaticConformal: StaticConformal_InitialiseState in CCTK_INITIAL
+0 0	95	1.919224 1.919224 1.919224	[0068] ManyBH: ManyBH_initialdata in CCTK_INITIAL
+0 0	96	0.000305 0.000305 0.000305	[0069] ADMBase: ADMBase_LapseOne in CCTK_INITIAL
+0 0	97	0.000976 0.000976 0.000976	[0070] ADMBase: ADMBase_ShiftZero in CCTK_INITIAL
+0 0	98	0.000255 0.000255 0.000255	[0071] ADMBase: ADMBase_DtLapseZero in CCTK_INITIAL
+0 0	99	0.000954 0.000954 0.000954	[0072] ADMBase: ADMBase_DtShiftZero in CCTK_INITIAL
+0 0	100	2.8e-05 2.8e-05 2.8e-05	[0073] CarpetIOASCII: CarpetIOASCIIInit in CCTK_INITIAL
+0 0	101	1.9e-05 1.9e-05 1.9e-05	[0074] CarpetIOBasic: CarpetIOBasicInit in CCTK_INITIAL
+0 0	102	2.3e-05 2.3e-05 2.3e-05	[0075] CarpetIOHDF5: CarpetIOHDF5_Init in CCTK_INITIAL
+0 0	103	1.9e-05 1.9e-05 1.9e-05	[0076] CarpetIOScalar: CarpetIOScalarInit in CCTK_INITIAL
+0 0	104	0.019594 0.019594 0.019594	[0077] ML_BSSN: ML_BSSN_InitialADMBase1Everywhere in CCTK_INITIAL
+0 0	105	0.001984 0.001984 0.001984	[0078] ML_BSSN: ML_BSSN_InitialADMBase2BoundaryScalar in CCTK_INITIAL
+0 0	106	3.6e-05 3.6e-05 3.6e-05	[0079] MoL: MoL_StartLoop in CCTK_INITIAL
+0 0	107	0.01857 0.01857 0.01857	[0080] ML_BSSN: ML_BSSN_InitialADMBase2Interior in CCTK_INITIAL
+0 0	108	0.001352 0.001352 0.001352	[0081] TmunuBase: TmunuBase_ZeroTmunu in CCTK_INITIAL
+0 0	109	0.002949 0.002949 0.002949	[0082] ML_BSSN: ML_BSSN_EnforceEverywhere in CCTK_POSTINITIAL
+0 0	110	3.6e-05 3.6e-05 3.6e-05	[0083] CarpetIOHDF5: CarpetIOHDF5_CloseFiles in CCTK_POSTINITIAL
+0 0	111	0.000156 0.000156 0.000156	[0084] ADMBase: ADMBase_Boundaries in CCTK_POSTINITIAL
+0 0	112	0.004492 0.004492 0.004492	[0085] Boundary: Boundary_ApplyPhysicalBCs in CCTK_POSTINITIAL
+0 0	113	0.000193 0.000193 0.000193	[0086] CartGrid3D: CartGrid3D_ApplyBC in CCTK_POSTINITIAL
+0 0	114	3.7e-05 3.7e-05 3.7e-05	[0087] Boundary: Boundary_ClearSelection in CCTK_POSTINITIAL
+0 0	115	0.000168 0.000168 0.000168	[0088] ML_BSSN: ML_BSSN_SelectBoundConds in CCTK_POSTINITIAL
+0 0	116	0.016651 0.016651 0.016651	[0089] ML_BSSN: ML_BSSN_ADMBaseInterior in CCTK_POSTINITIAL
+0 0	117	0.00112 0.00112 0.00112	[0090] ML_BSSN: ML_BSSN_ADMBaseBoundaryScalar in CCTK_POSTINITIAL
+0 0	118	0.014155 0.014155 0.014155	[0091] ML_BSSN: ML_BSSN_ADMBaseEverywhere in CCTK_POSTINITIAL
+0 0	119	0.000125 0.000125 0.000125	[0092] ML_BSSN_Helper: ML_BSSN_ADMBase_SelectBCs in CCTK_POSTINITIAL
+0 0	120	0.001358 0.001358 0.001358	[0093] TmunuBase: TmunuBase_ZeroTmunu in CCTK_POSTINITIAL
+0 0	121	0.03527 0.03527 0.03527	[0094] ADMConstraints: ADMConstraints in CCTK_POSTINITIAL
+0 0	122	8.2e-05 8.2e-05 8.2e-05	[0095] ADMConstraints: ADMConstraints_Boundaries in CCTK_POSTINITIAL
+0 0	123	0.001681 0.001681 0.001681	[0096] ML_BSSN: ML_BSSN_ConstraintsEverywhere in CCTK_POSTINITIAL
+0 0	124	0.000143 0.000143 0.000143	[0097] ML_BSSN: ML_BSSN_ConstraintsEverywhere_SelectBCs in CCTK_POSTINITIAL
+0 0	125	0.046079 0.046079 0.046079	[0098] ML_BSSN: ML_BSSN_ConstraintsInterior in CCTK_POSTINITIAL
+0 0	126	0.000175 0.000175 0.000175	[0099] ML_BSSN: ML_BSSN_ConstraintsInterior_SelectBCs in CCTK_POSTINITIAL
+0 0	127	6.6e-05 6.6e-05 6.6e-05	[0100] ManyBH: ManyBH_cleanup in CCTK_POSTPOSTINITIAL
+0 0	128	5.6e-05 5.6e-05 5.6e-05	[0101] CarpetIOHDF5: CarpetIOHDF5_InitialDataCheckpoint in CCTK_CPINITIAL
+0 0	129	2.8e-05 2.8e-05 2.8e-05	[0102] CarpetLib: CarpetLib_printtimestats in CCTK_ANALYSIS
+0 0	130	1.8e-05 1.8e-05 1.8e-05	[0103] CarpetLib: CarpetLib_printmemstats in CCTK_ANALYSIS
+0 0	131	3.6e-05 3.6e-05 3.6e-05	[0104] LoopControl: lc_statistics_analysis in CCTK_ANALYSIS
+0 0	132	0 0 0	[0105] TimerReport: zzz_TimerReport_Output in CCTK_ANALYSIS
+0 0	133	0 0 0	main
+0 0	134	0.004312 0.004312 0.004312	main/CarpetStartup
+0 0	135	4e-06 4e-06 4e-06	main/CarpetStartup/AllocateGridHierarchy
+0 0	136	1.8e-05 1.8e-05 1.8e-05	main/CarpetStartup/CarpetLib::dh::recompose
+0 0	137	3e-05 3e-05 3e-05	main/CarpetStartup/CarpetLib::dh::regrid
+0 0	138	0.003631 0.003631 0.003631	main/CarpetStartup/CarpetLib::gh::regrid
+0 0	139	0.003514 0.003514 0.003514	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid
+0 0	140	8.2e-05 8.2e-05 8.2e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_boxes
+0 0	141	0.001702 0.001702 0.001702	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm
+0 0	142	0.000149 0.000149 0.000149	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/old2new_ref_prol
+0 0	143	2.1e-05 2.1e-05 2.1e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/old2new_ref_prol/CarpetLib
+0 0	144	0.000149 0.000149 0.000149	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/old2new_sync
+0 0	145	2e-05 2e-05 2e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/old2new_sync/CarpetLib::dh
+0 0	146	0.000146 0.000146 0.000146	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/ref_bnd_prol
+0 0	147	1.8e-05 1.8e-05 1.8e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/ref_bnd_prol/CarpetLib::dh
+0 0	148	0.000176 0.000176 0.000176	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/ref_prol
+0 0	149	2e-05 2e-05 2e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/ref_prol/CarpetLib::dh::bs
+0 0	150	0.00077 0.00077 0.00077	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/ref_refl_prol
+0 0	151	0.000125 0.000125 0.000125	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/ref_refl_prol/CarpetLib::d
+0 0	152	0.000153 0.000153 0.000153	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/sync
+0 0	153	1.7e-05 1.7e-05 1.7e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/sync/CarpetLib::dh::bs1
+0 0	154	3.2e-05 3.2e-05 3.2e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/sync/CarpetLib::dh::bs2
+0 0	155	2.1e-05 2.1e-05 2.1e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/sync/CarpetLib::dh::bs3
+0 0	156	0.000389 0.000389 0.000389	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/buffers
+0 0	157	0.000328 0.000328 0.000328	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/comm
+0 0	158	1.4e-05 1.4e-05 1.4e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/comm/mgprol
+0 0	159	1.4e-05 1.4e-05 1.4e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/comm/mgrest
+0 0	160	1.7e-05 1.7e-05 1.7e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/comm/refbndprol
+0 0	161	1.6e-05 1.6e-05 1.6e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/comm/reflux
+0 0	162	1.5e-05 1.5e-05 1.5e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/comm/refprol
+0 0	163	1.7e-05 1.7e-05 1.7e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/comm/refrest
+0 0	164	2.4e-05 2.4e-05 2.4e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/comm/sync
+0 0	165	4.9e-05 4.9e-05 4.9e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/domain
+0 0	166	6.3e-05 6.3e-05 6.3e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/mask
+0 0	167	0.000131 0.000131 0.000131	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/region
+0 0	168	0.000326 0.000326 0.000326	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/test
+0 0	169	2.2e-05 2.2e-05 2.2e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/unusedpoints_mask
+0 0	170	2e-06 2e-06 2e-06	main/CarpetStartup/CheckRegions
+0 0	171	0 0 0	main/Initialise
+0 0	172	0 0 0	main/Initialise/CallAnalysis
+0 0	173	0 0 0	main/Initialise/CallAnalysis/CCTK_ANALYSIS
+0 0	174	7.5e-05 7.5e-05 7.5e-05	main/Initialise/CallAnalysis/CCTK_ANALYSIS/CallFunction
+0 0	175	2.7e-05 2.7e-05 2.7e-05	main/Initialise/CallAnalysis/CCTK_ANALYSIS/CallFunction/thorns
+0 0	176	1e-06 1e-06 1e-06	main/Initialise/CallAnalysis/CCTK_ANALYSIS/CallFunction/thorns/CarpetLib_printmemstats
+0 0	177	1e-06 1e-06 1e-06	main/Initialise/CallAnalysis/CCTK_ANALYSIS/CallFunction/thorns/CarpetLib_printtimestats
+0 0	178	1e-06 1e-06 1e-06	main/Initialise/CallAnalysis/CCTK_ANALYSIS/CallFunction/thorns/lc_statistics_analysis
+0 0	179	0 0 0	main/Initialise/CallAnalysis/CCTK_ANALYSIS/CallFunction/thorns/zzz_TimerReport_Output
+0 0	180	6.5e-05 6.5e-05 6.5e-05	main/Initialise/CallAnalysis/CCTK_CPINITIAL
+0 0	181	4.9e-05 4.9e-05 4.9e-05	main/Initialise/CallAnalysis/CCTK_CPINITIAL/CallFunction
+0 0	182	1.5e-05 1.5e-05 1.5e-05	main/Initialise/CallAnalysis/CCTK_CPINITIAL/CallFunction/thorns
+0 0	183	8e-06 8e-06 8e-06	main/Initialise/CallAnalysis/CCTK_CPINITIAL/CallFunction/thorns/CarpetIOHDF5_InitialDataCheckpoint
+0 0	184	2.139661 2.139661 2.139661	main/Initialise/CallInitial
+0 0	185	0.004123 0.004123 0.004123	main/Initialise/CallInitial/CCTK_BASEGRID
+0 0	186	0.003979 0.003979 0.003979	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction
+0 0	187	0.003573 0.003573 0.003573	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns
+0 0	188	1.6e-05 1.6e-05 1.6e-05	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/ADMBase_SetDtLapseStateOn
+0 0	189	1.5e-05 1.5e-05 1.5e-05	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/ADMBase_SetDtShiftStateOn
+0 0	190	1.9e-05 1.9e-05 1.9e-05	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/ADMBase_SetShiftStateOn
+0 0	191	8e-06 8e-06 8e-06	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/ADMMacros_SetLocalSpatialOrder
+0 0	192	2.8e-05 2.8e-05 2.8e-05	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/CarpetMaskSetup
+0 0	193	0.000175 0.000175 0.000175	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/CoordBase_SetupMask
+0 0	194	0.000118 0.000118 0.000118	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/ML_BSSN_CheckBoundaries
+0 0	195	8e-06 8e-06 8e-06	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/MaskBase_AllocateMask
+0 0	196	0.000302 0.000302 0.000302	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/MaskBase_InitMask
+0 0	197	0.000737 0.000737 0.000737	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/MaskBase_SetMask
+0 0	198	0.000337 0.000337 0.000337	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/MaskBase_TestMask
+0 0	199	0.001619 0.001619 0.001619	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/SpatialCoordinates
+0 0	200	4.6e-05 4.6e-05 4.6e-05	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/SpatialSpacings
+0 0	201	2e-06 2e-06 2e-06	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/SymBase_Check
+0 0	202	7e-06 7e-06 7e-06	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/TemporalSpacings
+0 0	203	8e-06 8e-06 8e-06	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/Time_Initialise
+0 0	204	2e-06 2e-06 2e-06	main/Initialise/CallInitial/CCTK_BASEGRID/CarpetLib::ggf::recompose_allocate
+0 0	205	3e-06 3e-06 3e-06	main/Initialise/CallInitial/CCTK_BASEGRID/CarpetLib::ggf::recompose_crop
+0 0	206	1e-06 1e-06 1e-06	main/Initialise/CallInitial/CCTK_BASEGRID/dh::recompose_free_old
+0 0	207	1.963502 1.963502 1.963502	main/Initialise/CallInitial/CCTK_INITIAL
+0 0	208	1.963382 1.963382 1.963382	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction
+0 0	209	0.000137 0.000137 0.000137	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs
+0 0	210	1e-06 1e-06 1e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Prolongate
+0 0	211	0.000116 0.000116 0.000116	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync
+0 0	212	4e-06 4e-06 4e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync/comm_state[0].create
+0 0	213	8e-06 8e-06 8e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync/comm_state[1].state_get_buffer_size
+0 0	214	2e-06 2e-06 2e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync/comm_state[2].state_get_buffer_size
+0 0	215	2e-06 2e-06 2e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync/comm_state[3].state_fill_send_buffe
+0 0	216	1e-06 1e-06 1e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync/comm_state[4].state_fill_send_buffe
+0 0	217	2e-06 2e-06 2e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync/comm_state[5].state_do_some_work.us
+0 0	218	1e-06 1e-06 1e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync/comm_state[6].state_do_some_work.st
+0 0	219	2e-06 2e-06 2e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync/comm_state[7].state_empty_recv_buff
+0 0	220	1e-06 1e-06 1e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync/comm_state[8].state_empty_recv_buff
+0 0	221	1.962754 1.962754 1.962754	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns
+0 0	222	0.000211 0.000211 0.000211	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ADMBase_DtLapseZero
+0 0	223	0.000914 0.000914 0.000914	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ADMBase_DtShiftZero
+0 0	224	0.000217 0.000217 0.000217	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ADMBase_LapseOne
+0 0	225	0.000934 0.000934 0.000934	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ADMBase_ShiftZero
+0 0	226	5e-06 5e-06 5e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/CarpetIOASCIIInit
+0 0	227	4e-06 4e-06 4e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/CarpetIOBasicInit
+0 0	228	8e-06 8e-06 8e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/CarpetIOHDF5_Init
+0 0	229	4e-06 4e-06 4e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/CarpetIOScalarInit
+0 0	230	0.01954 0.01954 0.01954	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ML_BSSN_InitialADMBase1Everywhere
+0 0	231	0.001925 0.001925 0.001925	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ML_BSSN_InitialADMBase2BoundaryScalar
+0 0	232	0.018512 0.018512 0.018512	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ML_BSSN_InitialADMBase2Interior
+0 0	233	1.919012 1.919012 1.919012	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ManyBH_initialdata
+0 0	234	2.3e-05 2.3e-05 2.3e-05	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/MoL_StartLoop
+0 0	235	1.6e-05 1.6e-05 1.6e-05	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/StaticConformal_InitialiseState
+0 0	236	0.001282 0.001282 0.001282	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/TmunuBase_ZeroTmunu
+0 0	237	0.12505 0.12505 0.12505	main/Initialise/CallInitial/CCTK_POSTINITIAL
+0 0	238	0.124823 0.124823 0.124823	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction
+0 0	239	0.000245 0.000245 0.000245	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs
+0 0	240	4e-06 4e-06 4e-06	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Prolongate
+0 0	241	0.000193 0.000193 0.000193	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync
+0 0	242	7e-06 7e-06 7e-06	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync/comm_state[0].create
+0 0	243	2.7e-05 2.7e-05 2.7e-05	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync/comm_state[1].state_get_buffer_
+0 0	244	6e-06 6e-06 6e-06	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync/comm_state[2].state_get_buffer_
+0 0	245	1.2e-05 1.2e-05 1.2e-05	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync/comm_state[3].state_fill_send_b
+0 0	246	6e-06 6e-06 6e-06	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync/comm_state[4].state_fill_send_b
+0 0	247	1.1e-05 1.1e-05 1.1e-05	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync/comm_state[5].state_do_some_wor
+0 0	248	6e-06 6e-06 6e-06	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync/comm_state[6].state_do_some_wor
+0 0	249	1.1e-05 1.1e-05 1.1e-05	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync/comm_state[7].state_empty_recv_
+0 0	250	4e-06 4e-06 4e-06	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync/comm_state[8].state_empty_recv_
+0 0	251	0.123785 0.123785 0.123785	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns
+0 0	252	2.6e-05 2.6e-05 2.6e-05	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ADMBase_Boundaries
+0 0	253	0.035204 0.035204 0.035204	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ADMConstraints
+0 0	254	2.9e-05 2.9e-05 2.9e-05	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ADMConstraints_Boundaries
+0 0	255	0.004174 0.004174 0.004174	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/Boundary_ApplyPhysicalBCs
+0 0	256	7e-06 7e-06 7e-06	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/Boundary_ClearSelection
+0 0	257	1.1e-05 1.1e-05 1.1e-05	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/CarpetIOHDF5_CloseFiles
+0 0	258	2.5e-05 2.5e-05 2.5e-05	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/CartGrid3D_ApplyBC
+0 0	259	0.00103 0.00103 0.00103	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ADMBaseBoundaryScalar
+0 0	260	0.0141 0.0141 0.0141	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ADMBaseEverywhere
+0 0	261	0.016606 0.016606 0.016606	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ADMBaseInterior
+0 0	262	0.000109 0.000109 0.000109	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ADMBase_SelectBCs
+0 0	263	0.001643 0.001643 0.001643	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ConstraintsEverywhere
+0 0	264	0.000107 0.000107 0.000107	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ConstraintsEverywhere_Selec
+0 0	265	0.046024 0.046024 0.046024	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ConstraintsInterior
+0 0	266	0.000122 0.000122 0.000122	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ConstraintsInterior_SelectB
+0 0	267	0.002892 0.002892 0.002892	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_EnforceEverywhere
+0 0	268	0.000121 0.000121 0.000121	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_SelectBoundConds
+0 0	269	0.001321 0.001321 0.001321	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/TmunuBase_ZeroTmunu
+0 0	270	6.2e-05 6.2e-05 6.2e-05	main/Initialise/CallInitial/CallRegridInitialMeta
+0 0	271	5e-06 5e-06 5e-06	main/Initialise/CallInitial/CallRegridInitialMeta/CCTK_PREREGRIDINITIAL
+0 0	272	2e-06 2e-06 2e-06	main/Initialise/CallInitial/CallRegridInitialMeta/Regrid
+0 0	273	1e-06 1e-06 1e-06	main/Initialise/CallInitial/CallRegridInitialMeta/RegridFree
+0 0	274	0.046719 0.046719 0.046719	main/Initialise/CallInitial/Poison
+0 0	275	0.000155 0.000155 0.000155	main/Initialise/CallPostInitial
+0 0	276	7.7e-05 7.7e-05 7.7e-05	main/Initialise/CallPostInitial/CCTK_POSTPOSTINITIAL
+0 0	277	6e-05 6e-05 6e-05	main/Initialise/CallPostInitial/CCTK_POSTPOSTINITIAL/CallFunction
+0 0	278	4.4e-05 4.4e-05 4.4e-05	main/Initialise/CallPostInitial/CCTK_POSTPOSTINITIAL/CallFunction/thorns
+0 0	279	3.6e-05 3.6e-05 3.6e-05	main/Initialise/CallPostInitial/CCTK_POSTPOSTINITIAL/CallFunction/thorns/ManyBH_cleanup
+0 0	280	3e-06 3e-06 3e-06	main/Initialise/CallPostInitial/CCTK_POSTSTEP
+0 0	281	1e-06 1e-06 1e-06	main/Initialise/CallRestrict
+0 0	282	1.358525 1.358525 1.358525	main/Initialise/CallSetup
+0 0	283	0.000458 0.000458 0.000458	main/Initialise/CallSetup/CCTK_PARAMCHECK
+0 0	284	0.000402 0.000402 0.000402	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction
+0 0	285	0.000361 0.000361 0.000361	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns
+0 0	286	2e-05 2e-05 2e-05	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/ADMBase_ParamCheck
+0 0	287	6.7e-05 6.7e-05 6.7e-05	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/ADMConstraints_ParamCheck
+0 0	288	2e-06 2e-06 2e-06	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/Boundary_Check
+0 0	289	1e-05 1e-05 1e-05	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/CarpetLib_test_prolongate_3d_rf2
+0 0	290	4.3e-05 4.3e-05 4.3e-05	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/CarpetParamCheck
+0 0	291	2e-06 2e-06 2e-06	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/CheckFortranParameters
+0 0	292	0.0001 0.0001 0.0001	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/ML_BSSN_ParamCheck
+0 0	293	2.2e-05 2.2e-05 2.2e-05	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/MoL_ParamCheck
+0 0	294	6e-06 6e-06 6e-06	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/ParamCheck_CartGrid3D
+0 0	295	2.7e-05 2.7e-05 2.7e-05	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/Vectors_Test
+0 0	296	1.357813 1.357813 1.357813	main/Initialise/CallSetup/CCTK_WRAGH
+0 0	297	1.3577 1.3577 1.3577	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction
+0 0	298	1.357488 1.357488 1.357488	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns
+0 0	299	9.2e-05 9.2e-05 9.2e-05	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/ADMConstraint_InitSymBound
+0 0	300	7e-06 7e-06 7e-06	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/Boundary_RegisterBCs
+0 0	301	4e-06 4e-06 4e-06	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/Einstein_ActivateSlicing
+0 0	302	3.2e-05 3.2e-05 3.2e-05	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/Einstein_InitSymBound
+0 0	303	2e-06 2e-06 2e-06	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/Einstein_SetNextSlicing
+0 0	304	0.000229 0.000229 0.000229	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/ML_BSSN_ParamCompat
+0 0	305	0.000103 0.000103 0.000103	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/ML_BSSN_RegisterConstrained
+0 0	306	0.000128 0.000128 0.000128	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/ML_BSSN_RegisterSymmetries
+0 0	307	0.000154 0.000154 0.000154	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/ML_BSSN_RegisterVars
+0 0	308	1.356356 1.356356 1.356356	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/ManyBH_spectralinit
+0 0	309	2.7e-05 2.7e-05 2.7e-05	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/MoL_ReportNumberVariables
+0 0	310	2.3e-05 2.3e-05 2.3e-05	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/MoL_SetScheduleStatus
+0 0	311	5.5e-05 5.5e-05 5.5e-05	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/MoL_SetupIndexArrays
+0 0	312	2.7e-05 2.7e-05 2.7e-05	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/RegisterCartGrid3DCoords
+0 0	313	1.1e-05 1.1e-05 1.1e-05	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/RegisterSymmetryBoundaries
+0 0	314	2.3e-05 2.3e-05 2.3e-05	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/Slab_InitTimers
+0 0	315	2e-06 2e-06 2e-06	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/SymBase_Statistics
+0 0	316	8.5e-05 8.5e-05 8.5e-05	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/TmunuBase_SetStressEnergyState
+0 0	317	0.000167 0.000167 0.000167	main/Initialise/CallSetup/Poison
+0 0	318	0.000152 0.000152 0.000152	main/Initialise/CarpetLib::ggf::recompose_allocate
+0 0	319	0.000119 0.000119 0.000119	main/Initialise/CarpetLib::ggf::recompose_crop
+0 0	320	9.8e-05 9.8e-05 9.8e-05	main/Initialise/dh::recompose_free_old
+0 0	321	0 0 0	meta mode
+0 0	322	0 0 0	meta mode/meta mode
+0 0	323	0.000287 0.000287 0.000287	meta mode/meta mode/enter_global_mode
+0 0	324	3.497119 3.497119 3.497119	meta mode/meta mode/global mode
+0 0	325	4.2e-05 4.2e-05 4.2e-05	meta mode/meta mode/global mode/enter_level_mode
+0 0	326	3.5e-05 3.5e-05 3.5e-05	meta mode/meta mode/global mode/leave_level_mode
+0 0	327	2.13947 2.13947 2.13947	meta mode/meta mode/global mode/level(0)
+0 0	328	0.001565 0.001565 0.001565	meta mode/meta mode/global mode/level(0)/enter_local_mode
+0 0	329	0.000122 0.000122 0.000122	meta mode/meta mode/global mode/level(0)/enter_singlemap_mode
+0 0	330	0.000373 0.000373 0.000373	meta mode/meta mode/global mode/level(0)/leave_local_mode
+0 0	331	0.000137 0.000137 0.000137	meta mode/meta mode/global mode/level(0)/leave_singlemap_mode
+0 0	332	9e-05 9e-05 9e-05	meta mode/meta mode/leave_global_mode
+
+# Column 1 iteration
+# Column 2 simulation time
+# Column 3 timer number
+# Column 4,5,6 average, minimum, maximum over all processors
+# Column 7+ timer name
+0 0	0	4.15251 4.15251 4.15251	CCTK total time
+0 0	1	0 0 0	IO method CarpetIOBasic
+0 0	2	0 0 0	IO method CarpetIOScalar
+0 0	3	0 0 0	IO method IOASCII_0D
+0 0	4	0 0 0	IO method IOASCII_1D
+0 0	5	0 0 0	IO method IOASCII_2D
+0 0	6	0 0 0	IO method IOASCII_3D
+0 0	7	0 0 0	IO method IOHDF5
+0 0	8	0 0 0	IO method IOHDF5_0D
+0 0	9	0 0 0	IO method IOHDF5_1D
+0 0	10	0 0 0	IO method IOHDF5_2D
+0 0	11	0 0 0	IO method IOHDF5_3D
+0 0	12	0 0 0	Slab/apply
+0 0	13	0 0 0	Slab/copy_back
+0 0	14	0 0 0	Slab/copy_back_flipgeneral
+0 0	15	0 0 0	Slab/copy_back_flipx
+0 0	16	0 0 0	Slab/copy_back_flipxy
+0 0	17	0 0 0	Slab/copy_back_flipy
+0 0	18	0 0 0	Slab/copy_back_general
+0 0	19	0 0 0	Slab/copy_back_noflip
+0 0	20	0 0 0	Slab/copy_in
+0 0	21	0 0 0	Slab/copy_in_general
+0 0	22	0 0 0	Slab/copy_in_noxpose
+0 0	23	0 0 0	Slab/copy_in_xposegeneral
+0 0	24	0 0 0	Slab/copy_in_xposexy
+0 0	25	0 0 0	Slab/init
+0 0	26	0 0 0	Slab/xfer
+0 0	27	0.000136 0.000136 0.000136	[0000] Carpet: MultiModel_Startup in CCTK_STARTUP
+0 0	28	0.100024 0.100024 0.100024	[0001] CycleClock: CycleClock_Setup in CCTK_STARTUP
+0 0	29	2e-06 2e-06 2e-06	[0002] LoopControl: lc_setup in CCTK_STARTUP
+0 0	30	3.3e-05 3.3e-05 3.3e-05	[0003] ML_BSSN_Helper: ML_BSSN_SetGroupTags in CCTK_STARTUP
+0 0	31	1.2e-05 1.2e-05 1.2e-05	[0004] Timers: Timer_Startup in CCTK_STARTUP
+0 0	32	3e-06 3e-06 3e-06	[0005] Carpet: Driver_Startup in CCTK_STARTUP
+0 0	33	2e-06 2e-06 2e-06	[0006] IOUtil: IOUtil_Startup in CCTK_STARTUP
+0 0	34	4e-06 4e-06 4e-06	[0007] CarpetInterp: CarpetInterpStartup in CCTK_STARTUP
+0 0	35	2.8e-05 2.8e-05 2.8e-05	[0008] CarpetReduce: CarpetReduceStartup in CCTK_STARTUP
+0 0	36	1e-06 1e-06 1e-06	[0009] CartGrid3D: SymmetryStartup in CCTK_STARTUP
+0 0	37	1e-06 1e-06 1e-06	[0010] CoordBase: CoordBase_Startup in CCTK_STARTUP
+0 0	38	4e-06 4e-06 4e-06	[0011] AEILocalInterp: AEILocalInterp_U_Startup in CCTK_STARTUP
+0 0	39	3.3e-05 3.3e-05 3.3e-05	[0012] CarpetIOASCII: CarpetIOASCIIStartup in CCTK_STARTUP
+0 0	40	2e-06 2e-06 2e-06	[0013] LocalInterp: LocalInterp_Startup in CCTK_STARTUP
+0 0	41	3e-06 3e-06 3e-06	[0014] CarpetIOBasic: CarpetIOBasicStartup in CCTK_STARTUP
+0 0	42	1e-06 1e-06 1e-06	[0015] ML_BSSN: ML_BSSN_Startup in CCTK_STARTUP
+0 0	43	2e-06 2e-06 2e-06	[0016] ML_BSSN_Helper: ML_BSSN_RegisterSlicing in CCTK_STARTUP
+0 0	44	3.1e-05 3.1e-05 3.1e-05	[0017] CarpetIOHDF5: CarpetIOHDF5_Startup in CCTK_STARTUP
+0 0	45	4e-06 4e-06 4e-06	[0018] MoL: MoL_Startup in CCTK_STARTUP
+0 0	46	8e-06 8e-06 8e-06	[0019] Slab: Slab_InitMPIDatatypes in CCTK_STARTUP
+0 0	47	2e-06 2e-06 2e-06	[0020] SymBase: SymBase_Startup in CCTK_STARTUP
+0 0	48	4e-06 4e-06 4e-06	[0021] CarpetIOScalar: CarpetIOScalarStartup in CCTK_STARTUP
+0 0	49	2e-06 2e-06 2e-06	[0022] Vectors: Vectors_Startup in CCTK_STARTUP
+0 0	50	5.5e-05 5.5e-05 5.5e-05	[0023] ADMBase: Einstein_InitSymBound in CCTK_WRAGH
+0 0	51	9.9e-05 9.9e-05 9.9e-05	[0024] ADMConstraints: ADMConstraint_InitSymBound in CCTK_WRAGH
+0 0	52	1.6e-05 1.6e-05 1.6e-05	[0025] Boundary: Boundary_RegisterBCs in CCTK_WRAGH
+0 0	53	5.5e-05 5.5e-05 5.5e-05	[0026] CartGrid3D: RegisterCartGrid3DCoords in CCTK_WRAGH
+0 0	54	1.1e-05 1.1e-05 1.1e-05	[0027] CoordGauge: Einstein_ActivateSlicing in CCTK_WRAGH
+0 0	55	9e-06 9e-06 9e-06	[0028] CoordGauge: Einstein_SetNextSlicing in CCTK_WRAGH
+0 0	56	0.000262 0.000262 0.000262	[0029] ML_BSSN_Helper: ML_BSSN_ParamCompat in CCTK_WRAGH
+0 0	57	1.356371 1.356371 1.356371	[0030] ManyBH: ManyBH_spectralinit in CCTK_WRAGH
+0 0	58	7.1e-05 7.1e-05 7.1e-05	[0031] MoL: MoL_SetupIndexArrays in CCTK_WRAGH
+0 0	59	3.4e-05 3.4e-05 3.4e-05	[0032] MoL: MoL_SetScheduleStatus in CCTK_WRAGH
+0 0	60	9.4e-05 9.4e-05 9.4e-05	[0033] TmunuBase: TmunuBase_SetStressEnergyState in CCTK_WRAGH
+0 0	61	0.000226 0.000226 0.000226	[0034] ML_BSSN: ML_BSSN_RegisterVars in CCTK_WRAGH
+0 0	62	0.000132 0.000132 0.000132	[0035] ML_BSSN_Helper: ML_BSSN_RegisterConstrained in CCTK_WRAGH
+0 0	63	3.2e-05 3.2e-05 3.2e-05	[0036] Slab: Slab_InitTimers in CCTK_WRAGH
+0 0	64	3.9e-05 3.9e-05 3.9e-05	[0037] CartGrid3D: RegisterSymmetryBoundaries in CCTK_WRAGH
+0 0	65	0.000157 0.000157 0.000157	[0038] ML_BSSN: ML_BSSN_RegisterSymmetries in CCTK_WRAGH
+0 0	66	1.1e-05 1.1e-05 1.1e-05	[0039] SymBase: SymBase_Statistics in CCTK_WRAGH
+0 0	67	5.7e-05 5.7e-05 5.7e-05	[0040] MoL: MoL_ReportNumberVariables in CCTK_WRAGH
+0 0	68	3.7e-05 3.7e-05 3.7e-05	[0041] ADMBase: ADMBase_ParamCheck in CCTK_PARAMCHECK
+0 0	69	7.6e-05 7.6e-05 7.6e-05	[0042] ADMConstraints: ADMConstraints_ParamCheck in CCTK_PARAMCHECK
+0 0	70	9e-06 9e-06 9e-06	[0043] Boundary: Boundary_Check in CCTK_PARAMCHECK
+0 0	71	5.2e-05 5.2e-05 5.2e-05	[0044] Carpet: CarpetParamCheck in CCTK_PARAMCHECK
+0 0	72	1.8e-05 1.8e-05 1.8e-05	[0045] CarpetLib: CarpetLib_test_prolongate_3d_rf2 in CCTK_PARAMCHECK
+0 0	73	1.6e-05 1.6e-05 1.6e-05	[0046] CartGrid3D: ParamCheck_CartGrid3D in CCTK_PARAMCHECK
+0 0	74	9e-06 9e-06 9e-06	[0047] Fortran: CheckFortranParameters in CCTK_PARAMCHECK
+0 0	75	0.00013 0.00013 0.00013	[0048] ML_BSSN_Helper: ML_BSSN_ParamCheck in CCTK_PARAMCHECK
+0 0	76	3.2e-05 3.2e-05 3.2e-05	[0049] MoL: MoL_ParamCheck in CCTK_PARAMCHECK
+0 0	77	3.5e-05 3.5e-05 3.5e-05	[0050] Vectors: Vectors_Test in CCTK_PARAMCHECK
+0 0	78	7.3e-05 7.3e-05 7.3e-05	[0051] ADMBase: ADMBase_SetShiftStateOn in CCTK_BASEGRID
+0 0	79	4.6e-05 4.6e-05 4.6e-05	[0052] ADMBase: ADMBase_SetDtLapseStateOn in CCTK_BASEGRID
+0 0	80	4.7e-05 4.7e-05 4.7e-05	[0053] ADMBase: ADMBase_SetDtShiftStateOn in CCTK_BASEGRID
+0 0	81	3.8e-05 3.8e-05 3.8e-05	[0054] ADMMacros: ADMMacros_SetLocalSpatialOrder in CCTK_BASEGRID
+0 0	82	7.6e-05 7.6e-05 7.6e-05	[0055] CartGrid3D: SpatialSpacings in CCTK_BASEGRID
+0 0	83	0.001652 0.001652 0.001652	[0056] CartGrid3D: SpatialCoordinates in CCTK_BASEGRID
+0 0	84	2.8e-05 2.8e-05 2.8e-05	[0057] CarpetReduce: MaskBase_AllocateMask in CCTK_BASEGRID
+0 0	85	0.000358 0.000358 0.000358	[0058] CarpetReduce: MaskBase_InitMask in CCTK_BASEGRID
+0 0	86	0.000229 0.000229 0.000229	[0059] CarpetReduce: CoordBase_SetupMask in CCTK_BASEGRID
+0 0	87	5.6e-05 5.6e-05 5.6e-05	[0060] CarpetReduce: CarpetMaskSetup in CCTK_BASEGRID
+0 0	88	0.000784 0.000784 0.000784	[0061] CarpetReduce: MaskBase_SetMask in CCTK_BASEGRID
+0 0	89	0.000355 0.000355 0.000355	[0062] CarpetReduce: MaskBase_TestMask in CCTK_BASEGRID
+0 0	90	0.000162 0.000162 0.000162	[0063] ML_BSSN: ML_BSSN_CheckBoundaries in CCTK_BASEGRID
+0 0	91	4.6e-05 4.6e-05 4.6e-05	[0064] SymBase: SymBase_Check in CCTK_BASEGRID
+0 0	92	2.9e-05 2.9e-05 2.9e-05	[0065] Time: Time_Initialise in CCTK_BASEGRID
+0 0	93	2.2e-05 2.2e-05 2.2e-05	[0066] Time: TemporalSpacings in CCTK_BASEGRID
+0 0	94	6.1e-05 6.1e-05 6.1e-05	[0067] StaticConformal: StaticConformal_InitialiseState in CCTK_INITIAL
+0 0	95	1.919224 1.919224 1.919224	[0068] ManyBH: ManyBH_initialdata in CCTK_INITIAL
+0 0	96	0.000305 0.000305 0.000305	[0069] ADMBase: ADMBase_LapseOne in CCTK_INITIAL
+0 0	97	0.000976 0.000976 0.000976	[0070] ADMBase: ADMBase_ShiftZero in CCTK_INITIAL
+0 0	98	0.000255 0.000255 0.000255	[0071] ADMBase: ADMBase_DtLapseZero in CCTK_INITIAL
+0 0	99	0.000954 0.000954 0.000954	[0072] ADMBase: ADMBase_DtShiftZero in CCTK_INITIAL
+0 0	100	2.8e-05 2.8e-05 2.8e-05	[0073] CarpetIOASCII: CarpetIOASCIIInit in CCTK_INITIAL
+0 0	101	1.9e-05 1.9e-05 1.9e-05	[0074] CarpetIOBasic: CarpetIOBasicInit in CCTK_INITIAL
+0 0	102	2.3e-05 2.3e-05 2.3e-05	[0075] CarpetIOHDF5: CarpetIOHDF5_Init in CCTK_INITIAL
+0 0	103	1.9e-05 1.9e-05 1.9e-05	[0076] CarpetIOScalar: CarpetIOScalarInit in CCTK_INITIAL
+0 0	104	0.019594 0.019594 0.019594	[0077] ML_BSSN: ML_BSSN_InitialADMBase1Everywhere in CCTK_INITIAL
+0 0	105	0.001984 0.001984 0.001984	[0078] ML_BSSN: ML_BSSN_InitialADMBase2BoundaryScalar in CCTK_INITIAL
+0 0	106	3.6e-05 3.6e-05 3.6e-05	[0079] MoL: MoL_StartLoop in CCTK_INITIAL
+0 0	107	0.01857 0.01857 0.01857	[0080] ML_BSSN: ML_BSSN_InitialADMBase2Interior in CCTK_INITIAL
+0 0	108	0.001352 0.001352 0.001352	[0081] TmunuBase: TmunuBase_ZeroTmunu in CCTK_INITIAL
+0 0	109	0.002949 0.002949 0.002949	[0082] ML_BSSN: ML_BSSN_EnforceEverywhere in CCTK_POSTINITIAL
+0 0	110	3.6e-05 3.6e-05 3.6e-05	[0083] CarpetIOHDF5: CarpetIOHDF5_CloseFiles in CCTK_POSTINITIAL
+0 0	111	0.000156 0.000156 0.000156	[0084] ADMBase: ADMBase_Boundaries in CCTK_POSTINITIAL
+0 0	112	0.004492 0.004492 0.004492	[0085] Boundary: Boundary_ApplyPhysicalBCs in CCTK_POSTINITIAL
+0 0	113	0.000193 0.000193 0.000193	[0086] CartGrid3D: CartGrid3D_ApplyBC in CCTK_POSTINITIAL
+0 0	114	3.7e-05 3.7e-05 3.7e-05	[0087] Boundary: Boundary_ClearSelection in CCTK_POSTINITIAL
+0 0	115	0.000168 0.000168 0.000168	[0088] ML_BSSN: ML_BSSN_SelectBoundConds in CCTK_POSTINITIAL
+0 0	116	0.016651 0.016651 0.016651	[0089] ML_BSSN: ML_BSSN_ADMBaseInterior in CCTK_POSTINITIAL
+0 0	117	0.00112 0.00112 0.00112	[0090] ML_BSSN: ML_BSSN_ADMBaseBoundaryScalar in CCTK_POSTINITIAL
+0 0	118	0.014155 0.014155 0.014155	[0091] ML_BSSN: ML_BSSN_ADMBaseEverywhere in CCTK_POSTINITIAL
+0 0	119	0.000125 0.000125 0.000125	[0092] ML_BSSN_Helper: ML_BSSN_ADMBase_SelectBCs in CCTK_POSTINITIAL
+0 0	120	0.001358 0.001358 0.001358	[0093] TmunuBase: TmunuBase_ZeroTmunu in CCTK_POSTINITIAL
+0 0	121	0.03527 0.03527 0.03527	[0094] ADMConstraints: ADMConstraints in CCTK_POSTINITIAL
+0 0	122	8.2e-05 8.2e-05 8.2e-05	[0095] ADMConstraints: ADMConstraints_Boundaries in CCTK_POSTINITIAL
+0 0	123	0.001681 0.001681 0.001681	[0096] ML_BSSN: ML_BSSN_ConstraintsEverywhere in CCTK_POSTINITIAL
+0 0	124	0.000143 0.000143 0.000143	[0097] ML_BSSN: ML_BSSN_ConstraintsEverywhere_SelectBCs in CCTK_POSTINITIAL
+0 0	125	0.046079 0.046079 0.046079	[0098] ML_BSSN: ML_BSSN_ConstraintsInterior in CCTK_POSTINITIAL
+0 0	126	0.000175 0.000175 0.000175	[0099] ML_BSSN: ML_BSSN_ConstraintsInterior_SelectBCs in CCTK_POSTINITIAL
+0 0	127	6.6e-05 6.6e-05 6.6e-05	[0100] ManyBH: ManyBH_cleanup in CCTK_POSTPOSTINITIAL
+0 0	128	5.6e-05 5.6e-05 5.6e-05	[0101] CarpetIOHDF5: CarpetIOHDF5_InitialDataCheckpoint in CCTK_CPINITIAL
+0 0	129	2.8e-05 2.8e-05 2.8e-05	[0102] CarpetLib: CarpetLib_printtimestats in CCTK_ANALYSIS
+0 0	130	1.8e-05 1.8e-05 1.8e-05	[0103] CarpetLib: CarpetLib_printmemstats in CCTK_ANALYSIS
+0 0	131	3.6e-05 3.6e-05 3.6e-05	[0104] LoopControl: lc_statistics_analysis in CCTK_ANALYSIS
+0 0	132	0.005018 0.005018 0.005018	[0105] TimerReport: zzz_TimerReport_Output in CCTK_ANALYSIS
+0 0	133	5.6e-05 5.6e-05 5.6e-05	[0106] CarpetIOHDF5: CarpetIOHDF5_TerminationCheckpoint in CCTK_TERMINATE
+0 0	134	3.6e-05 3.6e-05 3.6e-05	[0107] LoopControl: lc_statistics_terminate in CCTK_TERMINATE
+0 0	135	4.5e-05 4.5e-05 4.5e-05	[0108] MoL: MoL_FreeIndexArrays in CCTK_TERMINATE
+0 0	136	0 0 0	[0109] TimerReport: zzz_TimerReport_Output in CCTK_TERMINATE
+0 0	137	0 0 0	main
+0 0	138	0.004312 0.004312 0.004312	main/CarpetStartup
+0 0	139	4e-06 4e-06 4e-06	main/CarpetStartup/AllocateGridHierarchy
+0 0	140	1.8e-05 1.8e-05 1.8e-05	main/CarpetStartup/CarpetLib::dh::recompose
+0 0	141	3e-05 3e-05 3e-05	main/CarpetStartup/CarpetLib::dh::regrid
+0 0	142	0.003631 0.003631 0.003631	main/CarpetStartup/CarpetLib::gh::regrid
+0 0	143	0.003514 0.003514 0.003514	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid
+0 0	144	8.2e-05 8.2e-05 8.2e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_boxes
+0 0	145	0.001702 0.001702 0.001702	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm
+0 0	146	0.000149 0.000149 0.000149	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/old2new_ref_prol
+0 0	147	2.1e-05 2.1e-05 2.1e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/old2new_ref_prol/CarpetLib
+0 0	148	0.000149 0.000149 0.000149	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/old2new_sync
+0 0	149	2e-05 2e-05 2e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/old2new_sync/CarpetLib::dh
+0 0	150	0.000146 0.000146 0.000146	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/ref_bnd_prol
+0 0	151	1.8e-05 1.8e-05 1.8e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/ref_bnd_prol/CarpetLib::dh
+0 0	152	0.000176 0.000176 0.000176	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/ref_prol
+0 0	153	2e-05 2e-05 2e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/ref_prol/CarpetLib::dh::bs
+0 0	154	0.00077 0.00077 0.00077	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/ref_refl_prol
+0 0	155	0.000125 0.000125 0.000125	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/ref_refl_prol/CarpetLib::d
+0 0	156	0.000153 0.000153 0.000153	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/sync
+0 0	157	1.7e-05 1.7e-05 1.7e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/sync/CarpetLib::dh::bs1
+0 0	158	3.2e-05 3.2e-05 3.2e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/sync/CarpetLib::dh::bs2
+0 0	159	2.1e-05 2.1e-05 2.1e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/bcast_comm/sync/CarpetLib::dh::bs3
+0 0	160	0.000389 0.000389 0.000389	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/buffers
+0 0	161	0.000328 0.000328 0.000328	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/comm
+0 0	162	1.4e-05 1.4e-05 1.4e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/comm/mgprol
+0 0	163	1.4e-05 1.4e-05 1.4e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/comm/mgrest
+0 0	164	1.7e-05 1.7e-05 1.7e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/comm/refbndprol
+0 0	165	1.6e-05 1.6e-05 1.6e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/comm/reflux
+0 0	166	1.5e-05 1.5e-05 1.5e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/comm/refprol
+0 0	167	1.7e-05 1.7e-05 1.7e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/comm/refrest
+0 0	168	2.4e-05 2.4e-05 2.4e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/comm/sync
+0 0	169	4.9e-05 4.9e-05 4.9e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/domain
+0 0	170	6.3e-05 6.3e-05 6.3e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/mask
+0 0	171	0.000131 0.000131 0.000131	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/region
+0 0	172	0.000326 0.000326 0.000326	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/test
+0 0	173	2.2e-05 2.2e-05 2.2e-05	main/CarpetStartup/CarpetLib::gh::regrid/CarpetLib::dh::regrid/unusedpoints_mask
+0 0	174	2e-06 2e-06 2e-06	main/CarpetStartup/CheckRegions
+0 0	175	9e-06 9e-06 9e-06	main/Evolve
+0 0	176	1e-06 1e-06 1e-06	main/Evolve/DoTerminate
+0 0	177	4.151586 4.151586 4.151586	main/Initialise
+0 0	178	0.651766 0.651766 0.651766	main/Initialise/CallAnalysis
+0 0	179	0.005181 0.005181 0.005181	main/Initialise/CallAnalysis/CCTK_ANALYSIS
+0 0	180	0.005092 0.005092 0.005092	main/Initialise/CallAnalysis/CCTK_ANALYSIS/CallFunction
+0 0	181	0.00503 0.00503 0.00503	main/Initialise/CallAnalysis/CCTK_ANALYSIS/CallFunction/thorns
+0 0	182	1e-06 1e-06 1e-06	main/Initialise/CallAnalysis/CCTK_ANALYSIS/CallFunction/thorns/CarpetLib_printmemstats
+0 0	183	1e-06 1e-06 1e-06	main/Initialise/CallAnalysis/CCTK_ANALYSIS/CallFunction/thorns/CarpetLib_printtimestats
+0 0	184	1e-06 1e-06 1e-06	main/Initialise/CallAnalysis/CCTK_ANALYSIS/CallFunction/thorns/lc_statistics_analysis
+0 0	185	0.004994 0.004994 0.004994	main/Initialise/CallAnalysis/CCTK_ANALYSIS/CallFunction/thorns/zzz_TimerReport_Output
+0 0	186	6.5e-05 6.5e-05 6.5e-05	main/Initialise/CallAnalysis/CCTK_CPINITIAL
+0 0	187	4.9e-05 4.9e-05 4.9e-05	main/Initialise/CallAnalysis/CCTK_CPINITIAL/CallFunction
+0 0	188	1.5e-05 1.5e-05 1.5e-05	main/Initialise/CallAnalysis/CCTK_CPINITIAL/CallFunction/thorns
+0 0	189	8e-06 8e-06 8e-06	main/Initialise/CallAnalysis/CCTK_CPINITIAL/CallFunction/thorns/CarpetIOHDF5_InitialDataCheckpoint
+0 0	190	0.646217 0.646217 0.646217	main/Initialise/CallAnalysis/OutputGH
+0 0	191	0.646207 0.646207 0.646207	main/Initialise/CallAnalysis/OutputGH/OutputGH
+0 0	192	0.000868 0.000868 0.000868	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOASCII::IOASCII_0D [0]
+0 0	193	0.000858 0.000858 0.000858	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOASCII::IOASCII_0D [0]/OutputGH<0>
+0 0	194	0.007879 0.007879 0.007879	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOASCII::IOASCII_1D [1]
+0 0	195	0.007865 0.007865 0.007865	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOASCII::IOASCII_1D [1]/OutputGH<1>
+0 0	196	1e-05 1e-05 1e-05	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOASCII::IOASCII_2D [2]
+0 0	197	1e-06 1e-06 1e-06	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOASCII::IOASCII_2D [2]/OutputGH<2>
+0 0	198	1e-05 1e-05 1e-05	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOASCII::IOASCII_3D [3]
+0 0	199	1e-06 1e-06 1e-06	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOASCII::IOASCII_3D [3]/OutputGH<3>
+0 0	200	0.005645 0.005645 0.005645	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOBasic::CarpetIOBasic [4]
+0 0	201	0.005632 0.005632 0.005632	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOBasic::CarpetIOBasic [4]/OutputGH
+0 0	202	0.282298 0.282298 0.282298	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOHDF5::IOHDF5 [10]
+0 0	203	0.282286 0.282286 0.282286	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOHDF5::IOHDF5 [10]/OutputGH
+0 0	204	1.1e-05 1.1e-05 1.1e-05	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOHDF5::IOHDF5_0D [5]
+0 0	205	1e-06 1e-06 1e-06	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOHDF5::IOHDF5_0D [5]/OutputGH<0>
+0 0	206	1.1e-05 1.1e-05 1.1e-05	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOHDF5::IOHDF5_1D [6]
+0 0	207	2e-06 2e-06 2e-06	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOHDF5::IOHDF5_1D [6]/OutputGH<1>
+0 0	208	0.271329 0.271329 0.271329	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOHDF5::IOHDF5_2D [7]
+0 0	209	0.271316 0.271316 0.271316	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOHDF5::IOHDF5_2D [7]/OutputGH<2>
+0 0	210	1.3e-05 1.3e-05 1.3e-05	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOHDF5::IOHDF5_3D [8]
+0 0	211	2e-06 2e-06 2e-06	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOHDF5::IOHDF5_3D [8]/OutputGH<3>
+0 0	212	0.077982 0.077982 0.077982	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOScalar::CarpetIOScalar [9]
+0 0	213	0.077971 0.077971 0.077971	main/Initialise/CallAnalysis/OutputGH/OutputGH/IOScalar::CarpetIOScalar [9]/OutputGH
+0 0	214	2.139661 2.139661 2.139661	main/Initialise/CallInitial
+0 0	215	0.004123 0.004123 0.004123	main/Initialise/CallInitial/CCTK_BASEGRID
+0 0	216	0.003979 0.003979 0.003979	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction
+0 0	217	0.003573 0.003573 0.003573	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns
+0 0	218	1.6e-05 1.6e-05 1.6e-05	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/ADMBase_SetDtLapseStateOn
+0 0	219	1.5e-05 1.5e-05 1.5e-05	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/ADMBase_SetDtShiftStateOn
+0 0	220	1.9e-05 1.9e-05 1.9e-05	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/ADMBase_SetShiftStateOn
+0 0	221	8e-06 8e-06 8e-06	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/ADMMacros_SetLocalSpatialOrder
+0 0	222	2.8e-05 2.8e-05 2.8e-05	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/CarpetMaskSetup
+0 0	223	0.000175 0.000175 0.000175	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/CoordBase_SetupMask
+0 0	224	0.000118 0.000118 0.000118	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/ML_BSSN_CheckBoundaries
+0 0	225	8e-06 8e-06 8e-06	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/MaskBase_AllocateMask
+0 0	226	0.000302 0.000302 0.000302	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/MaskBase_InitMask
+0 0	227	0.000737 0.000737 0.000737	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/MaskBase_SetMask
+0 0	228	0.000337 0.000337 0.000337	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/MaskBase_TestMask
+0 0	229	0.001619 0.001619 0.001619	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/SpatialCoordinates
+0 0	230	4.6e-05 4.6e-05 4.6e-05	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/SpatialSpacings
+0 0	231	2e-06 2e-06 2e-06	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/SymBase_Check
+0 0	232	7e-06 7e-06 7e-06	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/TemporalSpacings
+0 0	233	8e-06 8e-06 8e-06	main/Initialise/CallInitial/CCTK_BASEGRID/CallFunction/thorns/Time_Initialise
+0 0	234	2e-06 2e-06 2e-06	main/Initialise/CallInitial/CCTK_BASEGRID/CarpetLib::ggf::recompose_allocate
+0 0	235	3e-06 3e-06 3e-06	main/Initialise/CallInitial/CCTK_BASEGRID/CarpetLib::ggf::recompose_crop
+0 0	236	1e-06 1e-06 1e-06	main/Initialise/CallInitial/CCTK_BASEGRID/dh::recompose_free_old
+0 0	237	1.963502 1.963502 1.963502	main/Initialise/CallInitial/CCTK_INITIAL
+0 0	238	1.963382 1.963382 1.963382	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction
+0 0	239	0.000137 0.000137 0.000137	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs
+0 0	240	1e-06 1e-06 1e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Prolongate
+0 0	241	0.000116 0.000116 0.000116	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync
+0 0	242	4e-06 4e-06 4e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync/comm_state[0].create
+0 0	243	8e-06 8e-06 8e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync/comm_state[1].state_get_buffer_size
+0 0	244	2e-06 2e-06 2e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync/comm_state[2].state_get_buffer_size
+0 0	245	2e-06 2e-06 2e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync/comm_state[3].state_fill_send_buffe
+0 0	246	1e-06 1e-06 1e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync/comm_state[4].state_fill_send_buffe
+0 0	247	2e-06 2e-06 2e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync/comm_state[5].state_do_some_work.us
+0 0	248	1e-06 1e-06 1e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync/comm_state[6].state_do_some_work.st
+0 0	249	2e-06 2e-06 2e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync/comm_state[7].state_empty_recv_buff
+0 0	250	1e-06 1e-06 1e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/syncs/Sync/comm_state[8].state_empty_recv_buff
+0 0	251	1.962754 1.962754 1.962754	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns
+0 0	252	0.000211 0.000211 0.000211	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ADMBase_DtLapseZero
+0 0	253	0.000914 0.000914 0.000914	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ADMBase_DtShiftZero
+0 0	254	0.000217 0.000217 0.000217	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ADMBase_LapseOne
+0 0	255	0.000934 0.000934 0.000934	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ADMBase_ShiftZero
+0 0	256	5e-06 5e-06 5e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/CarpetIOASCIIInit
+0 0	257	4e-06 4e-06 4e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/CarpetIOBasicInit
+0 0	258	8e-06 8e-06 8e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/CarpetIOHDF5_Init
+0 0	259	4e-06 4e-06 4e-06	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/CarpetIOScalarInit
+0 0	260	0.01954 0.01954 0.01954	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ML_BSSN_InitialADMBase1Everywhere
+0 0	261	0.001925 0.001925 0.001925	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ML_BSSN_InitialADMBase2BoundaryScalar
+0 0	262	0.018512 0.018512 0.018512	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ML_BSSN_InitialADMBase2Interior
+0 0	263	1.919012 1.919012 1.919012	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ManyBH_initialdata
+0 0	264	2.3e-05 2.3e-05 2.3e-05	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/MoL_StartLoop
+0 0	265	1.6e-05 1.6e-05 1.6e-05	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/StaticConformal_InitialiseState
+0 0	266	0.001282 0.001282 0.001282	main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/TmunuBase_ZeroTmunu
+0 0	267	0.12505 0.12505 0.12505	main/Initialise/CallInitial/CCTK_POSTINITIAL
+0 0	268	0.124823 0.124823 0.124823	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction
+0 0	269	0.000245 0.000245 0.000245	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs
+0 0	270	4e-06 4e-06 4e-06	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Prolongate
+0 0	271	0.000193 0.000193 0.000193	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync
+0 0	272	7e-06 7e-06 7e-06	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync/comm_state[0].create
+0 0	273	2.7e-05 2.7e-05 2.7e-05	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync/comm_state[1].state_get_buffer_
+0 0	274	6e-06 6e-06 6e-06	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync/comm_state[2].state_get_buffer_
+0 0	275	1.2e-05 1.2e-05 1.2e-05	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync/comm_state[3].state_fill_send_b
+0 0	276	6e-06 6e-06 6e-06	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync/comm_state[4].state_fill_send_b
+0 0	277	1.1e-05 1.1e-05 1.1e-05	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync/comm_state[5].state_do_some_wor
+0 0	278	6e-06 6e-06 6e-06	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync/comm_state[6].state_do_some_wor
+0 0	279	1.1e-05 1.1e-05 1.1e-05	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync/comm_state[7].state_empty_recv_
+0 0	280	4e-06 4e-06 4e-06	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/syncs/Sync/comm_state[8].state_empty_recv_
+0 0	281	0.123785 0.123785 0.123785	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns
+0 0	282	2.6e-05 2.6e-05 2.6e-05	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ADMBase_Boundaries
+0 0	283	0.035204 0.035204 0.035204	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ADMConstraints
+0 0	284	2.9e-05 2.9e-05 2.9e-05	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ADMConstraints_Boundaries
+0 0	285	0.004174 0.004174 0.004174	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/Boundary_ApplyPhysicalBCs
+0 0	286	7e-06 7e-06 7e-06	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/Boundary_ClearSelection
+0 0	287	1.1e-05 1.1e-05 1.1e-05	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/CarpetIOHDF5_CloseFiles
+0 0	288	2.5e-05 2.5e-05 2.5e-05	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/CartGrid3D_ApplyBC
+0 0	289	0.00103 0.00103 0.00103	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ADMBaseBoundaryScalar
+0 0	290	0.0141 0.0141 0.0141	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ADMBaseEverywhere
+0 0	291	0.016606 0.016606 0.016606	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ADMBaseInterior
+0 0	292	0.000109 0.000109 0.000109	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ADMBase_SelectBCs
+0 0	293	0.001643 0.001643 0.001643	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ConstraintsEverywhere
+0 0	294	0.000107 0.000107 0.000107	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ConstraintsEverywhere_Selec
+0 0	295	0.046024 0.046024 0.046024	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ConstraintsInterior
+0 0	296	0.000122 0.000122 0.000122	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ConstraintsInterior_SelectB
+0 0	297	0.002892 0.002892 0.002892	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_EnforceEverywhere
+0 0	298	0.000121 0.000121 0.000121	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_SelectBoundConds
+0 0	299	0.001321 0.001321 0.001321	main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/TmunuBase_ZeroTmunu
+0 0	300	6.2e-05 6.2e-05 6.2e-05	main/Initialise/CallInitial/CallRegridInitialMeta
+0 0	301	5e-06 5e-06 5e-06	main/Initialise/CallInitial/CallRegridInitialMeta/CCTK_PREREGRIDINITIAL
+0 0	302	2e-06 2e-06 2e-06	main/Initialise/CallInitial/CallRegridInitialMeta/Regrid
+0 0	303	1e-06 1e-06 1e-06	main/Initialise/CallInitial/CallRegridInitialMeta/RegridFree
+0 0	304	0.046719 0.046719 0.046719	main/Initialise/CallInitial/Poison
+0 0	305	0.000155 0.000155 0.000155	main/Initialise/CallPostInitial
+0 0	306	7.7e-05 7.7e-05 7.7e-05	main/Initialise/CallPostInitial/CCTK_POSTPOSTINITIAL
+0 0	307	6e-05 6e-05 6e-05	main/Initialise/CallPostInitial/CCTK_POSTPOSTINITIAL/CallFunction
+0 0	308	4.4e-05 4.4e-05 4.4e-05	main/Initialise/CallPostInitial/CCTK_POSTPOSTINITIAL/CallFunction/thorns
+0 0	309	3.6e-05 3.6e-05 3.6e-05	main/Initialise/CallPostInitial/CCTK_POSTPOSTINITIAL/CallFunction/thorns/ManyBH_cleanup
+0 0	310	3e-06 3e-06 3e-06	main/Initialise/CallPostInitial/CCTK_POSTSTEP
+0 0	311	1e-06 1e-06 1e-06	main/Initialise/CallRestrict
+0 0	312	1.358525 1.358525 1.358525	main/Initialise/CallSetup
+0 0	313	0.000458 0.000458 0.000458	main/Initialise/CallSetup/CCTK_PARAMCHECK
+0 0	314	0.000402 0.000402 0.000402	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction
+0 0	315	0.000361 0.000361 0.000361	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns
+0 0	316	2e-05 2e-05 2e-05	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/ADMBase_ParamCheck
+0 0	317	6.7e-05 6.7e-05 6.7e-05	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/ADMConstraints_ParamCheck
+0 0	318	2e-06 2e-06 2e-06	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/Boundary_Check
+0 0	319	1e-05 1e-05 1e-05	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/CarpetLib_test_prolongate_3d_rf2
+0 0	320	4.3e-05 4.3e-05 4.3e-05	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/CarpetParamCheck
+0 0	321	2e-06 2e-06 2e-06	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/CheckFortranParameters
+0 0	322	0.0001 0.0001 0.0001	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/ML_BSSN_ParamCheck
+0 0	323	2.2e-05 2.2e-05 2.2e-05	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/MoL_ParamCheck
+0 0	324	6e-06 6e-06 6e-06	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/ParamCheck_CartGrid3D
+0 0	325	2.7e-05 2.7e-05 2.7e-05	main/Initialise/CallSetup/CCTK_PARAMCHECK/CallFunction/thorns/Vectors_Test
+0 0	326	1.357813 1.357813 1.357813	main/Initialise/CallSetup/CCTK_WRAGH
+0 0	327	1.3577 1.3577 1.3577	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction
+0 0	328	1.357488 1.357488 1.357488	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns
+0 0	329	9.2e-05 9.2e-05 9.2e-05	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/ADMConstraint_InitSymBound
+0 0	330	7e-06 7e-06 7e-06	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/Boundary_RegisterBCs
+0 0	331	4e-06 4e-06 4e-06	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/Einstein_ActivateSlicing
+0 0	332	3.2e-05 3.2e-05 3.2e-05	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/Einstein_InitSymBound
+0 0	333	2e-06 2e-06 2e-06	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/Einstein_SetNextSlicing
+0 0	334	0.000229 0.000229 0.000229	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/ML_BSSN_ParamCompat
+0 0	335	0.000103 0.000103 0.000103	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/ML_BSSN_RegisterConstrained
+0 0	336	0.000128 0.000128 0.000128	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/ML_BSSN_RegisterSymmetries
+0 0	337	0.000154 0.000154 0.000154	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/ML_BSSN_RegisterVars
+0 0	338	1.356356 1.356356 1.356356	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/ManyBH_spectralinit
+0 0	339	2.7e-05 2.7e-05 2.7e-05	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/MoL_ReportNumberVariables
+0 0	340	2.3e-05 2.3e-05 2.3e-05	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/MoL_SetScheduleStatus
+0 0	341	5.5e-05 5.5e-05 5.5e-05	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/MoL_SetupIndexArrays
+0 0	342	2.7e-05 2.7e-05 2.7e-05	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/RegisterCartGrid3DCoords
+0 0	343	1.1e-05 1.1e-05 1.1e-05	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/RegisterSymmetryBoundaries
+0 0	344	2.3e-05 2.3e-05 2.3e-05	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/Slab_InitTimers
+0 0	345	2e-06 2e-06 2e-06	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/SymBase_Statistics
+0 0	346	8.5e-05 8.5e-05 8.5e-05	main/Initialise/CallSetup/CCTK_WRAGH/CallFunction/thorns/TmunuBase_SetStressEnergyState
+0 0	347	0.000167 0.000167 0.000167	main/Initialise/CallSetup/Poison
+0 0	348	0.000152 0.000152 0.000152	main/Initialise/CarpetLib::ggf::recompose_allocate
+0 0	349	0.000119 0.000119 0.000119	main/Initialise/CarpetLib::ggf::recompose_crop
+0 0	350	9.8e-05 9.8e-05 9.8e-05	main/Initialise/dh::recompose_free_old
+0 0	351	0 0 0	main/Shutdown
+0 0	352	0.000129 0.000129 0.000129	main/Shutdown/CallFunction
+0 0	353	3.5e-05 3.5e-05 3.5e-05	main/Shutdown/CallFunction/thorns
+0 0	354	8e-06 8e-06 8e-06	main/Shutdown/CallFunction/thorns/CarpetIOHDF5_TerminationCheckpoint
+0 0	355	3e-06 3e-06 3e-06	main/Shutdown/CallFunction/thorns/MoL_FreeIndexArrays
+0 0	356	1e-06 1e-06 1e-06	main/Shutdown/CallFunction/thorns/lc_statistics_terminate
+0 0	357	0 0 0	main/Shutdown/CallFunction/thorns/zzz_TimerReport_Output
+0 0	358	0 0 0	meta mode
+0 0	359	0 0 0	meta mode/meta mode
+0 0	360	0.000348 0.000348 0.000348	meta mode/meta mode/enter_global_mode
+0 0	361	4.148722 4.148722 4.148722	meta mode/meta mode/global mode
+0 0	362	0.000635 0.000635 0.000635	meta mode/meta mode/global mode/enter_level_mode
+0 0	363	0.000399 0.000399 0.000399	meta mode/meta mode/global mode/leave_level_mode
+0 0	364	2.77822 2.77822 2.77822	meta mode/meta mode/global mode/level(0)
+0 0	365	0.007597 0.007597 0.007597	meta mode/meta mode/global mode/level(0)/enter_local_mode
+0 0	366	0.000649 0.000649 0.000649	meta mode/meta mode/global mode/level(0)/enter_singlemap_mode
+0 0	367	0.00173 0.00173 0.00173	meta mode/meta mode/global mode/level(0)/leave_local_mode
+0 0	368	0.000625 0.000625 0.000625	meta mode/meta mode/global mode/level(0)/leave_singlemap_mode
+0 0	369	0.000108 0.000108 0.000108	meta mode/meta mode/leave_global_mode
+
