@@ -127,7 +127,7 @@ def buildSinglePlosts(datadf):
                 plt.close('all')
                 print('Plot %s' % (datadf.loc[irow]['dir'] + '_' + axis + plotFormat))
             else:
-                print("Data set %s is empty" %(dataFiled))
+                print("Data set %s is empty")
 
 
 def buildPlots(method):
@@ -165,7 +165,7 @@ def buildPlots(method):
 
 
 
-buildPlots('manybh')
+#buildPlots('manybh')
 buildPlots('twopun')
 
 
