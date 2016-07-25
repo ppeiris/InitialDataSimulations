@@ -82,17 +82,22 @@ def buildGroupPlots(datadf, method):
     ai = {'x': 0, 'y': 1, 'z': 2}
     for gname, gdata in datadf.groupby('zone'):
         for axis in axislist:
+
             fig = plt.figure()
             ad = fig.add_subplot(111)
             ad.grid(True)
             for irow in gdata.index:
-                if axis in ['d']:
-                    axisVal = datadf.loc[irow][axis]['ml'].str.split(' ').apply(lambda x: x[0])
-                    dataVal = np.log10(np.abs(datadf.loc[irow][axis]['ix']))
-                else:
-                    axisVal = datadf.loc[irow][axis]['ix'].str.split(' ').apply(lambda x: x[ai[axis]])
-                    dataVal = np.log10(np.abs(datadf.loc[irow][axis]['iy']))
-                ad.plot(axisVal, dataVal, label=datadf.loc[irow]['res'])
+                try:
+                    if axis in ['d']:
+                        axisVal = datadf.loc[irow][axis]['ml'].str.split(' ').apply(lambda x: x[0])
+                        dataVal = np.log10(np.abs(datadf.loc[irow][axis]['ix']))
+                    else:
+                        axisVal = datadf.loc[irow][axis]['ix'].str.split(' ').apply(lambda x: x[ai[axis]])
+                        dataVal = np.log10(np.abs(datadf.loc[irow][axis]['iy']))
+                    ad.plot(axisVal, dataVal, label=datadf.loc[irow]['res'])
+                except Exception, e:
+                    print(str(e))
+                    continue
             ad.legend(loc=loc['best'], ncol=legend_ncol, prop={'size': legend_fontsize})
             ad.set_xlabel(axis)
             ad.set_ylabel('log(H)')

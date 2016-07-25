@@ -11,14 +11,18 @@ import os
 import sys
 import optparse
 import pandas as pd
+sys.path.append('../zones')
+import zones
 
-pd.set_option('display.height', 1000)
+# pd.set_option('display.height', 1000)
 pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 
 # BASEPATH = os.path.dirname(os.path.realpath(__file__))
-BASEPATH = os.path.expanduser('~') + '/simulations/GenerateSimulations'
+BASEPATH = os.path.dirname(os.path.realpath(__file__)) #+ '/simulations/GenerateSimulations'
+
+
 defaultData = os.path.join(BASEPATH, 'paroriginal/initdata.csv')
 
 # update new values in in the default value set
@@ -57,6 +61,24 @@ def getVal(df, key, col='global'):
     except Exception, e:
         print(str(e))
         sys.exit()
+
+
+def zoneplot(df):
+    global BASEPATH, simname
+    z = zones.zone()
+    gridData = z.gridBoxPoints()
+    print(gridData)
+
+
+    # xbh = getVal(df, 'xbh').replace('x', ',')
+    # f = open(os.path.join(BASEPATH, 'paroriginal/zone.tex'), 'r+')
+    # w = open(simname + '/plots/zone.tex','w+')
+    # for line in f:
+    #     line = line.replace('[==bhpositoin==]', '\\newcommand\\bhone{(' + xbh +')}' +'\n\n')
+    #     w.write(line)
+
+
+
 
 VERSION = '1.0'
 USAGE = '%prog [-h | --help] [--version][-f | --file]'
@@ -459,6 +481,9 @@ for line in f:
     w.write(line)
 
 print 'Par files are created in ' + simname + ' directory'
+
+
+zoneplot(data)
 
 print('Done.')
 

@@ -1,0 +1,37 @@
+---
+title: RIT - TODO
+tags: ["MS thesis"]
+notebook: RIT - MS thesis
+---
+
+# TODO Today
+- [X] run 2bh to check if it produce the data
+- [X] email josh
+- [ ] build a script to make multi plot from different simulations for given resolution
+
+
+
+# TODO
+
+- [ ] Add the L2 norm
+- [ ] Generate par file for existing simulation (from todo list)
+- [ ] Add the L2Norm in to the program and generate all the plots and send to Josh
+- [ ] Read the code to understand it
+- [ ] Contine on the lectures
+
+
+# Simulations
+
+## 1 BH - Boosted in x-direction
+- [ ] p0.0 sim
+- [ ] p0.1 sim
+- [ ] p0.3 sim
+- [ ] p0.5 sim
+- [ ] p0.75 sim
+
+|       | xBH | rsurf | puncpower | xbh         | sbh         | pbh         | note |
+| ----- | --- | ----- | --------- | ----------- | ----------- | ----------- | ---- |
+| [ ]   | 1   | 0.1   | 0.25      | 0.3x0.0x0.0 | 0.0x0.0x0.0 | 0.0x0.0x0.0 | Static |
+| [ ]   | 1   | 0.1   | 0.25      | 0.0x0.0x0.0 | 0.0x0.0x0.0 | 0.0x0.0x0.0 |
+
+
