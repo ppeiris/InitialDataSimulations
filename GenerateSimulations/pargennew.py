@@ -65,9 +65,11 @@ def getVal(df, key, col='global'):
 
 def zoneplot(df):
     global BASEPATH, simname
-    z = zones.zone()
-    gridData = z.gridBoxPoints()
-    print(gridData)
+    z = zones.zone(
+
+        )
+    # gridData = z.gridBoxPoints()
+    # print(gridData)
 
 
     # xbh = getVal(df, 'xbh').replace('x', ',')
