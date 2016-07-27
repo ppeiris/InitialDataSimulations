@@ -216,10 +216,10 @@ CoordBase::boundary_size_z_upper = 3
 IOASCII::out1D_xline_y = 0.5
 IOASCII::out1D_xline_z = 0.5
 
-IOASCII::out1D_yline_x = 0.5
+IOASCII::out1D_yline_x = 3.0
 IOASCII::out1D_yline_z = 0.5
 
-IOASCII::out1D_zline_x = 0.5
+IOASCII::out1D_zline_x = 3.0
 IOASCII::out1D_zline_y = 0.5
 
 #--------------------------------------------------------------------------------------- 

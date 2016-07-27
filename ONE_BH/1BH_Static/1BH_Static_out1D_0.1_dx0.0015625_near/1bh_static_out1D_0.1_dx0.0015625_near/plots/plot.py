@@ -16,7 +16,7 @@ BASEPATH = os.path.dirname(os.path.realpath(__file__))
 manybhDirArr=['manybhnear_1bh_static_out1D_0.1_dx0.0015625_near_4x5x9','manybhnear_1bh_static_out1D_0.1_dx0.0015625_near_8x9x13','manybhnear_1bh_static_out1D_0.1_dx0.0015625_near_12x13x17','manybhnear_1bh_static_out1D_0.1_dx0.0015625_near_16x17x25','manybhmid_1bh_static_out1D_0.1_dx0.0015625_near_4x5x9','manybhmid_1bh_static_out1D_0.1_dx0.0015625_near_8x9x13','manybhmid_1bh_static_out1D_0.1_dx0.0015625_near_12x13x17','manybhmid_1bh_static_out1D_0.1_dx0.0015625_near_16x17x25','manybhfar_1bh_static_out1D_0.1_dx0.0015625_near_4x5x9','manybhfar_1bh_static_out1D_0.1_dx0.0015625_near_8x9x13','manybhfar_1bh_static_out1D_0.1_dx0.0015625_near_12x13x17','manybhfar_1bh_static_out1D_0.1_dx0.0015625_near_16x17x25']
 
 
-twopunDirArr=[]
+twopunDirArr=['twopunnear_1bh_static_out1D_0.1_dx0.0015625_near_10','twopunnear_1bh_static_out1D_0.1_dx0.0015625_near_20','twopunnear_1bh_static_out1D_0.1_dx0.0015625_near_30','twopunnear_1bh_static_out1D_0.1_dx0.0015625_near_40','twopunmid_1bh_static_out1D_0.1_dx0.0015625_near_10','twopunmid_1bh_static_out1D_0.1_dx0.0015625_near_20','twopunmid_1bh_static_out1D_0.1_dx0.0015625_near_30','twopunmid_1bh_static_out1D_0.1_dx0.0015625_near_40','twopunfar_1bh_static_out1D_0.1_dx0.0015625_near_10','twopunfar_1bh_static_out1D_0.1_dx0.0015625_near_20','twopunfar_1bh_static_out1D_0.1_dx0.0015625_near_30','twopunfar_1bh_static_out1D_0.1_dx0.0015625_near_40']
 
 
 simname='1bh_static_out1D_0.1_dx0.0015625_near'
