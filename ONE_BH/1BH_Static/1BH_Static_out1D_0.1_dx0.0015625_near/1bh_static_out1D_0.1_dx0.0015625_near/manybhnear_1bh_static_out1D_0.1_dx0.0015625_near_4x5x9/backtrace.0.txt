@@ -1,0 +1,22 @@
+Backtrace from rank 0 pid 1315:
+1. ./bbhcode() [0x226257a]
+2. /lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7fbeb17950e0]
+3. /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x37) [0x7fbeb1795067]
+4. /lib/x86_64-linux-gnu/libc.so.6(abort+0x148) [0x7fbeb1796448]
+5. /lib/x86_64-linux-gnu/libc.so.6(+0x2e266) [0x7fbeb178e266]
+6. /lib/x86_64-linux-gnu/libc.so.6(+0x2e312) [0x7fbeb178e312]
+7. ./bbhcode() [0x22326dd]
+8. ./bbhcode() [0x42f344]
+9. ./bbhcode() [0x251d171]
+a. ./bbhcode() [0x2178713]
+b. ./bbhcode() [0x217c1a6]
+c. ./bbhcode() [0x4513c3]
+d. ./bbhcode() [0x465c5b]
+e. ./bbhcode() [0x21ee772]
+f. ./bbhcode() [0x41ba33]
+10. /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7fbeb1781b45]
+11. ./bbhcode() [0x42588f]
+
+The hexadecimal addresses in this backtrace can also be interpreted
+with a debugger (e.g. gdb), or with the 'addr2line' (or 'gaddr2line')
+command line tool: 'addr2line -e cactus_sim <address>'.
