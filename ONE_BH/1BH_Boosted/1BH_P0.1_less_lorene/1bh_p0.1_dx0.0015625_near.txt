@@ -1,0 +1,65 @@
+#Headding
+# do not delete this line
+var=val
+
+# Simulation Name
+simname=1bh_p0.1_dx0.0015625_near
+simmethods=manybh
+
+# global values
+exename=bbhcode
+nbh=1
+mbh=1
+
+dxyz=0.0015625
+xmin_near=2.96875
+xmax_near=3.03125
+
+ymin_near=0.46875
+ymax_near=0.53125
+
+zmin_near=0.46875
+zmax_near=0.53125
+
+
+xmin_shift_near=0.03125
+xmax_shift_near=0.03125
+ymin_shift_near=0.21875
+ymax_shift_near=0.28125
+zmin_shift_near=0.21875
+zmax_shift_near=0.28125
+
+
+
+sbh=0.0x0.0x0.0
+pbh=0.1x0.0x0.0
+xbh=3.0x0.0x0.0
+
+out1D_xline_y_near=0.5
+out1D_xline_z_near=0.5
+
+out1D_yline_x_near=0.5
+out1D_yline_z_near=0.5
+
+out1D_zline_x_near=0.5
+out1D_zline_y_near=0.5
+
+
+out1D_xline_y_mid=0.5
+out1D_xline_z_mid=0.5
+
+out1D_yline_x_mid=0.5
+out1D_yline_z_mid=0.5
+
+out1D_zline_x_mid=0.5
+out1D_zline_y_mid=0.5
+
+
+# ManyBH Variables 
+
+nzpt=4x5x9,12x13x17
+rsurf=0.1
+puncpower=0.25
+
+# TwoPunc Variables
+twopunch_res=20,30,40,50
