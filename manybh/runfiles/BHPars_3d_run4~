@@ -1,0 +1,24 @@
+Number of blackholes = 2
+mbh = 0.40694
+sbhx = -0.03684
+sbhy = -0.0050028
+sbhz = 0.069584
+pbhx = 0.080499
+pbhy = -0.036311
+pbhz = -0.000743105
+x = -2.57272
+y = -5.57057
+z = -0.47758
+//New Blackhole
+mbh = 0.456072
+sbhx = 0.025826
+sbhy = 0.14951
+sbhz = 0.11050
+pbhx = -0.080499
+pbhy = 0.036311
+pbhz = 0.000743105
+x = 2.05867
+y = 4.45696
+z = 0.40645
+
+//2 BH, generic: run G3.5 of 0808.0713

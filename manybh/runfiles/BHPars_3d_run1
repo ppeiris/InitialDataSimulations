@@ -1,0 +1,24 @@
+Number of blackholes = 2
+mbh = 0.47656
+sbhx = 0.0
+sbhy = 0.0
+sbhz = 0.0
+pbhx = 0.0
+pbhy = 0.13808
+pbhz = 0.
+x = 3.0
+y = 0.0
+z = 0.0
+//New Blackhole
+mbh = 0.47656
+sbhx = 0.0
+sbhy = 0.0
+sbhz = 0.0
+pbhx = 0.0
+pbhy = -0.13808
+pbhz = 0.0
+x = -3.0
+y = 0.0
+z = 0.0
+
+//2 BH, symmetric, no spin - Last Orbit of binary BHs paper

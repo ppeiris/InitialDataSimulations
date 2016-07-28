@@ -1,0 +1,22 @@
+mbh1 = 0.47656
+mbh2 = 0.47656
+sbh1x = 0.0
+sbh1y = 0.0
+sbh1z = 0.025
+sbh2x = 0.0
+sbh2y = 0.0
+sbh2z = 0.0
+pbh1x = 0.13808
+pbh1y = 0.
+pbh1z = 0.
+pbh2x = -0.13808
+pbh2y = 0.
+pbh2z = 0.
+x1 = 0.0
+y1 = -3.0
+z1 = 0.0
+x2 = 0.0
+y2 = 3.0
+z2 = 0.0
+
+// LINE 2 is P/M, not P!  Same for Sep0!

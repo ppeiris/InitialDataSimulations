@@ -1,0 +1,8 @@
+nz = 10
+np = 12
+nt = 13
+nr = 21
+precis = 1e-10
+ite_max = 100
+relax = 0.2
+ite_poisson_max = 4

@@ -1,0 +1,44 @@
+Number of blackholes = 4
+mbh = 0.476561
+sbhx = 0.0
+sbhy = 0.0
+sbhz = 0.0
+pbhx = 0.13808
+pbhy = 0.
+pbhz = 0.
+x = 0.0
+y = -3.0
+z = 0.0
+//New Blackhole
+mbh = 0.476562
+sbhx = 0.0
+sbhy = 0.0
+sbhz = 0.0
+pbhx = 0.13808
+pbhy = 0.
+pbhz = 0.
+x = 0.0
+y = 3.0
+z = 0.0
+//New Blackhole
+mbh = 0.476563
+sbhx = 0.0
+sbhy = 0.0
+sbhz = 0.0
+pbhx = 0.13808
+pbhy = 0.
+pbhz = 0.
+x = -3.0
+y = 0.0
+z = 0.0 
+//New Blackhole
+mbh = 0.476564
+sbhx = 0.0
+sbhy = 0.0
+sbhz = 0.0
+pbhx = 0.13808
+pbhy = 0.
+pbhz = 0.
+x = 3.0
+y = 0.0
+z = 0.0 

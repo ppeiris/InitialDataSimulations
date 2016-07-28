@@ -1,0 +1,22 @@
+Number of BH = 2
+mbh = 0.47656
+sbhx = 0.0
+sbhy = 0.0
+sbhz = 0.025
+pbhx = 0.13808
+pbhy = 0.
+pbhz = 0.        
+x = 0.0
+y = -3.0
+z = 0.0 
+---Next BH-------
+mbh = 0.47656
+sbhx = 0.0
+sbhy = 0.0
+sbhz = 0.0
+pbhx = -0.13808
+pbhy = 0.
+pbhz = 0.        
+x = 0.0
+y = 3.0
+z = 0.0          
