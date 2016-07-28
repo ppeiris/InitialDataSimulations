@@ -8,8 +8,6 @@
 !*.par
 !*.out
 !/**
-!/**/admconstraints-hamiltonian*
-
 
 *exe
 manybhexe_puncpow

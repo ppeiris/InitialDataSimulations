@@ -58,26 +58,123 @@ def getVal(df, key, col='global'):
         return val
     except IndexError:
         return False
-    except Exception, e:
+    except Exception as e:
         print(str(e))
         sys.exit()
 
 
-def zoneplot(df):
+def dataCollectionAxis(df):
+
+    # near case
+
+    cases = getVal(df, 'cases')
+
+    for case in cases:
+        xmin = float(getVal(df, 'xmin', case))
+        xmax = float(getVal(df, 'xmax', case))
+        ymin = float(getVal(df, 'ymin', case))
+        ymax = float(getVal(df, 'ymax', case))
+        zmin = float(getVal(df, 'zmin', case))
+        zmax = float(getVal(df, 'zmax', case))
+
+
+        df = updatedf(df, 'out1D_xline_y', case, str((ymax - ymin)/2 + ymin))
+        df = updatedf(df, 'out1D_xline_z', case, str((zmax - zmin)/2 + zmin))
+
+        df = updatedf(df, 'out1D_yline_x', case, str((xmax - xmin)/2 + xmin))
+        df = updatedf(df, 'out1D_yline_z', case, str((zmax - zmin)/2 + zmin))
+
+        df = updatedf(df, 'out1D_zline_x', case, str((xmax - xmin)/2 + xmin))
+        df = updatedf(df, 'out1D_zline_y', case, str((ymax - ymin)/2 + ymin))
+
+    return df
+
+
+def zoneplot(df, case):
     global BASEPATH, simname
+
+    zplotScriptName = os.path.join(BASEPATH, 'paroriginal/zone.tex')
+
+    dx = getVal(df, 'dxyz')
+
+    # Near
+    xmin = getVal(df, 'xmin', case)
+    xmax = getVal(df, 'xmax', case)
+    ymin = getVal(df, 'ymin', case)
+    ymax = getVal(df, 'ymax', case)
+    zmin = getVal(df, 'zmin', case)
+    zmax = getVal(df, 'zmax', case)
+
+    out1D_xline_y = getVal(df, 'out1D_xline_y', case)
+    out1D_xline_z = getVal(df, 'out1D_xline_z', case)
+    out1D_yline_x = getVal(df, 'out1D_yline_x', case)
+    out1D_yline_z = getVal(df, 'out1D_yline_z', case)
+    out1D_zline_x = getVal(df, 'out1D_zline_x', case)
+    out1D_zline_y = getVal(df, 'out1D_zline_y', case)
+
     z = zones.zone(
+        dx,
+        xmin,
+        xmax,
+        ymin,
+        ymax,
+        zmin,
+        zmax,
+        out1D_xline_y,
+        out1D_xline_z,
+        out1D_yline_x,
+        out1D_yline_z,
+        out1D_zline_x,
+        out1D_zline_y
+    )
 
-        )
-    # gridData = z.gridBoxPoints()
-    # print(gridData)
+    xbh = getVal(df, 'xbh')
+    boxpoints = z.gridBoxPoints()
+    dataAxis = z.dataAxis()
+
+    xbh = xbh.replace('x', ',')
+
+    # line = line.replace('[==manybhDirArr==]',manybhDirlist+'\n\n')
+
+    bhposition = "\\newcommand\\bhone{(%s)}" % (xbh)
+
+    boxpointsList = {}
+    for key in boxpoints:
+        line = "\\newcommand\\%s{(%s, %s, %s)}" % (key, boxpoints[key][0], boxpoints[key][1], boxpoints[key][2])
+        boxpointsList[key] = line
+
+    boxpointsList['bhposition'] = bhposition
+
+    dataAxisList = {}
+    for key in dataAxis:
+        line = "\\newcommand\\%s{(%s, %s, %s)}" % (key, dataAxis[key][0], dataAxis[key][1], dataAxis[key][2])
+        dataAxisList[key] = line
+
+    f = open(zplotScriptName, 'r+')
+    w = open(simname + '/plots/zone_' + case + '.tex', 'w+')
+    for line in f:
+        newline = line
+        for key in boxpointsList:
+            old = "[==%s==]" % (key)
+            newline = line.replace(old, boxpointsList[key] + '\n')
+            if newline != line:
+                break
+
+        if newline == line:
+            for key in dataAxisList:
+                old = "[==%s==]" % (key)
+                # print(old)
+                newline = line.replace(old, dataAxisList[key] + '\n')
+                if newline != line:
+                    break
+
+        w.write(newline)
 
 
-    # xbh = getVal(df, 'xbh').replace('x', ',')
-    # f = open(os.path.join(BASEPATH, 'paroriginal/zone.tex'), 'r+')
-    # w = open(simname + '/plots/zone.tex','w+')
-    # for line in f:
-    #     line = line.replace('[==bhpositoin==]', '\\newcommand\\bhone{(' + xbh +')}' +'\n\n')
-    #     w.write(line)
+def createZoneplotFile(df):
+    cases = getVal(df, 'cases')
+    for case in cases:
+        zoneplot(df, case)
 
 
 
@@ -116,6 +213,10 @@ for key in list(udata.columns):
         col = 'global'
 
     data = updatedf(data, nkey, col, udata[key]['val'])
+
+
+
+dataCollectionAxis(data)
 
 print("Simulation Parameters")
 print('--------------------------------------------------------------------------------------------------------')
@@ -482,10 +583,10 @@ for line in f:
     line = line.replace('[==simname==]','simname=\''+simname+'\'\n\n')
     w.write(line)
 
-print 'Par files are created in ' + simname + ' directory'
+print ('Par files are created in ' + simname + ' directory')
 
 
-zoneplot(data)
+createZoneplotFile(data)
 
 print('Done.')
 

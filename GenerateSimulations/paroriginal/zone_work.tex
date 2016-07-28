@@ -2,6 +2,7 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.8}
 \begin{document}
+\newcommand\bhone {(3.0,0.0,0.0)}
 \begin{tikzpicture}
 \begin{axis}[
   view={35}{15},
@@ -13,8 +14,11 @@
   xlabel={$x$-axis},ylabel={$y$-axis},zlabel={$z$-axis},
 ]
 
+
+
+
 % plot dots for the two points
-\addplot3 [only marks] coordinates {(-5,-5,7) (3,0,5)};
+\addplot3 [only marks] coordinates {\bhone (3,0,5)};
 
 % plot dashed lines to axes
 \addplot3 [no marks,densely dashed] coordinates {(0,0,5) (3,0,5) (3,0,0)};
