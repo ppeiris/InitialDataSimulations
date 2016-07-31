@@ -1,16 +1,17 @@
 #include <stdlib.h>
 #include <math.h>
 #include <vector>
-#include <cmath>
 #include <stdio.h>
 #include <iostream>
 #include <string.h>
 #include <iomanip>
 #include <cmath>
+#include <fstream>
+#include <sstream>
+#include <iostream>
 using namespace std;
 //Return the function value at x
 //
-
 double funval(double x,double y, double z)
 {
     // f = (1+m/2r)
@@ -27,8 +28,8 @@ double funval(double x,double y, double z)
 void psi(void)
 {
     FILE *psi_file;
-    psi_file=fopen("psi.asc","w+");    
-    
+    psi_file=fopen("psi.asc","w+");
+
     double dx=0.003125;
     double xmin=2.9375;
     double xmax=3.0625;
@@ -37,7 +38,7 @@ void psi(void)
     double z=0.5;
     double nx,val;
 
-    
+
     nx=(xmax-xmin)/dx;
 
     for (int i=0;i<nx;i++)
@@ -50,24 +51,50 @@ void psi(void)
 
     }
 
-
     fclose(psi_file);
-
-
-
-
-
 }
 
-
-
 int main(int argc, char* argv[])
-{                                   
+{
     double dxyz;
     double dx;
     double div;
     char filename[30];
-    strcpy(filename,"StaticBH_away05_dx0.003125");
+    char *gridfile;
+    string str;
+
+    // ofstream filein;
+    // // strcpy(gridfile, str());
+    // printf("%s\n", argv[1]);
+    // filein.open(argv[1]);
+
+    // if (!filein)
+    // {
+    //     cerr << "Can't open " << argv[1] << endl;
+    //     exit(1);
+    // }
+    // else
+    // {
+    //     cout << "\n Grid input file open [ " << argv[1] << " ]\n";
+    // }
+
+    FILE *ifile;
+
+
+    ifile = fopen("test.txt", "r");
+
+    char buff[255];
+
+    fscanf(ifile, "%s", buff);
+
+    // printf("%s\n", buff);
+
+
+
+    return 0;
+
+
+    strcpy(filename,"StaticBH_away05_dx0.00078125");
 
 
 
@@ -75,7 +102,7 @@ int main(int argc, char* argv[])
     double tmpval,converge;
     double xmin,xmax,ymin,ymax,zmin,zmax;
     int nx,ny,nz;
-    
+
 
     //Near Zone when black-hole is at 3,0,0
     /*
@@ -86,7 +113,7 @@ int main(int argc, char* argv[])
     ymax=0.0078125;
     zmin=-0.0078125;
     zmax=0.0078125;
-    
+
     */
 
     //Near Zone when black-hole is at 3,0.5,0.5
@@ -100,53 +127,53 @@ int main(int argc, char* argv[])
     zmax=0.5078125;
     */
 
-    //Near Zone Grid is 3,0.1,0.1 
-    
-    dxyz=0.003125;
-    xmin=2.9375;
-    xmax=3.0625;
-    
-    ymin=0.0921875;
-    ymax=0.1078125;
-    zmin=0.0921875;
-    zmax=0.1078125;
-    
+    //Near Zone Grid is 3,0.1,0.1
+
+    // dxyz=0.003125;
+    // xmin=2.9375;
+    // xmax=3.0625;
+
+    // ymin=0.0921875;
+    // ymax=0.1078125;
+    // zmin=0.0921875;
+    // zmax=0.1078125;
+
 
     //Near Zone Grid is 3,0,0 (over the bh)
-    /*
-    dxyz=0.003125;
-    xmin=2.9375;
-    xmax=3.0625;
-    
-    ymin=-0.0078125;
-    ymax=0.0078125;
-    zmin=-0.0078125;
-    zmax=0.0078125;
-    */
-      
+
+    // dxyz=0.003125;
+    // xmin=2.9375;
+    // xmax=3.0625;
+
+    // ymin=-0.0078125;
+    // ymax=0.0078125;
+    // zmin=-0.0078125;
+    // zmax=0.0078125;
+
+
 
 
 
     //dxyz/=div;
 
 //dxyz=0.0125/div;
-    //dxyz=0.003125;
+    dxyz=0.003125;
 
     //dxyz=0.001562;
-    //dxyz=0.00078125;
+    // dxyz=0.00078125;
     //dxyz=0.000390625;
 
-    //xmin=0;
-    //xmax=6;
-    //ymin=-0.0078125;
-    //ymax=0.0078125;
-    //zmin=-0.0078125;
-    //zmax=0.0078125;
+    xmin=0;
+    xmax=6;
+    ymin=-0.0078125;
+    ymax=0.0078125;
+    zmin=-0.0078125;
+    zmax=0.0078125;
 
 
 
 
-   
+
 
     // Mid Zone
     /*
@@ -157,7 +184,7 @@ int main(int argc, char* argv[])
     ymax =0.5078125;
     ymin =0.4921875;
 
-    zmax =0.5078125; 
+    zmax =0.5078125;
     zmin =0.4921875;
     */
 
@@ -171,12 +198,12 @@ int main(int argc, char* argv[])
     ymax =0.5078125;
     ymin =0.4921875;
 
-    zmax =0.5078125; 
-    zmin =0.4921875; 
+    zmax =0.5078125;
+    zmin =0.4921875;
     */
 
 
-   
+
 
 
     nx=(xmax-xmin)/dxyz;
@@ -184,25 +211,25 @@ int main(int argc, char* argv[])
     nz=(zmax-zmin)/dxyz; //set up for 5
 
     cout<<nx<<":"<<ny<<":"<<nz<<endl;
-     
+
 
    FILE *file;
    strcat(filename,".asc");
-   file=fopen(filename,"w+");    
+   file=fopen(filename,"w+");
 
 
-    for(int i=2;i<nx-2;i++)
+    for(int i=0;i<nx;i++)
     {
-        for(int j=2;j<ny-2;j++)
+        for(int j=0;j<ny;j++)
         {
-            for(int k=2;k<nz-2;k++)
+            for(int k=0;k<nz;k++)
             {
 
                     // 4th Order finite difference stencil
                     tmpval=-funval(xmin+dxyz*(i+2),ymin+dxyz*j,zmin+dxyz*k)+16.0*funval(xmin+dxyz*(i+1),ymin+dxyz*j,zmin+dxyz*k)-30.0*funval(xmin+dxyz*i,ymin+dxyz*j,zmin+dxyz*k)+16.0*funval(xmin+dxyz*(i-1),ymin+dxyz*j,zmin+dxyz*k)-funval(xmin+dxyz*(i-2),ymin+dxyz*j,zmin+dxyz*k)-funval(xmin+dxyz*i,ymin+dxyz*(j+2),zmin+dxyz*k)+16.0*funval(xmin+dxyz*i,ymin+dxyz*(j+1),zmin+dxyz*k)-30.0*funval(xmin+dxyz*i,ymin+dxyz*j,zmin+dxyz*k)+16.0*funval(xmin+dxyz*i,ymin+dxyz*(j-1),zmin+dxyz*k)-funval(xmin+dxyz*i,ymin+dxyz*(j-2),zmin+dxyz*k)-funval(xmin+dxyz*i,ymin+dxyz*j,zmin+dxyz*(k+2))+16.0*funval(xmin+dxyz*i,ymin+dxyz*j,zmin+dxyz*(k+1))-30.0*funval(xmin+dxyz*i,ymin+dxyz*j,zmin+dxyz*k)+16.0*funval(xmin+dxyz*i,ymin+dxyz*j,zmin+dxyz*(k-1))-funval(xmin+dxyz*i,ymin+dxyz*j,zmin+dxyz*(k-2));
-                    
+
                     tmpval=tmpval/(12.0*dxyz*dxyz);
-                    
+
 
                     //fprintf(file,"%.13f %.13f %.13f %.13f\n",xmin+dxyz*i,ymin+dxyz*i,zmin+dxyz*i,tmpval);
                     fprintf(file,"%.13f %.13f\n",xmin+dxyz*i,tmpval);
@@ -222,8 +249,8 @@ int main(int argc, char* argv[])
     {
                     fprintf(file,"%.13f %.13f\n",xmin+dxyz*i,lapmatrix[i][2][2]);
                     //cout<<setw(1)<< setiosflags(ios::fixed)<<setprecision(13)<<xmin+dxyz*i<<"  "<<lapmatrix[i][2][2]<<endl;
-    }  
+    }
     */
 
-    return 0;	
-}        
+    return 0;
+}

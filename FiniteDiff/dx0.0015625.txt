@@ -1,0 +1,4 @@
+zone=near
+dxyz=0.0015625
+xmin=0
+xmax=6
