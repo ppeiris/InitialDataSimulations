@@ -19,20 +19,29 @@ datafiles = {
 
 
 
-fig = plt.figure()
-splot = fig.add_subplot(111)
-splot.grid(True)
+# fig = plt.figure()
+# splot = fig.add_subplot(111)
+# splot.grid(True)
 
 for key in datafiles:
     df = pd.read_csv(datafiles[key]['file'], sep='\t')
-    splot.plot(df.x[::datafiles[key]['skip']], np.log10(np.abs(df.fvalue[::datafiles[key]['skip']])), label=datafiles[key]['label'])
+    # splot.plot(df.x[::datafiles[key]['skip']], np.log10(np.abs(df.fvalue[::datafiles[key]['skip']])), label=datafiles[key]['label'])
 
-splot.plot([3], [-15], 'bo')
-splot.set_xlabel('X')
-splot.set_ylabel('log(H)')
-handles, labels = splot.get_legend_handles_labels()
-splot.legend(handles[::-1], labels[::-1], title='dx', loc=0, ncol=1, prop={'size': 8})
+    # l2 = np.log10(np.sqrt(np.abs(np.sum(df.fvalue*df.fvalue))))
+
+    l2 = np.sqrt(np.sum((np.log10(np.abs(df.fvalue))*np.log10(np.abs(df.fvalue)))))
+
+    print("dx: %s L2: %s" % (datafiles[key]['label'], str(l2)))
 
 
-fig.savefig('finitediff.eps')
-fig.savefig('finitediff.png')
+
+
+# splot.plot([3], [-15], 'bo')
+# splot.set_xlabel('X')
+# splot.set_ylabel('log(H)')
+# handles, labels = splot.get_legend_handles_labels()
+# splot.legend(handles[::-1], labels[::-1], title='dx', loc=0, ncol=1, prop={'size': 8})
+
+
+# fig.savefig('finitediff.eps')
+# fig.savefig('finitediff.png')

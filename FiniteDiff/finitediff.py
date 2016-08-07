@@ -131,7 +131,7 @@ def main():
     df = pd.read_table(datafile, sep='\=', engine='python', comment='#', names=['variable', 'value'])
 
     calOtherVariables()
-    solveLaplaceEq(outfile)
+    # solveLaplaceEq(outfile)
 
 if __name__ == "__main__":
     main()
