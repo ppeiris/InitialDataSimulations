@@ -48,7 +48,7 @@ def calOtherVariables():
 
 def fVal(x, y ,z):
     m = 1.0
-    x = x - 3.0
+    # x = x - 3.0
     r = np.sqrt(x*x + y*y + z*z)
     return (1.0 + m/(2.0 * r))
 
