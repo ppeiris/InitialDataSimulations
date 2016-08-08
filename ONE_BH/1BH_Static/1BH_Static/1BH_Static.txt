@@ -12,6 +12,8 @@ nbh=1
 mbh=1
 
 dxyz=0.0015625
+dxyz_near=0.0015625
+
 xmin_near=0.0
 xmax_near=6.0
 
@@ -53,7 +55,7 @@ global_nz_near=6
 
 #nzpt=12x13x17,16x17x25,24x25x33,32x33x41,40x41x49
 
-nzpt=24x25x33,32x33x41,40x41x49
+nzpt=2x3x5,4x5x9
 
 rsurf=0.1
 puncpower=0.25
