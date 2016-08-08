@@ -1,0 +1,30 @@
+Backtrace from rank 0 pid 1763:
+1. ./bbhcode() [0x226257a]
+2. /lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7f58c67fc0e0]
+3. /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x37) [0x7f58c67fc067]
+4. /lib/x86_64-linux-gnu/libc.so.6(abort+0x148) [0x7f58c67fd448]
+5. /lib/x86_64-linux-gnu/libc.so.6(+0x2e266) [0x7f58c67f5266]
+6. /lib/x86_64-linux-gnu/libc.so.6(+0x2e312) [0x7f58c67f5312]
+7. ./bbhcode() [0x290bcaa]
+8. ./bbhcode() [0x2a402a6]
+9. ./bbhcode() [0x2950e67]
+a. ./bbhcode() [0x282455f]
+b. ./bbhcode() [0xfe51f3]
+c. ./bbhcode() [0xfe544f]
+d. ./bbhcode() [0xfe9f8d]
+e. ./bbhcode() [0x429d75]
+f. ./bbhcode() [0x223fefb]
+10. ./bbhcode() [0x22417cd]
+11. ./bbhcode() [0x42a070]
+12. ./bbhcode() [0x43125e]
+13. ./bbhcode() [0x4313cd]
+14. ./bbhcode() [0x42c259]
+15. ./bbhcode() [0x21ee04a]
+16. ./bbhcode() [0x21eeba4]
+17. ./bbhcode() [0x41ba33]
+18. /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7f58c67e8b45]
+19. ./bbhcode() [0x42588f]
+
+The hexadecimal addresses in this backtrace can also be interpreted
+with a debugger (e.g. gdb), or with the 'addr2line' (or 'gaddr2line')
+command line tool: 'addr2line -e cactus_sim <address>'.
