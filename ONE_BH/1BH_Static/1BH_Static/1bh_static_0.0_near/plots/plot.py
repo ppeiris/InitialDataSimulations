@@ -7,13 +7,13 @@ import pandas as pd
 import os, sys
 pd.set_option('display.precision', 30)
 axisArr=['d','x','y','z']
-caseArr=['near','mid','far']
+caseArr=['near']
 hamiltonian_colnames = ['it','tl','rl','c','ml','ix','iy','iz','time','x','y','z','data']
 axislist = ['d', 'x', 'y', 'z']
 BASEPATH = os.path.dirname(os.path.realpath(__file__))
 # Following 3 lines will be replaced by another python script according to the simulation parameters, Please do not change them manually
 
-manybhDirArr=['manybhnear_1bh_static_0.0_near_2x3x5','manybhnear_1bh_static_0.0_near_4x5x9','manybhnear_1bh_static_0.0_near_12x13x17','manybhnear_1bh_static_0.0_near_16x17x25','manybhnear_1bh_static_0.0_near_24x25x33','manybhnear_1bh_static_0.0_near_32x33x41','manybhnear_1bh_static_0.0_near_40x41x49','manybhmid_1bh_static_0.0_near_2x3x5','manybhmid_1bh_static_0.0_near_4x5x9','manybhmid_1bh_static_0.0_near_12x13x17','manybhmid_1bh_static_0.0_near_16x17x25','manybhmid_1bh_static_0.0_near_24x25x33','manybhmid_1bh_static_0.0_near_32x33x41','manybhmid_1bh_static_0.0_near_40x41x49','manybhfar_1bh_static_0.0_near_2x3x5','manybhfar_1bh_static_0.0_near_4x5x9','manybhfar_1bh_static_0.0_near_12x13x17','manybhfar_1bh_static_0.0_near_16x17x25','manybhfar_1bh_static_0.0_near_24x25x33','manybhfar_1bh_static_0.0_near_32x33x41','manybhfar_1bh_static_0.0_near_40x41x49']
+manybhDirArr=['manybhnear_1bh_static_0.0_near_4x5x9','manybhnear_1bh_static_0.0_near_12x13x17','manybhnear_1bh_static_0.0_near_16x17x25','manybhnear_1bh_static_0.0_near_24x25x33','manybhnear_1bh_static_0.0_near_32x33x41','manybhnear_1bh_static_0.0_near_40x41x49','manybhmid_1bh_static_0.0_near_2x3x5','manybhmid_1bh_static_0.0_near_4x5x9','manybhmid_1bh_static_0.0_near_12x13x17','manybhmid_1bh_static_0.0_near_16x17x25','manybhmid_1bh_static_0.0_near_24x25x33','manybhmid_1bh_static_0.0_near_32x33x41','manybhmid_1bh_static_0.0_near_40x41x49','manybhfar_1bh_static_0.0_near_2x3x5','manybhfar_1bh_static_0.0_near_4x5x9','manybhfar_1bh_static_0.0_near_12x13x17','manybhfar_1bh_static_0.0_near_16x17x25','manybhfar_1bh_static_0.0_near_24x25x33','manybhfar_1bh_static_0.0_near_32x33x41','manybhfar_1bh_static_0.0_near_40x41x49']
 
 
 twopunDirArr=[]
