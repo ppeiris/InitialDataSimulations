@@ -179,11 +179,7 @@ CarpetIOHDF5::out_vars      = "
 
 IOScalar::outScalar_criterion           = "divisor"
 IOScalar::outScalar_dir                 = "data_Scalar"
-IOScalar::outScalar_every               = 64
 IOScalar::outScalar_reductions          = "average minimum maximum norm1
 norm2 norm_inf sum"
 
-IOScalar::outScalar_vars      = "
-ML_ADMConstraints::ML_Ham
-ML_ADMConstraints::ML_mom
-"
+
