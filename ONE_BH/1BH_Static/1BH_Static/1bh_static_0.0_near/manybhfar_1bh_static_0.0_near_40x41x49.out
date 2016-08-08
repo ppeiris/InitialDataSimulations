@@ -1,0 +1,39 @@
+WARNING level 0 from host 127.0.0.1ip-172-30-0-219 process 0
+  while executing schedule bin (none), routine (no thorn)::(no routine)
+  in thorn Cactus, file /home/admin/Cactus/configs/bbhcode/build/Cactus/main/ProcessParameterDatabase.c:108:
+  -> Cannot open parameter file '/home/admin/simulations/ONE_BH/1BH_Static/1BH_Static/1bh_static_0.0_near/manybhfar_1bh_static_0.0_near_40x41x49.par': file doesn't exist
+--------------------------------------------------------------------------------
+
+       10                                  
+  1   0101       ************************  
+  01  1010 10      The Cactus Code V4.3.0    
+ 1010 1101 011      www.cactuscode.org     
+  1001 100101    ************************  
+    00010101                               
+     100011     (c) Copyright The Authors  
+      0100      GNU Licensed. No Warranty  
+      0101                                 
+--------------------------------------------------------------------------------
+
+Cactus version:    4.3.0
+Compile date:      Jul 06 2016 (04:25:41)
+Run date:          Aug 08 2016 (01:04:32+0000)
+Run host:          127.0.0.1ip-172-30-0-219 (pid=1403)
+Working directory: /home/admin/simulations/ONE_BH/1BH_Static/1BH_Static/1bh_static_0.0_near
+Executable:        ./bbhcode
+Parameter file:    /home/admin/simulations/ONE_BH/1BH_Static/1BH_Static/1bh_static_0.0_near/manybhfar_1bh_static_0.0_near_40x41x49.par
+--------------------------------------------------------------------------------
+
+Activating thorn Cactus...Success -> active implementation Cactus
+WARNING level 0 from host 127.0.0.1ip-172-30-0-219 process 0
+  while executing schedule bin (none), routine (no thorn)::(no routine)
+  in thorn Cactus, file /home/admin/Cactus/configs/bbhcode/build/Cactus/main/ProcessParameterDatabase.c:108:
+  -> Cannot open parameter file '/home/admin/simulations/ONE_BH/1BH_Static/1BH_Static/1bh_static_0.0_near/manybhfar_1bh_static_0.0_near_40x41x49.par': file doesn't exist
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD 
+with errorcode 0.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
