@@ -53,9 +53,9 @@ global_nz_near=6
 
 # ManyBH Variables
 
-#nzpt=12x13x17,16x17x25,24x25x33,32x33x41,40x41x49
+nzpt=2x3x5,4x5x9,12x13x17,16x17x25,24x25x33,32x33x41,40x41x49
 
-nzpt=2x3x5,4x5x9
+#nzpt=2x3x5,4x5x9
 
 rsurf=0.1
 puncpower=0.25
