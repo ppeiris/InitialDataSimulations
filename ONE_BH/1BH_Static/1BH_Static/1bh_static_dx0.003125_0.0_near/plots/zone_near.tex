@@ -1,0 +1,116 @@
+\documentclass[border=2mm]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+\begin{document}
+
+
+
+\newcommand\bhone{(3.0,0.0,0.0)}
+
+\newcommand\lbpone{(0.0, -0.00390625, -0.00390625)}
+
+\newcommand\lbptwo{(0.0, -0.00390625, 0.00390625)}
+
+\newcommand\ltpone{(0.0, 0.00390625, -0.00390625)}
+
+\newcommand\ltptwo{(0.0, 0.00390625, 0.00390625)}
+
+\newcommand\rbpone{(6.0, -0.00390625, -0.00390625)}
+
+\newcommand\rbptwo{(6.0, -0.00390625, 0.00390625)}
+
+\newcommand\rtpone{(6.0, 0.00390625, -0.00390625)}
+
+\newcommand\rtptwo{(6.0, 0.00390625, 0.00390625)}
+
+
+\newcommand\dataxlp{(-0.05, 0.0, 0.0)}
+
+\newcommand\dataxrp{(6.05, 0.0, 0.0)}
+
+\newcommand\dataylp{(3.0, -0.02390625, 0.0)}
+
+\newcommand\datayrp{(3.0, 0.02390625, 0.0)}
+
+\newcommand\datazlp{(3.0, 0.0, -0.02390625)}
+
+\newcommand\datazrp{(3.0, 0.0, 0.02390625)}
+
+
+
+\begin{tikzpicture}
+\begin{axis}[
+    view={35}{15},
+    axis lines=center,
+    width=30cm,
+    height=30cm,
+    xtick={2.5, 3, 3.5},
+    ytick={-0.5,0,0.5,1},
+    ztick={-0.5,0,0.5,1},
+    minor tick={-5,-4,...,5},
+    xmin=2.5,
+    xmax=3.5,
+    ymin=0,
+    ymax=1,
+    zmin=0,
+    zmax=0.75,
+    xlabel={$x$},ylabel={$y$},zlabel={$z$},
+]
+
+% plot dots for the two points
+%\addplot3 [only marks] coordinates {(-5,-5,7) (3,0,5)};
+\addplot3 [only marks] coordinates \bhone;
+%lbp1
+%\addplot3 [only marks] coordinates \lbpone;
+%lbp2
+%\addplot3 [only marks] coordinates \lbptwo;
+%ltp1
+%\addplot3 [only marks] coordinates \ltpone;
+%ltp2
+%\addplot3 [only marks] coordinates \ltptwo;
+%rbp1
+%\addplot3 [only marks] coordinates \rbpone;
+%rbp2
+%\addplot3 [only marks] coordinates \rbptwo;
+%rtp1
+%\addplot3 [only marks] coordinates \rtpone;
+%rtp2
+%\addplot3  coordinates \rtptwo;
+
+
+% plot dashed lines of zone
+\addplot3 [no marks, solid] coordinates {\lbpone \lbptwo};
+\addplot3 [no marks,solid] coordinates {\lbptwo \ltptwo};
+\addplot3 [no marks,solid] coordinates {\ltptwo \ltpone};
+\addplot3 [no marks,solid] coordinates {\ltpone \lbpone};
+
+\addplot3 [no marks,solid] coordinates {\rbpone \rbptwo};
+\addplot3 [no marks,solid] coordinates {\rtpone \rbpone};
+\addplot3 [no marks,solid] coordinates {\rtptwo \rtpone};
+\addplot3 [no marks,solid] coordinates {\rbptwo \rtptwo};
+
+\addplot3 [no marks,solid] coordinates {\lbpone \rbpone};
+\addplot3 [no marks,solid] coordinates {\ltpone \rtpone};
+
+\addplot3 [no marks,solid] coordinates {\lbptwo \rbptwo};
+\addplot3 [no marks,solid] coordinates {\ltptwo \rtptwo};
+
+% plot dashed lines of x line that collect data
+\addplot3 [no marks, densely dashed, color=red] coordinates {\dataxlp \dataxrp};
+
+% plot dashed lines of y line that collect data
+\addplot3 [no marks, densely dashed, color=blue] coordinates {\dataylp \datayrp};
+
+% plot dashed lines of y line that collect data
+\addplot3 [no marks, densely dashed, color=green] coordinates {\datazlp \datazrp};
+
+% label points
+%\node [above right] at (axis cs:3,0,5) {$P (3,0,5)$};
+%\node [above left] at (axis cs:-5,-5,7) {$Q (-5,-5,7)$};
+%\node [inner sep=2pt,outer sep=0pt] (O) at (axis cs:0,0,0) {};
+%\node [align=center] (origin) at ([xshift=1.5cm,yshift=-1.3cm]O) {$(0,0,0)$ \\Origin};
+%\draw [shorten <=.1cm,stealth-,gray] (O) to [out=-30,in=160] (origin.west);
+
+\end{axis}
+\end{tikzpicture}
+\end{document}
