@@ -13,7 +13,7 @@ axislist = ['d', 'x', 'y', 'z']
 BASEPATH = os.path.dirname(os.path.realpath(__file__))
 # Following 3 lines will be replaced by another python script according to the simulation parameters, Please do not change them manually
 
-manybhDirArr=['manybhnear_1bh_static_0.0_near_24x25x33','manybhnear_1bh_static_0.0_near_32x33x41','manybhnear_1bh_static_0.0_near_40x41x49','manybhmid_1bh_static_0.0_near_24x25x33','manybhmid_1bh_static_0.0_near_32x33x41','manybhmid_1bh_static_0.0_near_40x41x49','manybhfar_1bh_static_0.0_near_24x25x33','manybhfar_1bh_static_0.0_near_32x33x41','manybhfar_1bh_static_0.0_near_40x41x49']
+manybhDirArr=['manybhnear_1bh_static_0.0_near_4x5x9','manybhnear_1bh_static_0.0_near_8x9x13','manybhmid_1bh_static_0.0_near_4x5x9','manybhmid_1bh_static_0.0_near_8x9x13','manybhfar_1bh_static_0.0_near_4x5x9','manybhfar_1bh_static_0.0_near_8x9x13']
 
 
 twopunDirArr=[]
