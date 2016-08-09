@@ -4,7 +4,7 @@
 !*.py
 !*.out
 !*.bbh
-!.txt
+!*.txt
 !*.par
 !*.out
 !*hamiltonian.*
