@@ -7,7 +7,7 @@
 !.txt
 !*.par
 !*.out
-!/**
+!/**/*.x.asc
 
 *exe
 manybhexe_puncpow
