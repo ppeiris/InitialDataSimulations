@@ -13,6 +13,7 @@ mbh=1
 
 dxyz=0.0015625
 dxyz_near=0.0015625
+
 sbh=0.0x0.0x0.0
 pbh=0.1x0.0x0.0
 xbh=3.0x0.0x0.0
@@ -30,9 +31,6 @@ out1D_yline_z_near=0.5
 
 out1D_zline_x_near=0.5
 out1D_zline_y_near=0.5
-
-
-
 
 
 # ManyBH Variables 
