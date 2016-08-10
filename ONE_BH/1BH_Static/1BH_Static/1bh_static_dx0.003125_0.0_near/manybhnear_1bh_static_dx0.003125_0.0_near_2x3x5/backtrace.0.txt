@@ -1,10 +1,10 @@
-Backtrace from rank 0 pid 2127:
+Backtrace from rank 0 pid 2248:
 1. ./bbhcode() [0x226257a]
-2. /lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7f798f7d50e0]
-3. /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x37) [0x7f798f7d5067]
-4. /lib/x86_64-linux-gnu/libc.so.6(abort+0x148) [0x7f798f7d6448]
-5. /lib/x86_64-linux-gnu/libc.so.6(+0x2e266) [0x7f798f7ce266]
-6. /lib/x86_64-linux-gnu/libc.so.6(+0x2e312) [0x7f798f7ce312]
+2. /lib/x86_64-linux-gnu/libc.so.6(+0x350e0) [0x7f52c8d4c0e0]
+3. /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x37) [0x7f52c8d4c067]
+4. /lib/x86_64-linux-gnu/libc.so.6(abort+0x148) [0x7f52c8d4d448]
+5. /lib/x86_64-linux-gnu/libc.so.6(+0x2e266) [0x7f52c8d45266]
+6. /lib/x86_64-linux-gnu/libc.so.6(+0x2e312) [0x7f52c8d45312]
 7. ./bbhcode() [0x290bcaa]
 8. ./bbhcode() [0x2a402a6]
 9. ./bbhcode() [0x2950e67]
@@ -22,7 +22,7 @@ f. ./bbhcode() [0x223fefb]
 15. ./bbhcode() [0x21ee04a]
 16. ./bbhcode() [0x21eeba4]
 17. ./bbhcode() [0x41ba33]
-18. /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7f798f7c1b45]
+18. /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7f52c8d38b45]
 19. ./bbhcode() [0x42588f]
 
 The hexadecimal addresses in this backtrace can also be interpreted

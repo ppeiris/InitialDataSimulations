@@ -4,10 +4,11 @@
 !*.py
 !*.out
 !*.bbh
-!.txt
+!*.txt
 !*.par
 !*.out
-!/**
+!*hamiltonian.*
+!*/
 
 *exe
 manybhexe_puncpow

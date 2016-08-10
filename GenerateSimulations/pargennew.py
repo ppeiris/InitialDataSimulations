@@ -63,7 +63,17 @@ def getVal(df, key, col='global'):
         sys.exit()
 
 
-def dataCollectionAxis(df):
+def getDataCollectionShiftFromUser(udata, key, case):
+
+    try:
+        tmpval = udata[key + '_' + case]['val']
+        return tmpval
+    except KeyError:
+        return False
+
+
+
+def dataCollectionAxis(df, udata):
 
     # near case
 
@@ -77,15 +87,55 @@ def dataCollectionAxis(df):
         zmin = float(getVal(df, 'zmin', case))
         zmax = float(getVal(df, 'zmax', case))
 
+        tmpval = getDataCollectionShiftFromUser(udata, 'out1D_xline_y', case)
+        if tmpval:
+            if (float(tmpval)) > ymax or (float(tmpval)) < ymin:
+                print('Error - out1D_xline_y = %s: data collection axis is outside the grid [%s ... %s]' %(tmpval, ymin, ymax))
+            df = updatedf(df, 'out1D_xline_y', case, tmpval)
+        else:
+            df = updatedf(df, 'out1D_xline_y', case, str((ymax - ymin)/2 + ymin))
 
-        df = updatedf(df, 'out1D_xline_y', case, str((ymax - ymin)/2 + ymin))
-        df = updatedf(df, 'out1D_xline_z', case, str((zmax - zmin)/2 + zmin))
 
-        df = updatedf(df, 'out1D_yline_x', case, str((xmax - xmin)/2 + xmin))
-        df = updatedf(df, 'out1D_yline_z', case, str((zmax - zmin)/2 + zmin))
+        tmpval = getDataCollectionShiftFromUser(udata, 'out1D_xline_z', case)
+        if tmpval:
+            if float(tmpval) > zmax or (float(tmpval)) < zmin:
+                print('Error - out1D_xline_z = %s: data collection axis is outside the grid [%s ... %s]' %(tmpval, zmin, zmax))
+            df = updatedf(df, 'out1D_xline_z', case, tmpval)
+        else:
+            df = updatedf(df, 'out1D_xline_z', case, str((zmax - zmin)/2 + zmin))
 
-        df = updatedf(df, 'out1D_zline_x', case, str((xmax - xmin)/2 + xmin))
-        df = updatedf(df, 'out1D_zline_y', case, str((ymax - ymin)/2 + ymin))
+
+        tmpval = getDataCollectionShiftFromUser(udata, 'out1D_yline_x', case)
+        if tmpval:
+            if float(tmpval) > xmax or (float(tmpval)) < xmin:
+                print('Error - out1D_yline_x = %s: data collection axis is outside the grid [%s ... %s]' %(tmpval, xmin, xmax))
+            df = updatedf(df, 'out1D_yline_x', case, tmpval)
+        else:
+            df = updatedf(df, 'out1D_yline_x', case, str((xmax - xmin)/2 + xmin))
+
+        tmpval = getDataCollectionShiftFromUser(udata, 'out1D_yline_z', case)
+        if tmpval:
+            if float(tmpval) > zmax or (float(tmpval)) < zmin:
+                print('Error - out1D_yline_z = %s: data collection axis is outside the grid [%s ... %s]' %(tmpval, zmin, zmax))
+            df = updatedf(df, 'out1D_yline_z', case, tmpval)
+        else:
+            df = updatedf(df, 'out1D_yline_z', case, str((zmax - zmin)/2 + zmin))
+
+        tmpval = getDataCollectionShiftFromUser(udata, 'out1D_zline_x', case)
+        if tmpval:
+            if float(tmpval) > xmax or (float(tmpval)) < xmin:
+                print('Error - out1D_zline_x = %s: data collection axis is outside the grid [%s ... %s]' %(tmpval, xmin, xmax))
+            df = updatedf(df, 'out1D_zline_x', case, tmpval)
+        else:
+            df = updatedf(df, 'out1D_zline_x', case, str((xmax - xmin)/2 + xmin))
+
+        tmpval = getDataCollectionShiftFromUser(udata, 'out1D_zline_y', case)
+        if tmpval:
+            if float(tmpval) > ymax or (float(tmpval)) < ymin:
+                print('Error - out1D_zline_y = %s: data collection axis is outside the grid [%s ... %s]' %(tmpval, ymin, ymax))
+            df = updatedf(df, 'out1D_zline_y', case, tmpval)
+        else:
+            df = updatedf(df, 'out1D_zline_y', case, str((ymax - ymin)/2 + ymin))
 
     return df
 
@@ -214,9 +264,7 @@ for key in list(udata.columns):
 
     data = updatedf(data, nkey, col, udata[key]['val'])
 
-
-
-dataCollectionAxis(data)
+dataCollectionAxis(data, udata)
 
 print("Simulation Parameters")
 print('--------------------------------------------------------------------------------------------------------')
@@ -318,7 +366,7 @@ for case in cases:
                 runScript.write("START=$(date +%s)\n")
                 runScript.write("echo \"Simulation twopun"+case+"_"+simname+"_"+tres+" start at \"`date -u` >> SimulationStatus.out\n")
                 runScript.write("echo \"Still working on ...\" >> SimulationStatus.out\n")
-                runScript.write("nohup ./"+exename+" $SIM_PATH"+inputFileName+" > $SIM_PATH"+outputFileName+"\n")
+                runScript.write("nohup ~/"+exename+" $SIM_PATH"+inputFileName+" > $SIM_PATH"+outputFileName+"\n")
                 runScript.write("END=$(date +%s)\n")
                 runScript.write("echo \"Simulation twopun"+case+"_"+simname+"_"+tres+" end at \"`date -u` >> SimulationStatus.out\n")
                 #runScript.write("echo \"Simulation took\" $(($END-$START)) \"seconds\" >> SimulationStatus.out\n")
@@ -445,7 +493,7 @@ for case in cases:
             runScript.write("START=$(date +%s)\n")
             runScript.write("echo \"Simulation ManyBH"+case+"_"+simname+"_"+res+" start at \"`date -u` >> SimulationStatus.out\n")
             runScript.write("echo \"Still working on ...\" >> SimulationStatus.out\n")
-            runScript.write("nohup ./"+exename+" $SIM_PATH"+inputFileName+" > $SIM_PATH"+outputFileName+"\n")
+            runScript.write("nohup ~/"+exename+" $SIM_PATH"+inputFileName+" > $SIM_PATH"+outputFileName+"\n")
             runScript.write("END=$(date +%s)\n")
             runScript.write("echo \"Simulation ManyBH"+case+"_"+simname+"_"+res+" end at \"`date -u` >> SimulationStatus.out\n")
             # runScript.write("echo \"Simulation took\" $($END-$START) \"seconds\" >> SimulationStatus.out\n")

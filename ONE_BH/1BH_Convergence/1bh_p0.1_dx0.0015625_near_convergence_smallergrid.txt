@@ -1,0 +1,46 @@
+#Headding
+# do not delete this line
+var=val
+
+# Simulation Name
+simname=1bh_p0.1_dx0.0015625_near_convergence_smallergrid
+simmethods=manybh
+
+# global values
+exename=bbhcode
+nbh=1
+mbh=1
+
+dxyz=0.0015625
+dxyz_near=0.0015625
+
+sbh=0.0x0.0x0.0
+pbh=0.1x0.0x0.0
+xbh=3.0x0.0x0.0
+
+global_nx_near=81
+global_ny_near=81
+global_nz_near=81
+
+
+out1D_xline_y_near=0.0
+out1D_xline_z_near=0.0
+
+out1D_yline_x_near=0.5
+out1D_yline_z_near=0.5
+
+out1D_zline_x_near=0.5
+out1D_zline_y_near=0.5
+
+
+# ManyBH Variables 
+
+#nzpt=4x5x9,12x13x17
+
+nzpt=4x5x9,12x13x17,16x17x25,24x25x33,32x33x41,40x41x49
+
+rsurf=0.1
+puncpower=0.25
+
+# TwoPunc Variables
+twopunch_res=20,30,40,50
