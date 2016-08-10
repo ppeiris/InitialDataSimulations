@@ -9,12 +9,13 @@ pd.set_option('display.precision', 30)
 axisArr=['d','x','y','z']
 caseArr=['near','mid','far']
 hamiltonian_colnames = ['it','tl','rl','c','ml','ix','iy','iz','time','x','y','z','data']
+l2Norm_colnames = ['iteration', 'time', 'data']
+
 axislist = ['d', 'x', 'y', 'z']
 BASEPATH = os.path.dirname(os.path.realpath(__file__))
 # Following 3 lines will be replaced by another python script according to the simulation parameters, Please do not change them manually
 
-manybhDirArr=['manybhnear_1bh_p0.1_dx0.0015625_near_4x5x9','manybhnear_1bh_p0.1_dx0.0015625_near_12x13x17']
-
+manybhDirArr=['manybhnear_1bh_p0.1_dx0.0015625_near_4x5x9', 'manybhnear_1bh_p0.1_dx0.0015625_near_12x13x17','manybhnear_1bh_p0.1_dx0.0015625_near_16x17x25','manybhnear_1bh_p0.1_dx0.0015625_near_24x25x33','manybhnear_1bh_p0.1_dx0.0015625_near_32x33x41','manybhnear_1bh_p0.1_dx0.0015625_near_40x41x49']
 
 # manybhDirArr=['manybhnear_1bh_p0.1_dx0.0015625_near_4x5x9','manybhnear_1bh_p0.1_dx0.0015625_near_12x13x17','manybhnear_1bh_p0.1_dx0.0015625_near_16x17x25','manybhnear_1bh_p0.1_dx0.0015625_near_24x25x33','manybhnear_1bh_p0.1_dx0.0015625_near_32x33x41','manybhnear_1bh_p0.1_dx0.0015625_near_40x41x49','manybhmid_1bh_p0.1_dx0.0015625_near_4x5x9','manybhmid_1bh_p0.1_dx0.0015625_near_12x13x17','manybhmid_1bh_p0.1_dx0.0015625_near_16x17x25','manybhmid_1bh_p0.1_dx0.0015625_near_24x25x33','manybhmid_1bh_p0.1_dx0.0015625_near_32x33x41','manybhmid_1bh_p0.1_dx0.0015625_near_40x41x49','manybhfar_1bh_p0.1_dx0.0015625_near_4x5x9','manybhfar_1bh_p0.1_dx0.0015625_near_12x13x17','manybhfar_1bh_p0.1_dx0.0015625_near_16x17x25','manybhfar_1bh_p0.1_dx0.0015625_near_24x25x33','manybhfar_1bh_p0.1_dx0.0015625_near_32x33x41','manybhfar_1bh_p0.1_dx0.0015625_near_40x41x49']
 
@@ -79,6 +80,29 @@ near_x_label_loc_twopun = loc['best']
 near_y_label_loc_twopun = loc['best']
 near_z_label_loc_twopun = loc['best']
 
+def buildL2NormPlots(datadf, method):
+    print('Build L2 Norm')
+    ai = {'x': 0, 'y': 1, 'z': 2}
+
+    l2data = pd.DataFrame()
+    for gname, gdata in datadf.groupby('zone'):
+        fig = plt.figure()
+        l2p = fig.add_subplot(111)
+        l2p.grid(True)
+        for irow in gdata.index:
+            if not datadf.loc[irow]['l2'].empty:
+                l2dataPoint = {'x_label': datadf.loc[irow]['res'], 'y_value': np.log10(np.abs(datadf.loc[irow]['l2']['data'][0]))}
+                l2data = l2data.append(l2dataPoint, ignore_index=True)
+
+        if not l2data.empty:
+            l2p.plot(range(len(l2data['x_label'])), l2data['y_value'], 'bo--')
+            l2p.set_xticks(range(len(l2data['x_label'])))
+            l2p.set_xticklabels(l2data['x_label'], rotation=45, size='small')
+            l2p.set_xlabel('Resolutions')
+            l2p.set_ylabel('log(L2 Norm)')
+            fig.savefig((gname + '/' + method + '_' + gname + '_l2' + plotFormat), bbox_inches= 'tight')
+        plt.close('all')
+
 
 def buildGroupPlots(datadf, method):
     print('Building Group Plots ...')
@@ -86,6 +110,10 @@ def buildGroupPlots(datadf, method):
     for gname, gdata in datadf.groupby('zone'):
         for axis in axislist:
             fig = plt.figure()
+            figl2 = plt.figure()
+            l2p = figl2.add_subplot(111)
+            l2p.grid(True)
+
             ad = fig.add_subplot(111)
             ad.grid(True)
             for irow in gdata.index:
@@ -97,6 +125,11 @@ def buildGroupPlots(datadf, method):
                         axisVal = datadf.loc[irow][axis]['ix'].str.split(' ').apply(lambda x: x[ai[axis]])
                         dataVal = np.log10(np.abs(datadf.loc[irow][axis]['iy']))
                     ad.plot(axisVal, dataVal, label=datadf.loc[irow]['res'])
+                    # add L2
+                    if not datadf.loc[irow]['l2'].empty:
+                        l2p.plot(axisVal, [np.log10(np.abs(datadf.loc[irow]['l2']['data'][0]))] * len(axisVal), label=datadf.loc[irow]['res'])
+                        # ad.plot(axisVal, [np.log10(np.abs(datadf.loc[irow]['l2']['data'][0]))] * len(axisVal), label=datadf.loc[irow]['res'])
+
                 except Exception, e:
                     print(str(e))
                     continue
@@ -104,8 +137,16 @@ def buildGroupPlots(datadf, method):
             ad.set_xlabel(axis)
             ad.set_ylabel('log(H)')
             fig.savefig((gname + '/' + method + '_' + gname + '_' + axis + '_all_resolution' + plotFormat), bbox_inches= 'tight')
+
+            l2p.legend(loc=loc['best'], ncol=legend_ncol, prop={'size': legend_fontsize})
+            l2p.set_xlabel(axis)
+            l2p.set_ylabel('log(L2 Norm)')
+            ymin, ymax = l2p.get_ylim()
+            l2p.set_ylim([ymin - (ymax - ymin)/2, ymax + (ymax - ymin)/2])
+
+            figl2.savefig((gname + '/' + method + '_' + gname + '_' + axis + '_all_resolution_L2' + plotFormat), bbox_inches= 'tight')
             plt.close('all')
-            # print('Plot %s' % (gname + '_' + axis + '.png'))
+
         # print(gdata)
 
 def buildSinglePlosts(datadf):
@@ -127,8 +168,16 @@ def buildSinglePlosts(datadf):
                         axisVal = datadf.loc[irow][axis]['ix'].str.split(' ').apply(lambda x: x[ai[axis]])
                         dataVal = np.log10(np.abs(datadf.loc[irow][axis]['iy']))
 
+                    # print(len(axisVal))
                     ad.plot(axisVal, dataVal, label=datadf.loc[irow]['res'])
+
+                    # Plot l2 norm
+                    if not datadf.loc[irow]['l2'].empty:
+                        ad.plot(axisVal, [np.log10(np.abs(datadf.loc[irow]['l2']['data'][0]))] * len(axisVal), label='test')
+
+
                     ad.legend(loc=loc['best'], ncol=legend_ncol, prop={'size': legend_fontsize})
+
                     ad.set_xlabel(axis)
                     ad.set_ylabel('log(H)')
                     fig.savefig((datadf.loc[irow]['zone'] + '/' + datadf.loc[irow]['dir'] + '_' + axis + plotFormat), bbox_inches= 'tight')
@@ -153,11 +202,22 @@ def buildPlots(method):
     simdatadf['x'] = None
     simdatadf['y'] = None
     simdatadf['z'] = None
+    simdatadf['l2'] = 'l2'
+
     print('Loading data for %s ...' % (method))
     # Read all the data and store in simdatadf datat frame
     for irow in simdatadf.index:
+        datapathl2 = '../' + simdatadf.loc[irow]['dir'] + '/admconstraints-hamiltonian.norm2.asc'
+        if os.path.exists(datapathl2):
+            dftmp = pd.read_table(datapathl2, sep=' ', comment='#', names=l2Norm_colnames)
+        else:
+            dftmp = None
+
+        simdatadf.loc[irow]['l2'] = dftmp
+
         for axis in axislist:
             datapath = '../' + simdatadf.loc[irow]['dir'] + '/admconstraints-hamiltonian.' + axis + '.asc'
+            # print(datapath)
             df = pd.read_table(datapath, sep='\t', comment='#', names=hamiltonian_colnames)
             df = df[2:-2]
             df = df.reset_index()
@@ -170,6 +230,7 @@ def buildPlots(method):
 
     buildSinglePlosts(simdatadf)
     buildGroupPlots(simdatadf, method)
+    buildL2NormPlots(simdatadf, method)
     # build individual plots
     del simdatadf
 
@@ -233,11 +294,13 @@ for case in caseArr:
             dataFilex = '../'+manybhDir+'/admconstraints-hamiltonian.x.asc'
             dataFiley = '../'+manybhDir+'/admconstraints-hamiltonian.y.asc'
             dataFilez = '../'+manybhDir+'/admconstraints-hamiltonian.z.asc'
+            dataFileL2 = '../'+manybhDir+'/admconstraints-hamiltonian.norm2.asc'
 
             datad = pd.read_table(dataFiled, sep='\t', comment='#', names=hamiltonian_colnames)
             datax = pd.read_table(dataFilex, sep='\t', comment='#', names=hamiltonian_colnames)
             datay = pd.read_table(dataFiley, sep='\t', comment='#', names=hamiltonian_colnames)
             dataz = pd.read_table(dataFilez, sep='\t', comment='#', names=hamiltonian_colnames)
+            datal2 = pd.read_table(dataFileL2, sep='\t', comment='#', names=l2Norm_colnames)
 
             datad = datad[datad.it == 0]
             datax = datax[datax.it == 0]
@@ -246,6 +309,11 @@ for case in caseArr:
 
             # make the legends ( labels ) : Lorene resolutions
             plot_label=manybhDir[manybhDir.rfind('_')+1:len(manybhDir)]
+
+            print('============================')
+            print(datal2)
+            sys.exit()
+
             #Plot the axis d
             if not datad.empty:
                 datad['axis'] =  datad['ml'].str.split(' ').apply(lambda x: x[0])
