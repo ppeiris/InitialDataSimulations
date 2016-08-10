@@ -99,7 +99,7 @@ def dataCollectionAxis(df, udata):
 
         tmpval = getDataCollectionShiftFromUser(udata, 'out1D_xline_z', case)
         if tmpval:
-            if float(tmpval) > zmax or (float(tmpval)) < zmin::
+            if float(tmpval) > zmax or (float(tmpval)) < zmin:
                 print('Error - out1D_xline_z: data collection axis is outside the grid')
                 sys.exit()
             df = updatedf(df, 'out1D_xline_z', case, tmpval)
@@ -109,7 +109,7 @@ def dataCollectionAxis(df, udata):
 
         tmpval = getDataCollectionShiftFromUser(udata, 'out1D_yline_x', case)
         if tmpval:
-            if float(tmpval) > xmax or (float(tmpval)) < xmin::
+            if float(tmpval) > xmax or (float(tmpval)) < xmin:
                 print('Error - out1D_yline_x: data collection axis is outside the grid')
                 sys.exit()
             df = updatedf(df, 'out1D_yline_x', case, tmpval)
@@ -118,7 +118,7 @@ def dataCollectionAxis(df, udata):
 
         tmpval = getDataCollectionShiftFromUser(udata, 'out1D_yline_z', case)
         if tmpval:
-            if float(tmpval) > zmax or (float(tmpval)) < zmin::
+            if float(tmpval) > zmax or (float(tmpval)) < zmin:
                 print('Error - out1D_yline_z: data collection axis is outside the grid')
                 sys.exit()
             df = updatedf(df, 'out1D_yline_z', case, tmpval)
@@ -127,7 +127,7 @@ def dataCollectionAxis(df, udata):
 
         tmpval = getDataCollectionShiftFromUser(udata, 'out1D_zline_x', case)
         if tmpval:
-            if float(tmpval) > xmax or (float(tmpval)) < xmin::
+            if float(tmpval) > xmax or (float(tmpval)) < xmin:
                 print('Error - out1D_zline_x: data collection axis is outside the grid')
                 sys.exit()
             df = updatedf(df, 'out1D_zline_x', case, tmpval)
@@ -136,7 +136,7 @@ def dataCollectionAxis(df, udata):
 
         tmpval = getDataCollectionShiftFromUser(udata, 'out1D_zline_y', case)
         if tmpval:
-            if float(tmpval) > ymax or (float(tmpval)) < ymin::
+            if float(tmpval) > ymax or (float(tmpval)) < ymin:
                 print('Error - out1D_zline_y: data collection axis is outside the grid')
                 sys.exit()
             df = updatedf(df, 'out1D_zline_y', case, tmpval)
