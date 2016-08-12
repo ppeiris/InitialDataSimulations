@@ -5,6 +5,8 @@ matplotlib.use('agg')
 import matplotlib.pyplot as plt
 import pandas as pd
 import os, sys
+from matplotlib.ticker import AutoMinorLocator
+
 pd.set_option('display.precision', 30)
 axisArr=['d','x','y','z']
 caseArr=['near','mid','far']
@@ -109,6 +111,14 @@ def buildGroupPlots(datadf, method):
 
             ad = fig.add_subplot(111)
             ad.grid(True)
+
+            ad.xaxis.set_minor_locator(AutoMinorLocator(4))
+            ad.yaxis.set_minor_locator(AutoMinorLocator(4))
+
+            plt.tick_params(which='both', width=1)
+            plt.tick_params(which='minor', length=2)
+            plt.tick_params(axis ='both', which='major', length=4, labelsize =12)
+
             for irow in gdata.index:
                 try:
                     if axis in ['d']:

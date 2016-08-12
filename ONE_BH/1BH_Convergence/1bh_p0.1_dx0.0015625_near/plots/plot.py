@@ -5,6 +5,8 @@ matplotlib.use('agg')
 import matplotlib.pyplot as plt
 import pandas as pd
 import os, sys
+from matplotlib.ticker import AutoMinorLocator
+
 pd.set_option('display.precision', 30)
 axisArr=['d','x','y','z']
 caseArr=['near','mid','far']
@@ -15,7 +17,7 @@ axislist = ['d', 'x', 'y', 'z']
 BASEPATH = os.path.dirname(os.path.realpath(__file__))
 # Following 3 lines will be replaced by another python script according to the simulation parameters, Please do not change them manually
 
-manybhDirArr=['manybhnear_1bh_p0.1_dx0.0015625_near_4x5x9', 'manybhnear_1bh_p0.1_dx0.0015625_near_12x13x17','manybhnear_1bh_p0.1_dx0.0015625_near_16x17x25','manybhnear_1bh_p0.1_dx0.0015625_near_24x25x33','manybhnear_1bh_p0.1_dx0.0015625_near_32x33x41','manybhnear_1bh_p0.1_dx0.0015625_near_40x41x49']
+manybhDirArr=['manybhnear_1bh_p0.1_dx0.0015625_near_12x13x17','manybhnear_1bh_p0.1_dx0.0015625_near_16x17x25','manybhnear_1bh_p0.1_dx0.0015625_near_24x25x33','manybhnear_1bh_p0.1_dx0.0015625_near_32x33x41','manybhnear_1bh_p0.1_dx0.0015625_near_40x41x49']
 
 # manybhDirArr=['manybhnear_1bh_p0.1_dx0.0015625_near_4x5x9','manybhnear_1bh_p0.1_dx0.0015625_near_12x13x17','manybhnear_1bh_p0.1_dx0.0015625_near_16x17x25','manybhnear_1bh_p0.1_dx0.0015625_near_24x25x33','manybhnear_1bh_p0.1_dx0.0015625_near_32x33x41','manybhnear_1bh_p0.1_dx0.0015625_near_40x41x49','manybhmid_1bh_p0.1_dx0.0015625_near_4x5x9','manybhmid_1bh_p0.1_dx0.0015625_near_12x13x17','manybhmid_1bh_p0.1_dx0.0015625_near_16x17x25','manybhmid_1bh_p0.1_dx0.0015625_near_24x25x33','manybhmid_1bh_p0.1_dx0.0015625_near_32x33x41','manybhmid_1bh_p0.1_dx0.0015625_near_40x41x49','manybhfar_1bh_p0.1_dx0.0015625_near_4x5x9','manybhfar_1bh_p0.1_dx0.0015625_near_12x13x17','manybhfar_1bh_p0.1_dx0.0015625_near_16x17x25','manybhfar_1bh_p0.1_dx0.0015625_near_24x25x33','manybhfar_1bh_p0.1_dx0.0015625_near_32x33x41','manybhfar_1bh_p0.1_dx0.0015625_near_40x41x49']
 
@@ -30,7 +32,7 @@ simname='1bh_p0.1_dx0.0015625_near'
 simdir = {'manybh': manybhDirArr, 'twopun': twopunDirArr}
 
 plotFormat = '.png'
-# plotFormat = '.eps'
+plotFormat = '.eps'
 
 
 # Legend locations
@@ -116,6 +118,14 @@ def buildGroupPlots(datadf, method):
 
             ad = fig.add_subplot(111)
             ad.grid(True)
+
+            ad.xaxis.set_minor_locator(AutoMinorLocator(4))
+            ad.yaxis.set_minor_locator(AutoMinorLocator(4))
+
+            plt.tick_params(which='both', width=1)
+            plt.tick_params(which='minor', length=2)
+            plt.tick_params(axis ='both', which='major', length=4, labelsize =12)
+
             for irow in gdata.index:
                 try:
                     if axis in ['d']:
