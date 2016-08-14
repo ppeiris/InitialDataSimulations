@@ -17,10 +17,10 @@ xmin_near=0
 xmax_near=6
 
 ymin_near=-0.4921875
-ymax_near=0.4921875
+ymax_near=0.5078125
 
 zmin_near=-0.4921875
-zmax_near=0.4921875
+zmax_near=0.5078125
 
 
 global_nx_near=1921
