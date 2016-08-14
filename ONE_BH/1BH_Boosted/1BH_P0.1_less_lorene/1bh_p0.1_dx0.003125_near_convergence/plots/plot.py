@@ -16,7 +16,7 @@ l2Norm_colnames = ['iteration', 'time', 'data']
 axislist = ['d', 'x', 'y', 'z']
 BASEPATH = os.path.dirname(os.path.realpath(__file__))
 
-manybhDirArr=['manybhnear_1bh_p0.1_dx0.003125_near_convergence_4x5x9','manybhnear_1bh_p0.1_dx0.003125_near_convergence_8x9x13','manybhmid_1bh_p0.1_dx0.003125_near_convergence_4x5x9','manybhmid_1bh_p0.1_dx0.003125_near_convergence_8x9x13','manybhfar_1bh_p0.1_dx0.003125_near_convergence_4x5x9','manybhfar_1bh_p0.1_dx0.003125_near_convergence_8x9x13']
+manybhDirArr=['manybhnear_1bh_p0.1_dx0.003125_near_convergence_4x5x9','manybhnear_1bh_p0.1_dx0.003125_near_convergence_12x13x17','manybhnear_1bh_p0.1_dx0.003125_near_convergence_16x17x25','manybhnear_1bh_p0.1_dx0.003125_near_convergence_24x25x33','manybhnear_1bh_p0.1_dx0.003125_near_convergence_32x33x41','manybhnear_1bh_p0.1_dx0.003125_near_convergence_40x41x49','manybhmid_1bh_p0.1_dx0.003125_near_convergence_4x5x9','manybhmid_1bh_p0.1_dx0.003125_near_convergence_12x13x17','manybhmid_1bh_p0.1_dx0.003125_near_convergence_16x17x25','manybhmid_1bh_p0.1_dx0.003125_near_convergence_24x25x33','manybhmid_1bh_p0.1_dx0.003125_near_convergence_32x33x41','manybhmid_1bh_p0.1_dx0.003125_near_convergence_40x41x49','manybhfar_1bh_p0.1_dx0.003125_near_convergence_4x5x9','manybhfar_1bh_p0.1_dx0.003125_near_convergence_12x13x17','manybhfar_1bh_p0.1_dx0.003125_near_convergence_16x17x25','manybhfar_1bh_p0.1_dx0.003125_near_convergence_24x25x33','manybhfar_1bh_p0.1_dx0.003125_near_convergence_32x33x41','manybhfar_1bh_p0.1_dx0.003125_near_convergence_40x41x49']
 
 
 twopunDirArr=[]
