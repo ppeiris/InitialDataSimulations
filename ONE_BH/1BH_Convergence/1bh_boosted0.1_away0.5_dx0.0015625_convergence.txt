@@ -4,7 +4,7 @@ var=val
 
 # Simulation Name
 simname=1bh_boosted0.1_away0.5_dx0.0015625_convergence
-simmethods=manybh
+simmethods=manybh,twopunc
 
 # global values
 exename=bbhcode

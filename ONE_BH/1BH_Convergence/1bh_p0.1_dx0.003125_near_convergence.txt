@@ -3,7 +3,7 @@
 var=val
 
 # Simulation Name
-simname=1bh_p0.1_dx0.0015625_near
+simname=1bh_p0.1_dx0.003125_near_convergence
 simmethods=manybh
 
 # global values

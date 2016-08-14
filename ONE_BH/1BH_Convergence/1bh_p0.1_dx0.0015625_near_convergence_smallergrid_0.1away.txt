@@ -17,6 +17,11 @@ dxyz_near=0.0015625
 xmin_near=0
 xmax_near=6
 
+ymin_near=0.0375
+ymax_near=0.1625
+
+zmin_near=0.0375
+zmax_near=0.1625
 
 sbh=0.0x0.0x0.0
 pbh=0.1x0.0x0.0
