@@ -49,3 +49,4 @@ echo "Still working on ..." >> SimulationStatus.out
 nohup ~/bbhcode $SIM_PATH/manybhnear_1bh_p0.1_dx0.003125_near_convergence_40x41x49.par > $SIM_PATH/manybhnear_1bh_p0.1_dx0.003125_near_convergence_40x41x49.out
 END=$(date +%s)
 echo "Simulation ManyBHnear_1bh_p0.1_dx0.003125_near_convergence_40x41x49 end at "`date -u` >> SimulationStatus.out
+

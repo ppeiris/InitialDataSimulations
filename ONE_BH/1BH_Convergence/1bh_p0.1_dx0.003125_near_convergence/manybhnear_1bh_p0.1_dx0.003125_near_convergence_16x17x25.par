@@ -192,8 +192,8 @@ grid::xmin = 0
 grid::ymin = -0.4921875
 grid::zmin = -0.4921875
 grid::xmax = 6
-grid::ymax = 0.4921875
-grid::zmax = 0.4921875
+grid::ymax = 0.5078125
+grid::zmax = 0.5078125
 
 driver::global_nx = 1921
 driver::global_ny = 6
