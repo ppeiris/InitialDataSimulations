@@ -9,7 +9,8 @@ from matplotlib.ticker import AutoMinorLocator
 
 pd.set_option('display.precision', 30)
 axisArr=['d','x','y','z']
-caseArr=['near','mid','far']
+# caseArr=['near','mid','far']
+caseArr=['near','mid']
 hamiltonian_colnames = ['it','tl','rl','c','ml','ix','iy','iz','time','x','y','z','data']
 l2Norm_colnames = ['iteration', 'time', 'data']
 
@@ -19,6 +20,13 @@ BASEPATH = os.path.dirname(os.path.realpath(__file__))
 [==manybhDirArr==]
 [==twopunDirArr==]
 [==simname==]
+
+twopunDirArr=[]
+
+
+simname='1bh_p0.1_dx0.003125_near_convergence'
+
+
 
 twopunDirArr=[]
 
@@ -78,16 +86,18 @@ near_z_label_loc_twopun = loc['best']
 def buildL2NormPlots(datadf, method):
     print('Build L2 Norm')
     ai = {'x': 0, 'y': 1, 'z': 2}
-
-    l2data = pd.DataFrame()
     for gname, gdata in datadf.groupby('zone'):
+        l2data = pd.DataFrame()
+        if gname not in caseArr:
+            continue
         fig = plt.figure()
         l2p = fig.add_subplot(111)
         l2p.grid(True)
         for irow in gdata.index:
-            if not datadf.loc[irow]['l2'].empty:
-                l2dataPoint = {'x_label': datadf.loc[irow]['res'], 'y_value': np.log10(np.abs(datadf.loc[irow]['l2']['data'][0]))}
-                l2data = l2data.append(l2dataPoint, ignore_index=True)
+            if not gdata.loc[irow]['l2'].empty:
+                if gname == gdata.loc[irow]['zone']:
+                    l2dataPoint = {'x_label': gdata.loc[irow]['res'], 'y_value': np.log10(np.abs(gdata.loc[irow]['l2']['data'][0]))}
+                    l2data = l2data.append(l2dataPoint, ignore_index=True)
 
         if not l2data.empty:
             l2p.plot(range(len(l2data['x_label'])), l2data['y_value'], 'bo--')
@@ -103,6 +113,8 @@ def buildGroupPlots(datadf, method):
     print('Building Group Plots ...')
     ai = {'x': 0, 'y': 1, 'z': 2}
     for gname, gdata in datadf.groupby('zone'):
+        if gname not in caseArr:
+            continue
         for axis in axislist:
             fig = plt.figure()
             figl2 = plt.figure()
@@ -157,6 +169,9 @@ def buildSinglePlosts(datadf):
     print('Building Individual Plots...')
     ai = {'x': 0, 'y': 1, 'z': 2}
     for irow in datadf.index:
+        if datadf.loc[irow]['zone'] not in caseArr:
+            continue
+
         for axis in axislist:
             if not datadf.loc[irow][axis].empty:
                 try:
@@ -230,7 +245,6 @@ def buildPlots(method):
     for zone in caseArr:
         if not os.path.isdir(os.path.join(BASEPATH, zone)):
             os.makedirs(os.path.join(BASEPATH, zone))
-
     buildSinglePlosts(simdatadf)
     buildGroupPlots(simdatadf, method)
     buildL2NormPlots(simdatadf, method)
