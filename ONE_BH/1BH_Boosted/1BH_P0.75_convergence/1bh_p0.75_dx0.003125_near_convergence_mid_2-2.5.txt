@@ -3,8 +3,8 @@
 var=val
 
 # Simulation Name
-simname=1bh_p0.75_dx0.003125_near_convergence
-simmethods=twopunc
+simname=1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5
+simmethods=manybh
 
 # global values
 exename=bbhcode
@@ -30,6 +30,8 @@ zmin_shift_near=0.21875
 zmax_shift_near=0.28125
 
 
+xmin_mid=-1.2
+xmax_mid=2.8
 
 sbh=0.0x0.0x0.0
 pbh=0.75x0.0x0.0
@@ -63,4 +65,4 @@ rsurf=0.1
 puncpower=0.25
 
 # TwoPunc Variables
-twopunch_res=20,30,40,50,60
+twopunch_res=20,30,40,50
