@@ -1003,3 +1003,94 @@ bicgstab:     0   5.976e-07
 bicgstab:     1   1.631e-06   1.415e+00   0.000e+00   4.824e-01
 bicgstab:     2   1.565e-06   1.890e-01   6.041e-02  -6.860e-01
 bicgstab:     3   1.997e-06  -4.285e+00  -8.571e-01   4.786e-01
+bicgstab:     4   3.252e-06  -4.699e+00  -9.556e+00   1.119e+00
+bicgstab:     5   2.190e-06  -1.508e+00  -1.497e+00   1.306e+00
+bicgstab:     6   8.943e-06   3.792e+01  -3.687e+00   3.951e-01
+bicgstab:     7   1.310e-06  -2.675e-01   1.980e+02   2.290e+00
+bicgstab:     8   9.770e-07   3.730e-01  -8.731e-03   2.652e+00
+bicgstab:     9   9.438e-07  -5.996e-01   2.492e-02   4.892e-01
+bicgstab:    10   4.485e-07  -1.890e+00  -2.564e+00   1.204e+01
+bicgstab:    11   1.385e-06   1.535e+01  -9.555e-02   6.003e-01
+bicgstab:    12   1.690e-07   1.495e-01  -7.062e+01   4.622e-01
+bicgstab:    13   1.627e-07  -7.029e-01   1.881e-03   9.479e-01
+bicgstab:    14   1.497e-07   9.238e-02   5.191e+00   1.865e+00
+bicgstab:    15   7.689e-08   2.389e+01  -1.346e-01   4.144e-01
+bicgstab:    16   5.164e-08   7.029e-01   7.896e+00   4.233e+00
+bicgstab:    17   3.811e-08   1.470e+00   1.246e-01   4.172e-01
+bicgstab:    18   1.797e-08   1.651e+00   2.054e+00   1.053e+00
+bicgstab:    19   1.639e-08   1.606e-01  -1.917e-01   2.716e+00
+bicgstab:    20   9.286e-09   1.741e+01  -6.507e-01   7.109e-01
+bicgstab:    21   3.591e-09   4.431e-01  -8.517e+00   1.328e+00
+bicgstab:    22   3.454e-09   1.179e+00  -2.387e-02   4.590e-01
+bicgstab:    23   2.133e-09   5.330e+00  -3.848e-01   4.082e-01
+bicgstab:    24   9.030e-10   6.313e-02  -1.174e+00   1.192e+01
+bicgstab:    25   2.396e-10   3.620e+00  -6.723e-01   6.922e-01
+bicgstab:    26   9.311e-11   2.515e+00   6.331e-01   4.092e-01
+bicgstab:    27   2.639e-11   1.662e-01  -9.486e+00   1.223e+01
+bicgstab:    28   1.481e-11   2.338e+01   1.322e-02   5.850e-01
+bicgstab:    29   4.581e-12   3.439e-01  -2.875e+01   5.850e-01
+Newton: it=3 	 |F|=5.027789e-12 
+INFO (TwoPunctures): The two puncture masses are mp=1 and mm=1
+INFO (TwoPunctures): Puncture 1 ADM mass is 1.12523
+INFO (TwoPunctures): Puncture 2 ADM mass is 1.09661
+INFO (TwoPunctures): The total ADM mass is 2.22433
+INFO (TwoPunctures): Interpolating result
+INFO (TimerReport): Timer Report at iteration 0 time 0
+INFO (TimerReport): Top timers at iteration 0 time 0
+======================================================================
+    %    Time/s   Min/s   Max/s   Timer (gettimeofday)
+======================================================================
+100.0   2557.25 2557.25 2557.25   CCTK total time
+100.0   2557.25 2557.25 2557.25   meta mode/meta mode/global mode
+100.0   2557.24 2557.24 2557.24   main/Initialise/CallInitial
+100.0   2557.24 2557.24 2557.24   meta mode/meta mode/global mode/level(0)
+100.0   2557.09 2557.09 2557.09   main/Initialise/CallInitial/CCTK_INITIAL
+100.0   2557.09 2557.09 2557.09   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction
+100.0   2557.09 2557.09 2557.09   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns
+100.0   2557.05 2557.05 2557.05   [0067] TwoPunctures: TwoPunctures in CCTK_INITIAL
+100.0   2557.05 2557.05 2557.05   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/TwoPunctures
+  0.0      0.10    0.10    0.10   main/Initialise/CallInitial/CCTK_POSTINITIAL
+  0.0      0.10    0.10    0.10   main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction
+  0.0      0.10    0.10    0.10   main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns
+  0.0      0.10    0.10    0.10   [0001] CycleClock: CycleClock_Setup in CCTK_STARTUP
+  0.0      0.05    0.05    0.05   main/Initialise/CallInitial/Poison
+  0.0      0.04    0.04    0.04   [0096] ML_BSSN: ML_BSSN_ConstraintsInterior in CCTK_POSTINITIAL
+  0.0      0.04    0.04    0.04   main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ConstraintsInterior
+  0.0      0.03    0.03    0.03   [0092] ADMConstraints: ADMConstraints in CCTK_POSTINITIAL
+  0.0      0.03    0.03    0.03   main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ADMConstraints
+  0.0      0.02    0.02    0.02   [0076] ML_BSSN: ML_BSSN_InitialADMBase1Everywhere in CCTK_INITIAL
+  0.0      0.02    0.02    0.02   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ML_BSSN_InitialADMBase1Everywhere
+======================================================================
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Iteration      Time | ADMBASE::gxx | ADMBASE::gxy | ADMBASE::gxz | ADMBASE::gyy | ADMBASE::gyz | ADMBASE::gzz | ADMBASE::kxx | ADMBASE::kxy | ADMBASE::kxz | ADMBASE::kyy | ADMBASE::kyz | ADMBASE::kzz | ADMBASE::alp | *BASE::betax | *BASE::betay | *BASE::betaz | *RAINTS::ham | *AINTS::momx | *AINTS::momy | *AINTS::momz | *me_per_hour
+                    |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |             
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        0     0.000 |    1.6105182 |    0.0000000 |    0.0000000 |    1.6105182 |    0.0000000 |    1.6105182 |    0.0048001 |    0.0119979 |    0.0119979 |    0.0024001 |    0.0020685 |    0.0024001 |    1.0000000 |    0.0000000 |    0.0000000 |    0.0000000 | 4.227358e-10 | 7.456683e-16 | 4.844587e-16 | 4.850571e-16 |    0.0000000
+INFO (TimerReport): Timer Report before terminating at iteration 0 time 0
+INFO (TimerReport): Top timers at iteration 0 time 0
+======================================================================
+    %    Time/s   Min/s   Max/s   Timer (gettimeofday)
+======================================================================
+100.0   2557.35 2557.35 2557.35   CCTK total time
+100.0   2557.35 2557.35 2557.35   main/Initialise
+100.0   2557.34 2557.34 2557.34   meta mode/meta mode/global mode
+100.0   2557.33 2557.33 2557.33   meta mode/meta mode/global mode/level(0)
+100.0   2557.24 2557.24 2557.24   main/Initialise/CallInitial
+100.0   2557.09 2557.09 2557.09   main/Initialise/CallInitial/CCTK_INITIAL
+100.0   2557.09 2557.09 2557.09   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction
+100.0   2557.09 2557.09 2557.09   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns
+100.0   2557.05 2557.05 2557.05   [0067] TwoPunctures: TwoPunctures in CCTK_INITIAL
+100.0   2557.05 2557.05 2557.05   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/TwoPunctures
+  0.0      0.10    0.10    0.10   main/Initialise/CallInitial/CCTK_POSTINITIAL
+  0.0      0.10    0.10    0.10   main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction
+  0.0      0.10    0.10    0.10   main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns
+  0.0      0.10    0.10    0.10   [0001] CycleClock: CycleClock_Setup in CCTK_STARTUP
+  0.0      0.10    0.10    0.10   main/Initialise/CallAnalysis
+  0.0      0.09    0.09    0.09   main/Initialise/CallAnalysis/OutputGH
+  0.0      0.09    0.09    0.09   main/Initialise/CallAnalysis/OutputGH/OutputGH
+  0.0      0.08    0.08    0.08   main/Initialise/CallAnalysis/OutputGH/OutputGH/IOScalar::CarpetIOScalar [1]
+  0.0      0.08    0.08    0.08   main/Initialise/CallAnalysis/OutputGH/OutputGH/IOScalar::CarpetIOScalar [1]/OutputGH
+  0.0      0.05    0.05    0.05   main/Initialise/CallInitial/Poison
+======================================================================
+--------------------------------------------------------------------------------
+Done.
