@@ -20,7 +20,7 @@ BASEPATH = os.path.dirname(os.path.realpath(__file__))
 manybhDirArr=[]
 
 
-twopunDirArr=['twopunnear_1bh_p0.75_dx0.003125_near_convergence_20','twopunnear_1bh_p0.75_dx0.003125_near_convergence_30','twopunnear_1bh_p0.75_dx0.003125_near_convergence_40','twopunnear_1bh_p0.75_dx0.003125_near_convergence_50','twopunmid_1bh_p0.75_dx0.003125_near_convergence_20','twopunmid_1bh_p0.75_dx0.003125_near_convergence_30','twopunmid_1bh_p0.75_dx0.003125_near_convergence_40','twopunmid_1bh_p0.75_dx0.003125_near_convergence_50','twopunfar_1bh_p0.75_dx0.003125_near_convergence_20','twopunfar_1bh_p0.75_dx0.003125_near_convergence_30','twopunfar_1bh_p0.75_dx0.003125_near_convergence_40','twopunfar_1bh_p0.75_dx0.003125_near_convergence_50']
+twopunDirArr=['twopunnear_1bh_p0.75_dx0.003125_near_convergence_20','twopunnear_1bh_p0.75_dx0.003125_near_convergence_30','twopunnear_1bh_p0.75_dx0.003125_near_convergence_40','twopunnear_1bh_p0.75_dx0.003125_near_convergence_50','twopunnear_1bh_p0.75_dx0.003125_near_convergence_60','twopunmid_1bh_p0.75_dx0.003125_near_convergence_20','twopunmid_1bh_p0.75_dx0.003125_near_convergence_30','twopunmid_1bh_p0.75_dx0.003125_near_convergence_40','twopunmid_1bh_p0.75_dx0.003125_near_convergence_50','twopunmid_1bh_p0.75_dx0.003125_near_convergence_60','twopunfar_1bh_p0.75_dx0.003125_near_convergence_20','twopunfar_1bh_p0.75_dx0.003125_near_convergence_30','twopunfar_1bh_p0.75_dx0.003125_near_convergence_40','twopunfar_1bh_p0.75_dx0.003125_near_convergence_50','twopunfar_1bh_p0.75_dx0.003125_near_convergence_60']
 
 
 simname='1bh_p0.75_dx0.003125_near_convergence'
