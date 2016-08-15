@@ -10,7 +10,7 @@ from matplotlib.ticker import AutoMinorLocator
 pd.set_option('display.precision', 30)
 axisArr=['d','x','y','z']
 # caseArr=['near','mid','far']
-caseArr=['near','mid']
+caseArr=['near','mid','far']
 hamiltonian_colnames = ['it','tl','rl','c','ml','ix','iy','iz','time','x','y','z','data']
 l2Norm_colnames = ['iteration', 'time', 'data']
 

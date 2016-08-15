@@ -10,31 +10,28 @@ from matplotlib.ticker import AutoMinorLocator
 pd.set_option('display.precision', 30)
 axisArr=['d','x','y','z']
 # caseArr=['near','mid','far']
-caseArr=['near','mid']
+caseArr=['near','mid', 'far']
 hamiltonian_colnames = ['it','tl','rl','c','ml','ix','iy','iz','time','x','y','z','data']
 l2Norm_colnames = ['iteration', 'time', 'data']
 
 axislist = ['d', 'x', 'y', 'z']
 BASEPATH = os.path.dirname(os.path.realpath(__file__))
 
-manybhDirArr=['manybhnear_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_4x5x9','manybhnear_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_8x9x13','manybhnear_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_12x13x17','manybhnear_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_16x17x25','manybhnear_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_24x25x33','manybhnear_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_32x33x41','manybhnear_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_40x41x49','manybhmid_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_4x5x9','manybhmid_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_8x9x13','manybhmid_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_12x13x17','manybhmid_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_16x17x25','manybhmid_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_24x25x33','manybhmid_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_32x33x41','manybhmid_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_40x41x49','manybhfar_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_4x5x9','manybhfar_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_8x9x13','manybhfar_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_12x13x17','manybhfar_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_16x17x25','manybhfar_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_24x25x33','manybhfar_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_32x33x41','manybhfar_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_40x41x49']
-
-
-twopunDirArr=[]
-
-
-simname='1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5'
 
 
 
-twopunDirArr=[]
+manybhDirArr=['manybhnear_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_4x5x9','manybhnear_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_8x9x13','manybhnear_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_12x13x17','manybhmid_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_4x5x9','manybhmid_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_8x9x13','manybhmid_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_12x13x17','manybhfar_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_4x5x9','manybhfar_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_8x9x13','manybhfar_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_12x13x17']
 
 
-simname='1bh_p0.1_dx0.003125_near_convergence'
+# manybhDirArr=['manybhnear_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_4x5x9','manybhnear_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_8x9x13','manybhnear_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_12x13x17','manybhnear_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_16x17x25','manybhnear_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_24x25x33','manybhnear_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_32x33x41','manybhnear_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_40x41x49','manybhmid_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_4x5x9','manybhmid_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_8x9x13','manybhmid_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_12x13x17','manybhmid_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_16x17x25','manybhmid_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_24x25x33','manybhmid_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_32x33x41','manybhmid_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_40x41x49','manybhfar_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_4x5x9','manybhfar_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_8x9x13','manybhfar_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_12x13x17','manybhfar_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_16x17x25','manybhfar_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_24x25x33','manybhfar_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_32x33x41','manybhfar_1bh_p0.75_dx0.003125_near_convergence_mid_2_2.5_40x41x49']
+
 
 
 
 twopunDirArr=[]
+
+
+
 
 simdir = {'manybh': manybhDirArr, 'twopun': twopunDirArr}
 
@@ -112,6 +109,73 @@ def buildL2NormPlots(datadf, method):
             l2p.set_xlabel('Resolutions')
             l2p.set_ylabel('log(L2 Norm)')
             fig.savefig((gname + '/' + method + '_' + gname + '_l2' + plotFormat), bbox_inches= 'tight')
+        plt.close('all')
+
+
+def buildGroupPlotsGroup(datadf, method):
+    print('Building Group Plots In One')
+    ai = {'x': 0, 'y': 1, 'z': 2}
+
+    print('Building Group Subplots')
+    for axis in axislist:
+        splotcount = 321
+        zone_name = 1
+        fig1 = plt.figure(1)
+        for zname, zdata in datadf.groupby('zone'):
+            subplot = fig1.add_subplot(splotcount)
+            subplot.grid(True)
+
+            subplot.xaxis.set_minor_locator(AutoMinorLocator(4))
+            subplot.yaxis.set_minor_locator(AutoMinorLocator(4))
+
+            plt.tick_params(which='both', width=1)
+            plt.tick_params(which='minor', length=2)
+            plt.tick_params(axis ='both', which='major', length=4, labelsize =8)
+
+            l2data = pd.DataFrame()
+            for irow in zdata.index:
+                if axis in ['d']:
+                    axisVal = datadf.loc[irow][axis]['ml'].str.split(' ').apply(lambda x: x[0])
+                    dataVal = np.log10(np.abs(datadf.loc[irow][axis]['ix']))
+                else:
+                    axisVal = datadf.loc[irow][axis]['ix'].str.split(' ').apply(lambda x: x[ai[axis]])
+                    dataVal = np.log10(np.abs(datadf.loc[irow][axis]['iy']))
+                subplot.plot(axisVal, dataVal, label=datadf.loc[irow]['res'])
+                subplot.set_title('Zone - ' + str(zone_name) + '(a)', fontsize =9)
+                subplot.set_xlabel('$'+axis+'$', fontsize =10)
+                subplot.set_ylabel('$log(H)$', fontsize =10)
+                # subplot.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3, ncol=2, mode="expand", borderaxespad=0., prop={'size': 5})
+                subplot.legend(bbox_to_anchor=(1.01, 1.0), loc=2, borderaxespad=0., prop={'size': 5})
+                # subplot.legend(loc=loc['best'], ncol=legend_ncol, prop={'size': 5})
+                if not datadf.loc[irow]['l2'].empty:
+                    l2dataPoint = {'x_label': zdata.loc[irow]['res'], 'y_value': np.log10(np.abs(zdata.loc[irow]['l2']['data'][0]))}
+                    l2data = l2data.append(l2dataPoint, ignore_index=True)
+            splotcount +=1
+            subplot = fig1.add_subplot(splotcount)
+            subplot.grid(True)
+
+            subplot.xaxis.set_minor_locator(AutoMinorLocator(4))
+            subplot.yaxis.set_minor_locator(AutoMinorLocator(4))
+
+            plt.tick_params(which='both', width=1)
+            plt.tick_params(which='minor', length=0)
+            plt.tick_params(axis ='both', which='major', length=4, labelsize =8)
+
+            subplot.plot(range(len(l2data['x_label'])), l2data['y_value'], 'ko--')
+            subplot.set_xticks(range(len(l2data['x_label'])))
+            subplot.set_xticklabels(l2data['x_label'], size='xx-small')
+            subplot.set_title('Zone - ' + str(zone_name) + '(b)', fontsize =9)
+            subplot.set_xlabel('$Collocations$', fontsize =10)
+            subplot.set_ylabel('$log(l_{2})$', fontsize =10)
+            zone_name += 1
+            # plt.set_xticks(range(len(l2data['x_label'])))
+            # pltt.set_xticklabels(l2data['x_label'], rotation=45, size='small')
+            splotcount +=1
+            fig1.tight_layout()
+            fig1.subplots_adjust(left=None, bottom=None, right=None, top=None, wspace=None, hspace=None)
+
+        # plt.savefig('gplots_' + axis +'_.png')
+            plt.savefig('group/' + 'group_' + axis + plotFormat)
         plt.close('all')
 
 
@@ -251,9 +315,14 @@ def buildPlots(method):
     for zone in caseArr:
         if not os.path.isdir(os.path.join(BASEPATH, zone)):
             os.makedirs(os.path.join(BASEPATH, zone))
-    buildSinglePlosts(simdatadf)
-    buildGroupPlots(simdatadf, method)
-    buildL2NormPlots(simdatadf, method)
+
+    if not os.path.isdir(os.path.join(BASEPATH, 'group')):
+        os.makedirs(os.path.join(BASEPATH, 'group'))
+
+    # buildSinglePlosts(simdatadf)
+    # buildGroupPlots(simdatadf, method)
+    # buildL2NormPlots(simdatadf, method)
+    buildGroupPlotsGroup(simdatadf, method)
     # build individual plots
     del simdatadf
 
@@ -263,282 +332,3 @@ def buildPlots(method):
 buildPlots('manybh')
 buildPlots('twopun')
 
-
-# need to fix the y axis limits
-
-
-exit()
-
-
-
-for case in caseArr:
-    print('Start building plots for %s zone ' % (case))
-    # ManyBH plots ==================================================================================
-    figd=plt.figure()
-    ad = figd.add_subplot(111)
-    ad.grid(True)
-
-    figx=plt.figure()
-    ax = figx.add_subplot(111)
-    ax.grid(True)
-
-    figy=plt.figure()
-    ay = figy.add_subplot(111)
-    ay.grid(True)
-
-    figz=plt.figure()
-    az = figz.add_subplot(111)
-    az.grid(True)
-
-    print('ManyBH:')
-    for manybhDir in manybhDirArr:
-        print('resolution: %s' % (manybhDir))
-       #Create all the file Names
-       # print(manybhDir[6:manybhDir.find('_')])
-        if(manybhDir[6:manybhDir.find('_')]==case):
-
-            if(case == 'near'):
-                d_label_loc = near_d_label_loc_manybh
-                x_label_loc = near_x_label_loc_manybh
-                y_label_loc = near_y_label_loc_manybh
-                z_label_loc = near_z_label_loc_manybh
-            elif(case == 'mid'):
-                d_label_loc = mid_d_label_loc_manybh
-                x_label_loc = mid_x_label_loc_manybh
-                y_label_loc = mid_y_label_loc_manybh
-                z_label_loc = mid_z_label_loc_manybh
-            elif(case == 'far'):
-                d_label_loc = far_d_label_loc_manybh
-                x_label_loc = far_x_label_loc_manybh
-                y_label_loc = far_y_label_loc_manybh
-                z_label_loc = far_z_label_loc_manybh
-
-            dataFiled = '../'+manybhDir+'/admconstraints-hamiltonian.d.asc'
-            dataFilex = '../'+manybhDir+'/admconstraints-hamiltonian.x.asc'
-            dataFiley = '../'+manybhDir+'/admconstraints-hamiltonian.y.asc'
-            dataFilez = '../'+manybhDir+'/admconstraints-hamiltonian.z.asc'
-            dataFileL2 = '../'+manybhDir+'/admconstraints-hamiltonian.norm2.asc'
-
-            datad = pd.read_table(dataFiled, sep='\t', comment='#', names=hamiltonian_colnames)
-            datax = pd.read_table(dataFilex, sep='\t', comment='#', names=hamiltonian_colnames)
-            datay = pd.read_table(dataFiley, sep='\t', comment='#', names=hamiltonian_colnames)
-            dataz = pd.read_table(dataFilez, sep='\t', comment='#', names=hamiltonian_colnames)
-            datal2 = pd.read_table(dataFileL2, sep='\t', comment='#', names=l2Norm_colnames)
-
-            datad = datad[datad.it == 0]
-            datax = datax[datax.it == 0]
-            datay = datay[datay.it == 0]
-            dataz = dataz[dataz.it == 0]
-
-            # make the legends ( labels ) : Lorene resolutions
-            plot_label=manybhDir[manybhDir.rfind('_')+1:len(manybhDir)]
-
-            print('============================')
-            print(datal2)
-            sys.exit()
-
-            #Plot the axis d
-            if not datad.empty:
-                datad['axis'] =  datad['ml'].str.split(' ').apply(lambda x: x[0])
-                ad.plot(list(datad['axis']),list(np.log10(np.abs(datad['ix']))),label=plot_label)
-                ad.legend(loc=d_label_loc,ncol=legend_ncol, prop={'size':legend_fontsize})
-            else:
-                print("Data set %s is empty" %(dataFiled))
-
-            # Plot the axis x
-            if not datax.empty:
-                datax['axis'] = datax['ix'].str.split(' ').apply(lambda x: x[0])
-                ax.plot(datax['axis'], np.log10(np.abs(datax['iy'])), label=plot_label)
-                ax.legend(loc=x_label_loc, ncol=legend_ncol, prop={'size': legend_fontsize})
-            else:
-                print("Data set %s is empty" %(dataFilex))
-
-            #Plot the y axis
-            if not datay.empty:
-
-                datay['axis'] = datay['ix'].str.split(' ').apply(lambda x: x[1])
-                ay.plot(datay['axis'], np.log10(np.abs(datay['iy'])), label=plot_label)
-                ay.legend(loc=y_label_loc, ncol=legend_ncol, prop={'size': legend_fontsize})
-            else:
-                print("Data set %s is empty" %(dataFiley))
-
-            #Plot the z axis
-            if not dataz.empty:
-                dataz['axis'] = dataz['ix'].str.split(' ').apply(lambda x: x[2])
-                az.plot(dataz['axis'], np.log10(np.abs(dataz['iy'])), label=plot_label)
-                az.legend(loc=y_label_loc, ncol=legend_ncol, prop={'size': legend_fontsize})
-            else:
-                print("Data set %s is empty" %(dataFilez))
-
-    # Twopunc plots ==================================================================================
-
-    tfigd=plt.figure()
-    tad = tfigd.add_subplot(111)
-    tad.grid(True)
-
-    tfigx=plt.figure()
-    tax = tfigx.add_subplot(111)
-    tax.grid(True)
-
-    tfigy=plt.figure()
-    tay = tfigy.add_subplot(111)
-    tay.grid(True)
-
-    tfigz=plt.figure()
-    taz = tfigz.add_subplot(111)
-    taz.grid(True)
-
-    #Loop through twopun simulation files
-    for twopunDir in twopunDirArr:
-        if(twopunDir[6:twopunDir.find('_')]==case):
-            if(case == 'near'):
-                d_label_loc = near_d_label_loc_twopun
-                x_label_loc = near_x_label_loc_twopun
-                y_label_loc = near_y_label_loc_twopun
-                z_label_loc = near_z_label_loc_twopun
-            elif(case == 'mid'):
-                d_label_loc = mid_d_label_loc_twopun
-                x_label_loc = mid_x_label_loc_twopun
-                y_label_loc = mid_y_label_loc_twopun
-                z_label_loc = mid_z_label_loc_twopun
-            elif(case == 'far'):
-                d_label_loc = far_d_label_loc_twopun
-                x_label_loc = far_x_label_loc_twopun
-                y_label_loc = far_y_label_loc_twopun
-                z_label_loc = far_z_label_loc_twopun
-
-
-        tdataFiled='../'+twopunDir+'/admconstraints-hamiltonian.d.asc'
-        tdataFilex='../'+twopunDir+'/admconstraints-hamiltonian.x.asc'
-        tdataFiley='../'+twopunDir+'/admconstraints-hamiltonian.y.asc'
-        tdataFilez='../'+twopunDir+'/admconstraints-hamiltonian.z.asc'
-
-        tdatad = pd.read_table(tdataFiled, sep='\t', comment='#', names=hamiltonian_colnames)
-        tdatax = pd.read_table(tdataFilex, sep='\t', comment='#', names=hamiltonian_colnames)
-        tdatay = pd.read_table(tdataFiley, sep='\t', comment='#', names=hamiltonian_colnames)
-        tdataz = pd.read_table(tdataFilez, sep='\t', comment='#', names=hamiltonian_colnames)
-
-        tdatad = tdatad[tdatad.it == 0]
-        tdatax = tdatax[tdatax.it == 0]
-        tdatay = tdatay[tdatay.it == 0]
-        tdataz = tdataz[tdataz.it == 0]
-
-        # make the legends ( labels ) : Lorene resolutions
-        plot_label=twopunDir[twopunDir.rfind('_')+1:len(twopunDir)]
-        #Plot the axis d
-        if not tdatad.empty:
-            tdatad['axis'] = tdatad['ml'].str.split(' ').apply(lambda x: x[0])
-            tad.plot(tdatad['axis'],np.log10(np.abs(tdatad['ix'])),label=plot_label)
-            tad.legend(loc=d_label_loc,ncol=legend_ncol, prop={'size':legend_fontsize})
-
-        #Plot the axis x
-        if not tdatax.empty:
-            tdatax['axis'] = tdatax['ix'].str.split(' ').apply(lambda x: x[0])
-            tax.plot(tdatax['axis'],np.log10(np.abs(tdatax['iy'])),label=plot_label)
-            tax.legend(loc=d_label_loc,ncol=legend_ncol, prop={'size':legend_fontsize})
-
-        # Plot the y axis
-        if not tdatay.empty:
-            tdatay['axis'] = tdatay['ix'].str.split(' ').apply(lambda x: x[1])
-            tay.plot(tdatay['axis'],np.log10(np.abs(tdatay['iy'])),label=plot_label)
-            tay.legend(loc=d_label_loc,ncol=legend_ncol, prop={'size':legend_fontsize})
-
-        # Plot the z axis
-        if not tdataz.empty:
-            tdataz['axis'] = tdataz['ix'].str.split(' ').apply(lambda x: x[2])
-            tay.plot(tdataz['axis'],np.log10(np.abs(tdataz['iy'])),label=plot_label)
-            tay.legend(loc=d_label_loc,ncol=legend_ncol, prop={'size':legend_fontsize})
-
-    #Fix the ylimits for d-plots
-
-    ylimarray_m=ad.get_ylim()
-    ylimarray_t=tad.get_ylim()
-
-    ymin=ylimarray_t[0]
-    ymax=ylimarray_t[1]
-    if(ylimarray_m[0]<ylimarray_t[0]):
-        ymin=ylimarray_m[0]
-    if(ylimarray_m[1]>ylimarray_t[1]):
-        ymax=ylimarray_m[1]
-
-    ad.set_ylim(ymin,ymax)
-    tad.set_ylim(ymin,ymax)
-
-
-    #Fix the ylimits for x-plots
-    ylimarray_m=ax.get_ylim()
-    ylimarray_t=tax.get_ylim()
-
-    ymin=ylimarray_t[0]
-    ymax=ylimarray_t[1]
-    if(ylimarray_m[0]<ylimarray_t[0]):
-        ymin=ylimarray_m[0]
-    if(ylimarray_m[1]>ylimarray_t[1]):
-        ymax=ylimarray_m[1]
-
-    ax.set_ylim(ymin,ymax)
-    tax.set_ylim(ymin,ymax)
-
-    #Fix the ylimits for y-plots
-    ylimarray_m=ay.get_ylim()
-    ylimarray_t=tay.get_ylim()
-
-    ymin=ylimarray_t[0]
-    ymax=ylimarray_t[1]
-    if(ylimarray_m[0]<ylimarray_t[0]):
-        ymin=ylimarray_m[0]
-    if(ylimarray_m[1]>ylimarray_t[1]):
-        ymax=ylimarray_m[1]
-
-    ay.set_ylim(ymin,ymax)
-    tay.set_ylim(ymin,ymax)
-
-    #Fix the ylimits for z-plots
-    ylimarray_m=az.get_ylim()
-    ylimarray_t=taz.get_ylim()
-
-    ymin=ylimarray_t[0]
-    ymax=ylimarray_t[1]
-    if(ylimarray_m[0]<ylimarray_t[0]):
-        ymin=ylimarray_m[0]
-    if(ylimarray_m[1]>ylimarray_t[1]):
-        ymax=ylimarray_m[1]
-
-    az.set_ylim(ymin,ymax)
-    taz.set_ylim(ymin,ymax)
-
-    ad.set_xlabel('d')
-    ad.set_ylabel('log(H)')
-
-    ax.set_xlabel('x')
-    ax.set_ylabel('log(H)')
-
-    ay.set_xlabel('y')
-    ay.set_ylabel('log(H)')
-
-    az.set_xlabel('z')
-    az.set_ylabel('log(H)')
-
-    tad.set_xlabel('d')
-    tad.set_ylabel('log(H)')
-
-    tax.set_xlabel('x')
-    tax.set_ylabel('log(H)')
-
-    tay.set_xlabel('y')
-    tay.set_ylabel('log(H)')
-
-    taz.set_xlabel('z')
-    taz.set_ylabel('log(H)')
-
-    figd.savefig((case + '_d_manybh_' + simname + plotFormat), bbox_inches= 'tight')
-    figx.savefig((case + '_x_manybh_' + simname + plotFormat), bbox_inches= 'tight')
-    figy.savefig((case + '_y_manybh_' + simname + plotFormat), bbox_inches= 'tight')
-    figz.savefig((case + '_z_manybh_' + simname + plotFormat), bbox_inches= 'tight')
-
-    tfigd.savefig((case + '_d_twopun_' + simname + plotFormat), bbox_inches= 'tight')
-    tfigx.savefig((case + '_x_twopun_' + simname + plotFormat), bbox_inches= 'tight')
-    tfigy.savefig((case + '_y_twopun_' + simname + plotFormat), bbox_inches= 'tight')
-    tfigz.savefig((case + '_z_twopun_' + simname + plotFormat), bbox_inches= 'tight')
-
-    plt.close('all')

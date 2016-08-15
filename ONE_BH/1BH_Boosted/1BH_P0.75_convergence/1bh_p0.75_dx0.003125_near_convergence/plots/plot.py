@@ -27,18 +27,7 @@ manybhDirArr=['manybhnear_1bh_p0.75_dx0.003125_near_convergencee_4x5x9','manybhn
 twopunDirArr=[]
 
 
-simname='1bh_p0.75_dx0.003125_near_convergencee'
 
-
-
-twopunDirArr=[]
-
-
-simname='1bh_p0.1_dx0.003125_near_convergence'
-
-
-
-twopunDirArr=[]
 
 simdir = {'manybh': manybhDirArr, 'twopun': twopunDirArr}
 
@@ -148,7 +137,7 @@ def buildGroupPlotsGroup(datadf, method):
                     axisVal = datadf.loc[irow][axis]['ix'].str.split(' ').apply(lambda x: x[ai[axis]])
                     dataVal = np.log10(np.abs(datadf.loc[irow][axis]['iy']))
                 subplot.plot(axisVal, dataVal, label=datadf.loc[irow]['res'])
-                subplot.set_title('Zone - ' + str(zone_name) + '(a)', fontsize =10)
+                subplot.set_title('Zone - ' + str(zone_name) + '(a)', fontsize =9)
                 subplot.set_xlabel('$'+axis+'$', fontsize =10)
                 subplot.set_ylabel('$log(H)$', fontsize =10)
                 # subplot.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3, ncol=2, mode="expand", borderaxespad=0., prop={'size': 5})
@@ -171,7 +160,7 @@ def buildGroupPlotsGroup(datadf, method):
             subplot.plot(range(len(l2data['x_label'])), l2data['y_value'], 'ko--')
             subplot.set_xticks(range(len(l2data['x_label'])))
             subplot.set_xticklabels(l2data['x_label'], size='xx-small')
-            subplot.set_title('Zone - ' + str(zone_name) + '(b)', fontsize =10)
+            subplot.set_title('Zone - ' + str(zone_name) + '(b)', fontsize =9)
             subplot.set_xlabel('$Collocations$', fontsize =10)
             subplot.set_ylabel('$log(l_{2})$', fontsize =10)
             zone_name += 1
@@ -326,9 +315,9 @@ def buildPlots(method):
     if not os.path.isdir(os.path.join(BASEPATH, 'group')):
         os.makedirs(os.path.join(BASEPATH, 'group'))
 
-    buildSinglePlosts(simdatadf)
-    buildGroupPlots(simdatadf, method)
-    buildL2NormPlots(simdatadf, method)
+    # buildSinglePlosts(simdatadf)
+    # buildGroupPlots(simdatadf, method)
+    # buildL2NormPlots(simdatadf, method)
     buildGroupPlotsGroup(simdatadf, method)
     # build individual plots
     del simdatadf
