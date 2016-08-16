@@ -203,7 +203,7 @@ def buildGroupPlotsGroup(datadf, method):
             splotcount +=1
             fig1.tight_layout()
             fig1.subplots_adjust(left=None, bottom=None, right=None, top=None, wspace=None, hspace=None)
-            l2data.to_csv('l2data/' + method + '_' + axis + '.csv', sep='\t', index=False)
+            l2data.to_csv('l2data/' + method + '_' + zname + '_' + axis + '.csv', sep='\t', index=False)
         # plt.savefig('gplots_' + axis +'_.png')
             plt.savefig('group/' + method + '_group_' + axis + plotFormat)
         plt.close('all')
