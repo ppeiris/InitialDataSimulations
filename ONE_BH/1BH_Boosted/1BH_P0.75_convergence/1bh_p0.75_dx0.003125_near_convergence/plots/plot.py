@@ -35,7 +35,7 @@ simname='1bh_p0.75_dx0.003125_near_convergence'
 simdir = {'manybh': manybhDirArr, 'twopun': twopunDirArr}
 
 plotFormat = '.png'
-plotFormat = '.eps'
+# plotFormat = '.eps'
 
 
 # Legend locations
@@ -97,7 +97,7 @@ def plotL2Both():
             continue
 
         if axis == 'x':
-            dfmanybh = dfmanybh[0:4]
+            dfmanybh = dfmanybh[0:5]
 
 
         if len(dfmanybh) == len(dftwopun):
@@ -112,10 +112,6 @@ def plotL2Both():
             print('Axis: %s' %(axis))
             print('manybh len = %s' %(len(dfmanybh)))
             print('twopun len = %s' %(len(dftwopun)))
-
-
-
-
 
 
 def buildL2NormPlots(datadf, method):
@@ -370,7 +366,7 @@ def buildPlots(method):
 
 
 
-# buildPlots('manybh')
-# buildPlots('twopun')
+buildPlots('manybh')
+buildPlots('twopun')
 
 plotL2Both()

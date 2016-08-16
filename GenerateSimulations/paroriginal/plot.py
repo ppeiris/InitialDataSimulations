@@ -163,7 +163,7 @@ def buildGroupPlotsGroup(datadf, method):
             fig1.subplots_adjust(left=None, bottom=None, right=None, top=None, wspace=None, hspace=None)
 
         # plt.savefig('gplots_' + axis +'_.png')
-            plt.savefig('group/' + 'group_' + axis + plotFormat)
+            plt.savefig('group/' + method + '_group_' + axis + plotFormat)
         plt.close('all')
 
 
