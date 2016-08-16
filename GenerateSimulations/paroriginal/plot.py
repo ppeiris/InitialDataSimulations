@@ -21,6 +21,7 @@ BASEPATH = os.path.dirname(os.path.realpath(__file__))
 [==twopunDirArr==]
 [==simname==]
 
+
 simdir = {'manybh': manybhDirArr, 'twopun': twopunDirArr}
 
 plotFormat = '.png'
@@ -73,6 +74,43 @@ near_d_label_loc_twopun = loc['best']
 near_x_label_loc_twopun = loc['best']
 near_y_label_loc_twopun = loc['best']
 near_z_label_loc_twopun = loc['best']
+
+
+def plotL2Both():
+    global axisArr
+
+    for axis in axisArr:
+        try:
+            dfmanybh = pd.read_csv('l2data/manybh' + '_' + axis + '.csv', sep='\t')
+            dftwopun = pd.read_csv('l2data/twopun' + '_' + axis + '.csv', sep='\t')
+        except Exception:
+            continue
+
+        # if axis == 'd':
+        #     dfmanybh = dfmanybh[0:5]
+
+        if axis == 'x':
+            dfmanybh = dfmanybh[0:5]
+
+        # if axis == 'y':
+        #     dfmanybh = dfmanybh[0:5]
+
+        # if axis == 'z':
+        #     dfmanybh = dfmanybh[0:5]
+
+        if len(dfmanybh) == len(dftwopun):
+            fig = plt.figure()
+            l2p = fig.add_subplot(111)
+            l2p.grid(True)
+            l2p.plot(range(len(dfmanybh['x_label'])), dfmanybh['y_value'], 'ro--')
+            l2p.plot(range(len(dftwopun['x_label'])), dftwopun['y_value'], 'bo--')
+
+            fig.savefig('l2data/l2_manybh_twopun_' + axis + plotFormat, bbox_inches= 'tight')
+        else:
+            print('Axis: %s' %(axis))
+            print('manybh len = %s' %(len(dfmanybh)))
+            print('twopun len = %s' %(len(dftwopun)))
+
 
 def buildL2NormPlots(datadf, method):
     print('Build L2 Norm')
@@ -129,14 +167,18 @@ def buildGroupPlotsGroup(datadf, method):
                     axisVal = datadf.loc[irow][axis]['ix'].str.split(' ').apply(lambda x: x[ai[axis]])
                     dataVal = np.log10(np.abs(datadf.loc[irow][axis]['iy']))
                 subplot.plot(axisVal, dataVal, label=datadf.loc[irow]['res'])
-                subplot.set_title('Zone - ' + str(zone_name) + '(a)', fontsize =10)
+                subplot.set_title('Zone - ' + str(zone_name) + '(a)', fontsize =9)
                 subplot.set_xlabel('$'+axis+'$', fontsize =10)
                 subplot.set_ylabel('$log(H)$', fontsize =10)
                 # subplot.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3, ncol=2, mode="expand", borderaxespad=0., prop={'size': 5})
                 subplot.legend(bbox_to_anchor=(1.01, 1.0), loc=2, borderaxespad=0., prop={'size': 5})
                 # subplot.legend(loc=loc['best'], ncol=legend_ncol, prop={'size': 5})
                 if not datadf.loc[irow]['l2'].empty:
-                    l2dataPoint = {'x_label': zdata.loc[irow]['res'], 'y_value': np.log10(np.abs(zdata.loc[irow]['l2']['data'][0]))}
+                    l2dataPoint = {
+                        'x_label': zdata.loc[irow]['res'],
+                        'y_value': np.log10(np.abs(zdata.loc[irow]['l2']['data'][0])),
+                        'y_original': zdata.loc[irow]['l2']['data'][0]
+                    }
                     l2data = l2data.append(l2dataPoint, ignore_index=True)
             splotcount +=1
             subplot = fig1.add_subplot(splotcount)
@@ -152,7 +194,7 @@ def buildGroupPlotsGroup(datadf, method):
             subplot.plot(range(len(l2data['x_label'])), l2data['y_value'], 'ko--')
             subplot.set_xticks(range(len(l2data['x_label'])))
             subplot.set_xticklabels(l2data['x_label'], size='xx-small')
-            subplot.set_title('Zone - ' + str(zone_name) + '(b)', fontsize =10)
+            subplot.set_title('Zone - ' + str(zone_name) + '(b)', fontsize =9)
             subplot.set_xlabel('$Collocations$', fontsize =10)
             subplot.set_ylabel('$log(l_{2})$', fontsize =10)
             zone_name += 1
@@ -161,7 +203,7 @@ def buildGroupPlotsGroup(datadf, method):
             splotcount +=1
             fig1.tight_layout()
             fig1.subplots_adjust(left=None, bottom=None, right=None, top=None, wspace=None, hspace=None)
-
+            l2data.to_csv('l2data/' + method + '_' + axis + '.csv', sep='\t', index=False)
         # plt.savefig('gplots_' + axis +'_.png')
             plt.savefig('group/' + method + '_group_' + axis + plotFormat)
         plt.close('all')
@@ -307,6 +349,11 @@ def buildPlots(method):
     if not os.path.isdir(os.path.join(BASEPATH, 'group')):
         os.makedirs(os.path.join(BASEPATH, 'group'))
 
+    if not os.path.isdir(os.path.join(BASEPATH, 'l2data')):
+        os.makedirs(os.path.join(BASEPATH, 'l2data'))
+
+
+
     buildSinglePlosts(simdatadf)
     buildGroupPlots(simdatadf, method)
     buildL2NormPlots(simdatadf, method)
@@ -320,3 +367,4 @@ def buildPlots(method):
 buildPlots('manybh')
 buildPlots('twopun')
 
+plotL2Both()
