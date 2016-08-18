@@ -189,11 +189,11 @@ grid::type = "Byrange"
 grid::domain = "full"
 grid::dxyz = 0.003125
 grid::xmin = 2.96875
-grid::ymin = 0.46875
-grid::zmin = 0.46875
+grid::ymin = 0.06875
+grid::zmin = 0.06875
 grid::xmax = 3.03125
-grid::ymax = 0.53125
-grid::zmax = 0.53125
+grid::ymax = 0.13125
+grid::zmax = 0.13125
 
 driver::global_nx = 41
 driver::global_ny = 41
@@ -207,14 +207,14 @@ CoordBase::boundary_size_y_upper = 3
 CoordBase::boundary_size_z_lower = 3
 CoordBase::boundary_size_z_upper = 3
 
-IOASCII::out1D_xline_y = 0.5
-IOASCII::out1D_xline_z = 0.5
+IOASCII::out1D_xline_y = 0.1
+IOASCII::out1D_xline_z = 0.1
 
 IOASCII::out1D_yline_x = 3.0
-IOASCII::out1D_yline_z = 0.5
+IOASCII::out1D_yline_z = 0.1
 
 IOASCII::out1D_zline_x = 3.0
-IOASCII::out1D_zline_y = 0.5
+IOASCII::out1D_zline_y = 0.1
 
 #--------------------------------------------------------------------------------------- 
 # ManyBH Parameters:

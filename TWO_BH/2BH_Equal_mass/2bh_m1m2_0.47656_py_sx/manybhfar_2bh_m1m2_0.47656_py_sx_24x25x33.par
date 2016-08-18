@@ -187,14 +187,14 @@ CarpetIOHDF5::out_vars      = "
 grid::type = "Byrange"
 grid::domain = "full"
 grid::dxyz = 0.003125
-grid::xmin = 4.9375
+grid::xmin = -4.0
 grid::ymin = 4.9375
 grid::zmin = 4.9375
-grid::xmax = 5.0625
+grid::xmax = 4.0
 grid::ymax = 5.0625
 grid::zmax = 5.0625
 
-driver::global_nx = 41
+driver::global_nx = 2561
 driver::global_ny = 41
 driver::global_nz = 41
 driver::ghost_size = 3
@@ -209,10 +209,10 @@ CoordBase::boundary_size_z_upper = 3
 IOASCII::out1D_xline_y = 5.0
 IOASCII::out1D_xline_z = 5.0
 
-IOASCII::out1D_yline_x = 5.0
+IOASCII::out1D_yline_x = 0.0
 IOASCII::out1D_yline_z = 5.0
 
-IOASCII::out1D_zline_x = 5.0
+IOASCII::out1D_zline_x = 0.0
 IOASCII::out1D_zline_y = 5.0
 
 #--------------------------------------------------------------------------------------- 

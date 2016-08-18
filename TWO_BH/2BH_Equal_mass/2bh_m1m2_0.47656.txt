@@ -12,15 +12,23 @@ nbh=2
 mbh=0.47656,0.47656
 
 dxyz=0.003125
+
 xmin_near=2.96875
 xmax_near=3.03125
 
-ymin_near=0.46875
-ymax_near=0.53125
+#ymin_near=0.46875
+#ymax_near=0.53125
 
-zmin_near=0.46875
-zmax_near=0.53125
 
+ymin_near=0.06875
+ymax_near=0.13125
+
+zmin_near=0.06875
+zmax_near=0.13125
+
+xmin_far=-4.0
+xmax_far=4.0
+global_nx_far=2561
 
 xmin_shift_near=0.03125
 xmax_shift_near=0.03125
