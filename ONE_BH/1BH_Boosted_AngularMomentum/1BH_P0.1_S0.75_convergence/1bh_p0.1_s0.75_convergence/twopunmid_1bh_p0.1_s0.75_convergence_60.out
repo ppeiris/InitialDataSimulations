@@ -13,11 +13,11 @@
 
 Cactus version:    4.3.0
 Compile date:      Jul 06 2016 (04:25:41)
-Run date:          Aug 17 2016 (23:30:14+0000)
-Run host:          127.0.0.1ip-172-30-0-219 (pid=1810)
+Run date:          Aug 18 2016 (02:48:10+0000)
+Run host:          127.0.0.1ip-172-30-0-219 (pid=1972)
 Working directory: /home/admin/simulations/ONE_BH/1BH_Boosted_AngularMomentum/1BH_P0.1_S0.75_convergence/1bh_p0.1_s0.75_convergence
 Executable:        /home/admin/bbhcode
-Parameter file:    /home/admin/simulations/ONE_BH/1BH_Boosted_AngularMomentum/1BH_P0.1_S0.75_convergence/1bh_p0.1_s0.75_convergence/twopunnear_1bh_p0.1_s0.75_convergence_60.par
+Parameter file:    /home/admin/simulations/ONE_BH/1BH_Boosted_AngularMomentum/1BH_P0.1_S0.75_convergence/1bh_p0.1_s0.75_convergence/twopunmid_1bh_p0.1_s0.75_convergence_60.par
 --------------------------------------------------------------------------------
 
 Activating thorn Cactus...Success -> active implementation Cactus
@@ -714,7 +714,7 @@ INFO (Carpet): Multi-Model: This is process 0, model 0 "world"
 Current core file size limit: hard=[unlimited], soft=0 MB
 Current memory size limit: hard=[unlimited], soft=[unlimited]
 INFO (CycleClock): Measuring CycleClock tick via gettimeofday...
-INFO (CycleClock): Calibrated CycleClock: 0.416659 ns per clock tick (2.40005 GHz)
+INFO (CycleClock): Calibrated CycleClock: 0.41666 ns per clock tick (2.40004 GHz)
 INFO (Vectors): Using vector size 1 for architecture scalar (no vectorisation, 64-bit precision)
 --------------------------------------------------------------------------------
 AMR driver provided by Carpet
@@ -740,7 +740,7 @@ INFO (Carpet): MPI is enabled
 INFO (Carpet): Carpet is running on 1 processes
 INFO (Carpet): This is process 0
 INFO (Carpet): OpenMP is disabled
-INFO (Carpet): This process runs on host 127.0.0.1ip-172-30-0-219, pid=1810
+INFO (Carpet): This process runs on host 127.0.0.1ip-172-30-0-219, pid=1972
 INFO (Carpet): This process runs on 4 cores: 0-3
 INFO (Carpet): Thread 0 runs on 4 cores: 0-3
 INFO (Carpet): This simulation is running in 3 dimensions
@@ -750,21 +750,21 @@ INFO (Carpet): Boundary specification for map 0:
    is_staggered  : [[0,0,0],[0,0,0]]
    shiftout      : [[1,1,1],[1,1,1]]
 INFO (Carpet): Standard grid specification for map 0:
-   number of grid points: [41,41,41]
+   number of grid points: [1281,9,9]
 INFO (Carpet): CoordBase domain specification for map 0:
-   physical extent: [2,2,2] : [38,38,38]   ([36,36,36])
-   interior extent: [3,3,3] : [37,37,37]   ([34,34,34])
-   exterior extent: [0,0,0] : [40,40,40]   ([40,40,40])
+   physical extent: [2,2,2] : [1278,6,6]   ([1276,4,4])
+   interior extent: [3,3,3] : [1277,5,5]   ([1274,2,2])
+   exterior extent: [0,0,0] : [1280,8,8]   ([1280,8,8])
    base_spacing   : [1,1,1]
 INFO (Carpet): Adapted domain specification for map 0:
    convergence factor: 2
    convergence level : 0
-   physical extent   : [2,2,2] : [38,38,38]   ([36,36,36])
-   interior extent   : [3,3,3] : [37,37,37]   ([34,34,34])
-   exterior extent   : [0,0,0] : [40,40,40]   ([40,40,40])
+   physical extent   : [2,2,2] : [1278,6,6]   ([1276,4,4])
+   interior extent   : [3,3,3] : [1277,5,5]   ([1274,2,2])
+   exterior extent   : [0,0,0] : [1280,8,8]   ([1280,8,8])
    spacing           : [1,1,1]
 INFO (Carpet): Base grid specification for map 0:
-   number of grid points             : [41,41,41]
+   number of grid points             : [1281,9,9]
    number of coarse grid ghost points: [[3,3,3],[3,3,3]]
 INFO (Carpet): Buffer zone counts (excluding ghosts):
    [0]: [[0,0,0],[0,0,0]]
@@ -809,11 +809,11 @@ INFO (CarpetIOASCII): Periodic 0D AMR output requested for:
    ADMBASE::gxy
    ADMBASE::gxz
    ADMBASE::gyy
-   AWARNING level 1 from host 127.0.0.1ip-172-30-0-219 process 0
+   ADWARNING level 1 from host 127.0.0.1ip-172-30-0-219 process 0
   while executing schedule bin CCTK_WRAGH, routine ML_BSSN_Helper::ML_BSSN_ParamCompat
   in thorn ML_BSSN_Helper, file /home/admin/Cactus/configs/bbhcode/build/ML_BSSN_Helper/Parameters.c:98:
   -> Forcing ML_BSSN::evolveB=0 because ML_BSSN::shiftGammaCoeff=0.0
-DMBASE::gyz
+MBASE::gyz
    ADMBASE::gzz
    ADMBASE::kxx
    ADMBASE::kxy
@@ -909,15 +909,15 @@ WARNING level 1 from host 127.0.0.1ip-172-30-0-219 process 0
   -> Simulation domain volume and reduction weight sum differ
 INFO (ADMMacros): Spatial finite differencing order: 4
 INFO (CartGrid3D): Grid Spacings:
-INFO (CartGrid3D): dx=>1.5625000e-03  dy=>1.5625000e-03  dz=>1.5625000e-03
+INFO (CartGrid3D): dx=>3.1250000e-03  dy=>3.1250000e-03  dz=>3.1250000e-03
 INFO (CartGrid3D): Computational Coordinates:
-INFO (CartGrid3D): x=>[ 2.969, 3.031]  y=>[ 0.469, 0.531]  z=>[ 0.469, 0.531]
+INFO (CartGrid3D): x=>[-2.000, 2.000]  y=>[-0.013, 0.013]  z=>[-0.013, 0.013]
 INFO (CartGrid3D): Indices of Physical Coordinates:
-INFO (CartGrid3D): x=>[0,40]  y=>[0,40]  z=>[0,40]
+INFO (CartGrid3D): x=>[0,1280]  y=>[0,8]  z=>[0,8]
 INFO (CarpetReduce): Simulation domain volume:  1
 INFO (CarpetReduce): Additional excised volume: 0
-INFO (CarpetReduce): Reduction weight sum:      46656
-INFO (Time): Timestep set to 0.000390625 (courant_static)
+INFO (CarpetReduce): Reduction weight sum:      20416
+INFO (Time): Timestep set to 0.00078125 (courant_static)
 INFO (TwoPunctures): Solving puncture equation for BH-BH system
 INFO (TwoPunctures): b = 3
 Newton: it=0 	 |F|=2.028385e-01
@@ -1086,57 +1086,57 @@ INFO (TimerReport): Top timers at iteration 0 time 0
 ======================================================================
     %    Time/s   Min/s   Max/s   Timer (gettimeofday)
 ======================================================================
-100.0   7662.16 7662.16 7662.16   CCTK total time
-100.0   7662.16 7662.16 7662.16   meta mode/meta mode/global mode
-100.0   7662.16 7662.16 7662.16   main/Initialise/CallInitial
-100.0   7662.16 7662.16 7662.16   meta mode/meta mode/global mode/level(0)
-100.0   7662.00 7662.00 7662.00   main/Initialise/CallInitial/CCTK_INITIAL
-100.0   7662.00 7662.00 7662.00   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction
-100.0   7662.00 7662.00 7662.00   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns
-100.0   7661.96 7661.96 7661.96   [0067] TwoPunctures: TwoPunctures in CCTK_INITIAL
-100.0   7661.96 7661.96 7661.96   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/TwoPunctures
+100.0   8127.48 8127.48 8127.48   CCTK total time
+100.0   8127.48 8127.48 8127.48   meta mode/meta mode/global mode
+100.0   8127.48 8127.48 8127.48   main/Initialise/CallInitial
+100.0   8127.48 8127.48 8127.48   meta mode/meta mode/global mode/level(0)
+100.0   8127.29 8127.29 8127.29   main/Initialise/CallInitial/CCTK_INITIAL
+100.0   8127.29 8127.29 8127.29   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction
+100.0   8127.29 8127.29 8127.29   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns
+100.0   8127.24 8127.24 8127.24   [0067] TwoPunctures: TwoPunctures in CCTK_INITIAL
+100.0   8127.24 8127.24 8127.24   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/TwoPunctures
   0.0      0.11    0.11    0.11   main/Initialise/CallInitial/CCTK_POSTINITIAL
   0.0      0.11    0.11    0.11   main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction
   0.0      0.11    0.11    0.11   main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns
   0.0      0.10    0.10    0.10   [0001] CycleClock: CycleClock_Setup in CCTK_STARTUP
-  0.0      0.05    0.05    0.05   main/Initialise/CallInitial/Poison
-  0.0      0.04    0.04    0.04   [0096] ML_BSSN: ML_BSSN_ConstraintsInterior in CCTK_POSTINITIAL
-  0.0      0.04    0.04    0.04   main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ConstraintsInterior
-  0.0      0.03    0.03    0.03   [0092] ADMConstraints: ADMConstraints in CCTK_POSTINITIAL
-  0.0      0.03    0.03    0.03   main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ADMConstraints
-  0.0      0.02    0.02    0.02   [0076] ML_BSSN: ML_BSSN_InitialADMBase1Everywhere in CCTK_INITIAL
-  0.0      0.02    0.02    0.02   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ML_BSSN_InitialADMBase1Everywhere
+  0.0      0.07    0.07    0.07   main/Initialise/CallInitial/Poison
+  0.0      0.04    0.04    0.04   [0092] ADMConstraints: ADMConstraints in CCTK_POSTINITIAL
+  0.0      0.04    0.04    0.04   main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ADMConstraints
+  0.0      0.03    0.03    0.03   [0076] ML_BSSN: ML_BSSN_InitialADMBase1Everywhere in CCTK_INITIAL
+  0.0      0.03    0.03    0.03   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/ML_BSSN_InitialADMBase1Everywhere
+  0.0      0.03    0.03    0.03   [0089] ML_BSSN: ML_BSSN_ADMBaseEverywhere in CCTK_POSTINITIAL
+  0.0      0.03    0.03    0.03   main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns/ML_BSSN_ADMBaseEverywhere
 ======================================================================
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Iteration      Time | ADMBASE::gxx | ADMBASE::gxy | ADMBASE::gxz | ADMBASE::gyy | ADMBASE::gyz | ADMBASE::gzz | ADMBASE::kxx | ADMBASE::kxy | ADMBASE::kxz | ADMBASE::kyy | ADMBASE::kyz | ADMBASE::kzz | ADMBASE::alp | *BASE::betax | *BASE::betay | *BASE::betaz | *RAINTS::ham | *AINTS::momx | *AINTS::momy | *AINTS::momz | *me_per_hour
                     |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |        norm2 |             
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        0     0.000 |   12.1440062 |    0.0000000 |    0.0000000 |   12.1440062 |    0.0000000 |   12.1440062 |    0.0019842 |    0.0678246 |    0.0678488 |    1.8277543 |    0.0838847 |    1.8277534 |    1.0000000 |    0.0000000 |    0.0000000 |    0.0000000 | 1.763455e-10 | 4.533760e-13 | 5.480390e-11 | 5.478178e-11 |    0.0000000
+        0     0.000 |    4.3121907 |    0.0000000 |    0.0000000 |    4.3121907 |    0.0000000 |    4.3121907 |    0.0371537 |    0.0006466 |    0.0006466 |    0.0185768 |    0.0000030 |    0.0185768 |    1.0000000 |    0.0000000 |    0.0000000 |    0.0000000 | 5.904441e-09 | 1.546349e-12 | 3.053592e-14 | 3.053625e-14 |    0.0000000
 INFO (TimerReport): Timer Report before terminating at iteration 0 time 0
 INFO (TimerReport): Top timers at iteration 0 time 0
 ======================================================================
     %    Time/s   Min/s   Max/s   Timer (gettimeofday)
 ======================================================================
-100.0   7662.26 7662.26 7662.26   CCTK total time
-100.0   7662.26 7662.26 7662.26   main/Initialise
-100.0   7662.26 7662.26 7662.26   meta mode/meta mode/global mode
-100.0   7662.24 7662.24 7662.24   meta mode/meta mode/global mode/level(0)
-100.0   7662.16 7662.16 7662.16   main/Initialise/CallInitial
-100.0   7662.00 7662.00 7662.00   main/Initialise/CallInitial/CCTK_INITIAL
-100.0   7662.00 7662.00 7662.00   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction
-100.0   7662.00 7662.00 7662.00   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns
-100.0   7661.96 7661.96 7661.96   [0067] TwoPunctures: TwoPunctures in CCTK_INITIAL
-100.0   7661.96 7661.96 7661.96   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/TwoPunctures
+100.0   8127.64 8127.64 8127.64   CCTK total time
+100.0   8127.64 8127.64 8127.64   main/Initialise
+100.0   8127.64 8127.64 8127.64   meta mode/meta mode/global mode
+100.0   8127.62 8127.62 8127.62   meta mode/meta mode/global mode/level(0)
+100.0   8127.48 8127.48 8127.48   main/Initialise/CallInitial
+100.0   8127.29 8127.29 8127.29   main/Initialise/CallInitial/CCTK_INITIAL
+100.0   8127.29 8127.29 8127.29   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction
+100.0   8127.29 8127.29 8127.29   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns
+100.0   8127.24 8127.24 8127.24   [0067] TwoPunctures: TwoPunctures in CCTK_INITIAL
+100.0   8127.24 8127.24 8127.24   main/Initialise/CallInitial/CCTK_INITIAL/CallFunction/thorns/TwoPunctures
+  0.0      0.16    0.16    0.16   main/Initialise/CallAnalysis
+  0.0      0.15    0.15    0.15   main/Initialise/CallAnalysis/OutputGH
+  0.0      0.15    0.15    0.15   main/Initialise/CallAnalysis/OutputGH/OutputGH
   0.0      0.11    0.11    0.11   main/Initialise/CallInitial/CCTK_POSTINITIAL
   0.0      0.11    0.11    0.11   main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction
   0.0      0.11    0.11    0.11   main/Initialise/CallInitial/CCTK_POSTINITIAL/CallFunction/thorns
   0.0      0.10    0.10    0.10   [0001] CycleClock: CycleClock_Setup in CCTK_STARTUP
-  0.0      0.10    0.10    0.10   main/Initialise/CallAnalysis
-  0.0      0.09    0.09    0.09   main/Initialise/CallAnalysis/OutputGH
-  0.0      0.09    0.09    0.09   main/Initialise/CallAnalysis/OutputGH/OutputGH
-  0.0      0.08    0.08    0.08   main/Initialise/CallAnalysis/OutputGH/OutputGH/IOScalar::CarpetIOScalar [1]
-  0.0      0.08    0.08    0.08   main/Initialise/CallAnalysis/OutputGH/OutputGH/IOScalar::CarpetIOScalar [1]/OutputGH
-  0.0      0.05    0.05    0.05   main/Initialise/CallInitial/Poison
+  0.0      0.10    0.10    0.10   main/Initialise/CallAnalysis/OutputGH/OutputGH/IOScalar::CarpetIOScalar [1]
+  0.0      0.10    0.10    0.10   main/Initialise/CallAnalysis/OutputGH/OutputGH/IOScalar::CarpetIOScalar [1]/OutputGH
+  0.0      0.07    0.07    0.07   main/Initialise/CallInitial/Poison
 ======================================================================
 --------------------------------------------------------------------------------
 Done.
