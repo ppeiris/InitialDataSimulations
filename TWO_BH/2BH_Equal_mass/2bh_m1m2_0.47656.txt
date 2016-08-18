@@ -9,8 +9,7 @@ simmethods=manybh
 # global values
 exename=bbhcode
 nbh=2
-mbh=0.47656x0.47656
-
+mbh=0.47656,0.47656
 
 dxyz=0.003125
 xmin_near=2.96875
@@ -31,9 +30,9 @@ zmin_shift_near=0.21875
 zmax_shift_near=0.28125
 
 
-sbh=0.0x0.0x0.0
-pbh=0.1x0.0x0.0
-xbh=3.0x0.0x0.0
+sbh=0.82843x0.0x0.0,0.82843x0.0x0.0
+pbh=0.0x0.13808x0.0,0.0x-0.13808x0.0
+xbh=3.0x0.0x0.0,-3.0x0.0x0.0
 
 
 # ManyBH Variables

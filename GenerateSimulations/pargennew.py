@@ -182,6 +182,8 @@ def zoneplot(df, case):
     boxpoints = z.gridBoxPoints()
     dataAxis = z.dataAxis()
 
+    if type(xbh) is list:
+        xbh=xbh[0]
     xbh = xbh.replace('x', ',')
 
     # line = line.replace('[==manybhDirArr==]',manybhDirlist+'\n\n')
