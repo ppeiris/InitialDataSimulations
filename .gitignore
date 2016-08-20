@@ -2,11 +2,9 @@
 !.git*
 !*.sh
 !*.py
-!*.out
 !*.bbh
 !*.txt
 !*.par
-!*.out
 !*hamiltonian.*
 !*/
 
