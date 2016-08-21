@@ -3,8 +3,8 @@
 var=val
 
 # Simulation Name
-simname=2bh_m1m2_0.47656_py
-simmethods=twopunc
+simname=2bh_m1m2_0.47656_py0.0848
+simmethods=manybh
 
 # global values
 exename=bbhcode
@@ -39,15 +39,15 @@ zmax_shift_near=0.28125
 
 
 sbh=0.0x0.0x0.0,0.0x0.0x0.0
-pbh=0.0x0.13808x0.0,0.0x-0.13808x0.0
+pbh=0.0x0.0848x0.0,0.0x-0.0848x0.0
 xbh=3.0x0.0x0.0,-3.0x0.0x0.0
 
 
 # ManyBH Variables
 
-nzpt=16x17x25,24x25x33,32x33x41,40x41x49
+#nzpt=16x17x25,24x25x33,32x33x41,40x41x49
 
-#nzpt=4x5x9,8x9x13,12x13x17,16x17x25,24x25x33,32x33x41,40x41x49
+nzpt=4x5x9,8x9x13,12x13x17,16x17x25,24x25x33,32x33x41,40x41x49
 
 rsurf=0.1
 puncpower=0.25
