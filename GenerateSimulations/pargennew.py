@@ -72,6 +72,34 @@ def getDataCollectionShiftFromUser(udata, key, case):
         return False
 
 
+def calculateN(df):
+
+    cases = getVal(df, 'cases')
+
+    for case in cases:
+        dx = float(getVal(df, 'dxyz', case))
+        xmin = float(getVal(df, 'xmin', case))
+        xmax = float(getVal(df, 'xmax', case))
+        ymin = float(getVal(df, 'ymin', case))
+        ymax = float(getVal(df, 'ymax', case))
+        zmin = float(getVal(df, 'zmin', case))
+        zmax = float(getVal(df, 'zmax', case))
+
+        # driver::global_nx = 2561
+        # driver::global_ny = 41
+        # driver::global_nz = 41
+
+        tmp_global_nx = int(np.abs(xmax - xmin)/dx) + 1
+        df = updatedf(df, 'global_nx', case, str(tmp_global_nx))
+
+        tmp_global_ny = int(np.abs(ymax - ymin)/dx) + 1
+        df = updatedf(df, 'global_ny', case, str(tmp_global_ny))
+
+        tmp_global_nz = int(np.abs(zmax - zmin)/dx) + 1
+        df = updatedf(df, 'global_nz', case, str(tmp_global_nz))
+
+
+    return df
 
 def dataCollectionAxis(df, udata):
 
@@ -267,6 +295,7 @@ for key in list(udata.columns):
     data = updatedf(data, nkey, col, udata[key]['val'])
 
 dataCollectionAxis(data, udata)
+calculateN(data)
 
 print("Simulation Parameters")
 print('--------------------------------------------------------------------------------------------------------')

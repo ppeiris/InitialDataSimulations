@@ -39,12 +39,29 @@ manybhDirArr=[
 ]
 
 
-twopunDirArr=['twopunnear_2bh_m1m2_0.47656_py_20','twopunnear_2bh_m1m2_0.47656_py_30','twopunnear_2bh_m1m2_0.47656_py_40','twopunmid_2bh_m1m2_0.47656_py_20','twopunmid_2bh_m1m2_0.47656_py_30','twopunmid_2bh_m1m2_0.47656_py_40','twopunfar_2bh_m1m2_0.47656_py_20','twopunfar_2bh_m1m2_0.47656_py_30','twopunfar_2bh_m1m2_0.47656_py_40']
+twopunDirArr=[
+    'twopunnear_2bh_m1m2_0.47656_py_20',
+    'twopunnear_2bh_m1m2_0.47656_py_30',
+    'twopunnear_2bh_m1m2_0.47656_py_40',
+    'twopunnear_2bh_m1m2_0.47656_py_50',
+    # 'twopunnear_2bh_m1m2_0.47656_py_60',
+    # 'twopunnear_2bh_m1m2_0.47656_py_70',
+    'twopunmid_2bh_m1m2_0.47656_py_20',
+    'twopunmid_2bh_m1m2_0.47656_py_30',
+    'twopunmid_2bh_m1m2_0.47656_py_40',
+    'twopunmid_2bh_m1m2_0.47656_py_50',
+    # 'twopunmid_2bh_m1m2_0.47656_py_60',
+    # 'twopunmid_2bh_m1m2_0.47656_py_70',
+    'twopunfar_2bh_m1m2_0.47656_py_20',
+    'twopunfar_2bh_m1m2_0.47656_py_30',
+    'twopunfar_2bh_m1m2_0.47656_py_40',
+    # 'twopunfar_2bh_m1m2_0.47656_py_50',
+    # 'twopunfar_2bh_m1m2_0.47656_py_60',
+    # 'twopunfar_2bh_m1m2_0.47656_py_70'
+]
 
 
 simname='2bh_m1m2_0.47656_py'
-
-
 
 
 simdir = {'manybh': manybhDirArr, 'twopun': twopunDirArr}
@@ -184,14 +201,16 @@ def buildGroupPlotsGroup(datadf, method):
             plt.tick_params(axis ='both', which='major', length=4, labelsize =8)
 
             l2data = pd.DataFrame()
+            zo = 10
             for irow in zdata.index:
+                zo -=1
                 if axis in ['d']:
                     axisVal = datadf.loc[irow][axis]['ml'].str.split(' ').apply(lambda x: x[0])
                     dataVal = np.log10(np.abs(datadf.loc[irow][axis]['ix']))
                 else:
                     axisVal = datadf.loc[irow][axis]['ix'].str.split(' ').apply(lambda x: x[ai[axis]])
                     dataVal = np.log10(np.abs(datadf.loc[irow][axis]['iy']))
-                subplot.plot(axisVal, dataVal, label=datadf.loc[irow]['res'])
+                subplot.plot(axisVal, dataVal, label=datadf.loc[irow]['res'], zorder=zo)
                 subplot.set_title('Zone - ' + str(zone_name) + '(a)', fontsize =9)
                 subplot.set_xlabel('$'+axis+'$', fontsize =10)
                 subplot.set_ylabel('$log(H)$', fontsize =10)
