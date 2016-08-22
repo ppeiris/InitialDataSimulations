@@ -3,7 +3,7 @@
 var=val
 
 # Simulation Name
-simname=2bh_m1m2_0.47656_py
+simname=2bh_m1m2_0.47656_py0.13808
 simmethods=twopunc
 
 # global values
