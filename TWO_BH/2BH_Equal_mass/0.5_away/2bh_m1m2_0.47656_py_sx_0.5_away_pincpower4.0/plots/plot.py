@@ -17,7 +17,20 @@ l2Norm_colnames = ['iteration', 'time', 'data']
 axislist = ['d', 'x', 'y', 'z']
 BASEPATH = os.path.dirname(os.path.realpath(__file__))
 
-manybhDirArr=['manybhnear_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_4x5x9','manybhnear_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_8x9x13','manybhnear_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_12x13x17','manybhnear_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_16x17x25','manybhmid_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_4x5x9','manybhmid_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_8x9x13','manybhmid_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_12x13x17','manybhmid_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_16x17x25','manybhfar_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_4x5x9','manybhfar_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_8x9x13','manybhfar_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_12x13x17','manybhfar_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_16x17x25']
+manybhDirArr=[
+    'manybhnear_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_4x5x9',
+    'manybhnear_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_8x9x13',
+    # 'manybhnear_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_12x13x17',
+    # 'manybhnear_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_16x17x25',
+    # 'manybhmid_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_4x5x9',
+    # 'manybhmid_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_8x9x13',
+    # 'manybhmid_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_12x13x17',
+    # 'manybhmid_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_16x17x25',
+    # 'manybhfar_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_4x5x9',
+    # 'manybhfar_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_8x9x13',
+    # 'manybhfar_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_12x13x17',
+    # 'manybhfar_2bh_m1m2_0.47656_py_sx_0.5_away_pincpower4.0_16x17x25'
+]
 
 
 twopunDirArr=[]
