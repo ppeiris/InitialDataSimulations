@@ -1,0 +1,54 @@
+#Headding
+# do not delete this line
+var=val
+
+# Simulation Name
+simname=2bh_m1m2_0.47656_py_sx0.5
+simmethods=manybh,twopun
+
+# global values
+exename=bbhcode
+nbh=2
+mbh=0.47656,0.47656
+
+dxyz=0.003125
+
+xmin_near=2.96875
+xmax_near=3.03125
+
+#ymin_near=0.46875
+#ymax_near=0.53125
+
+
+ymin_near=0.06875
+ymax_near=0.13125
+
+zmin_near=0.06875
+zmax_near=0.13125
+
+xmin_far=-4.0
+xmax_far=4.0
+global_nx_far=2561
+
+xmin_shift_near=0.03125
+xmax_shift_near=0.03125
+ymin_shift_near=0.21875
+ymax_shift_near=0.28125
+zmin_shift_near=0.21875
+zmax_shift_near=0.28125
+
+
+sbh=0.5x0.0x0.0,0.5x0.0x0.0
+pbh=0.0x0.13808x0.0,0.0x-0.13808x0.0
+xbh=3.0x0.0x0.0,-3.0x0.0x0.0
+
+
+# ManyBH Variables
+
+nzpt=4x5x9,8x9x13,12x13x17,16x17x25,24x25x33,32x33x41,40x41x49
+#nzpt=4x5x9,8x9x13
+rsurf=0.1
+puncpower=0.25
+
+# TwoPunc Variables
+twopunch_res=20,30,40,50,60
