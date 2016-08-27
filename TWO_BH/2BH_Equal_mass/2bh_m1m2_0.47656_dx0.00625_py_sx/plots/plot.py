@@ -17,14 +17,35 @@ l2Norm_colnames = ['iteration', 'time', 'data']
 axislist = ['d', 'x', 'y', 'z']
 BASEPATH = os.path.dirname(os.path.realpath(__file__))
 
-
-manybhDirArr=['manybhnear_2bh_m1m2_0.47656_py_sx0.5_4x5x9','manybhnear_2bh_m1m2_0.47656_py_sx0.5_8x9x13','manybhnear_2bh_m1m2_0.47656_py_sx0.5_12x13x17','manybhnear_2bh_m1m2_0.47656_py_sx0.5_16x17x25','manybhnear_2bh_m1m2_0.47656_py_sx0.5_24x25x33','manybhnear_2bh_m1m2_0.47656_py_sx0.5_32x33x41','manybhnear_2bh_m1m2_0.47656_py_sx0.5_40x41x49','manybhmid_2bh_m1m2_0.47656_py_sx0.5_4x5x9','manybhmid_2bh_m1m2_0.47656_py_sx0.5_8x9x13','manybhmid_2bh_m1m2_0.47656_py_sx0.5_12x13x17','manybhmid_2bh_m1m2_0.47656_py_sx0.5_16x17x25','manybhmid_2bh_m1m2_0.47656_py_sx0.5_24x25x33','manybhmid_2bh_m1m2_0.47656_py_sx0.5_32x33x41','manybhmid_2bh_m1m2_0.47656_py_sx0.5_40x41x49','manybhfar_2bh_m1m2_0.47656_py_sx0.5_4x5x9','manybhfar_2bh_m1m2_0.47656_py_sx0.5_8x9x13','manybhfar_2bh_m1m2_0.47656_py_sx0.5_12x13x17','manybhfar_2bh_m1m2_0.47656_py_sx0.5_16x17x25','manybhfar_2bh_m1m2_0.47656_py_sx0.5_24x25x33','manybhfar_2bh_m1m2_0.47656_py_sx0.5_32x33x41','manybhfar_2bh_m1m2_0.47656_py_sx0.5_40x41x49']
+manybhDirArr=[
+    'manybhnear_2bh_m1m2_0.47656_dx0.00625_py_sx_4x5x9_bigger',
+    'manybhnear_2bh_m1m2_0.47656_dx0.00625_py_sx_8x9x13_bigger',
+    # 'manybhnear_2bh_m1m2_0.47656_dx0.00625_py_sx_12x13x17',
+    # 'manybhnear_2bh_m1m2_0.47656_dx0.00625_py_sx_16x17x25',
+    # 'manybhnear_2bh_m1m2_0.47656_dx0.00625_py_sx_24x25x33',
+    # 'manybhnear_2bh_m1m2_0.47656_dx0.00625_py_sx_32x33x41',
+    # 'manybhnear_2bh_m1m2_0.47656_dx0.00625_py_sx_40x41x49',
+    # 'manybhmid_2bh_m1m2_0.47656_dx0.00625_py_sx_4x5x9',
+    # 'manybhmid_2bh_m1m2_0.47656_dx0.00625_py_sx_8x9x13',
+    # 'manybhmid_2bh_m1m2_0.47656_dx0.00625_py_sx_12x13x17',
+    # 'manybhmid_2bh_m1m2_0.47656_dx0.00625_py_sx_16x17x25',
+    # 'manybhmid_2bh_m1m2_0.47656_dx0.00625_py_sx_24x25x33',
+    # 'manybhmid_2bh_m1m2_0.47656_dx0.00625_py_sx_32x33x41',
+    # 'manybhmid_2bh_m1m2_0.47656_dx0.00625_py_sx_40x41x49',
+    # 'manybhfar_2bh_m1m2_0.47656_dx0.00625_py_sx_4x5x9',
+    # 'manybhfar_2bh_m1m2_0.47656_dx0.00625_py_sx_8x9x13',
+    # 'manybhfar_2bh_m1m2_0.47656_dx0.00625_py_sx_12x13x17',
+    # 'manybhfar_2bh_m1m2_0.47656_dx0.00625_py_sx_16x17x25',
+    # 'manybhfar_2bh_m1m2_0.47656_dx0.00625_py_sx_24x25x33',
+    # 'manybhfar_2bh_m1m2_0.47656_dx0.00625_py_sx_32x33x41',
+    # 'manybhfar_2bh_m1m2_0.47656_dx0.00625_py_sx_40x41x49'
+]
 
 
 twopunDirArr=[]
 
 
-simname='2bh_m1m2_0.47656_py_sx0.5'
+simname='2bh_m1m2_0.47656_dx0.00625_py_sx'
 
 
 

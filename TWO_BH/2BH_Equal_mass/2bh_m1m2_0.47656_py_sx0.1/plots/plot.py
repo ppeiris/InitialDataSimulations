@@ -17,6 +17,7 @@ l2Norm_colnames = ['iteration', 'time', 'data']
 axislist = ['d', 'x', 'y', 'z']
 BASEPATH = os.path.dirname(os.path.realpath(__file__))
 
+
 manybhDirArr=['manybhnear_2bh_m1m2_0.47656_py_sx0.1_4x5x9','manybhnear_2bh_m1m2_0.47656_py_sx0.1_8x9x13','manybhnear_2bh_m1m2_0.47656_py_sx0.1_12x13x17','manybhnear_2bh_m1m2_0.47656_py_sx0.1_16x17x25','manybhnear_2bh_m1m2_0.47656_py_sx0.1_24x25x33','manybhnear_2bh_m1m2_0.47656_py_sx0.1_32x33x41','manybhnear_2bh_m1m2_0.47656_py_sx0.1_40x41x49','manybhmid_2bh_m1m2_0.47656_py_sx0.1_4x5x9','manybhmid_2bh_m1m2_0.47656_py_sx0.1_8x9x13','manybhmid_2bh_m1m2_0.47656_py_sx0.1_12x13x17','manybhmid_2bh_m1m2_0.47656_py_sx0.1_16x17x25','manybhmid_2bh_m1m2_0.47656_py_sx0.1_24x25x33','manybhmid_2bh_m1m2_0.47656_py_sx0.1_32x33x41','manybhmid_2bh_m1m2_0.47656_py_sx0.1_40x41x49','manybhfar_2bh_m1m2_0.47656_py_sx0.1_4x5x9','manybhfar_2bh_m1m2_0.47656_py_sx0.1_8x9x13','manybhfar_2bh_m1m2_0.47656_py_sx0.1_12x13x17','manybhfar_2bh_m1m2_0.47656_py_sx0.1_16x17x25','manybhfar_2bh_m1m2_0.47656_py_sx0.1_24x25x33','manybhfar_2bh_m1m2_0.47656_py_sx0.1_32x33x41','manybhfar_2bh_m1m2_0.47656_py_sx0.1_40x41x49']
 
 
