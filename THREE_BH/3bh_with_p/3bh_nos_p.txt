@@ -1,0 +1,57 @@
+#Headding
+# do not delete this line
+var=val
+
+# Simulation Name
+simname=3bh_nps_pinall
+simmethods=manybh
+
+# global values
+exename=bbhcode
+nbh=3
+mbh=0.3239234,0.3239234,0.3247293
+
+dxyz=0.003125
+
+sbh=0.0x0.0x0.0,0.0x0.0x0.0,0.0x0.0x0.0
+pbh=-0.0613136x0.0x0.0334305,-0.0613136x0.0x0.0334305,0.0x0.0x-0.0668610
+xbh=-3.6321068x-7.2642136x0.0,3.6321068x-7.2642136x0.0,0.0x14.5284272x0.0
+
+
+xmin_near=-0.0625
+xmax_near=0.0625
+ymin_near=4.0696068
+ymax_near=4.1946068
+zmin_near=-6.8267136
+zmax_near=-6.7017136
+
+xmin_mid=-2.0
+xmax_mid=2.0
+ymin_mid=3.6196068
+ymax_mid=3.6446068
+zmin_mid=-7.2767136
+zmax_mid=-7.2517136
+
+xmin_far=1.9375
+xmax_far=2.0625
+ymin_far=8.5696068
+ymax_far=8.6946068
+zmin_far=-2.3267136
+zmax_far=-2.2017136
+
+
+#xmin_shift_near=0.03125
+#xmax_shift_near=0.03125
+#ymin_shift_near=0.21875
+#ymax_shift_near=0.28125
+#zmin_shift_near=0.21875
+#zmax_shift_near=0.28125
+
+
+# ManyBH Variables
+nzpt=4x5x9,8x9x13,12x13x17,16x17x25,24x25x33,32x33x41,40x41x49
+rsurf=0.1
+puncpower=0.25
+
+# TwoPunc Variables
+twopunch_res=20,30,40,50,60
